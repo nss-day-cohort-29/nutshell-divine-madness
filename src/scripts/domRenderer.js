@@ -1,5 +1,3 @@
-const domRenderer = {
+import domComponents from "./domComponents";
 
-}
-
-export default domRenderer
+domComponents.buildNavigation()
