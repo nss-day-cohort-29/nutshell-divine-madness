@@ -1,6 +1,6 @@
 import events from "./events";
-import nomadData from "./nomadData";
-console.log("I'm working")
+import friends from "./friends";
+friends.buildFriendPage()
 
 // template for object to pass into nomadData.connectToData() if you are doing a GET
 

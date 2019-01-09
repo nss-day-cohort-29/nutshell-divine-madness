@@ -5,9 +5,21 @@
       "userName": "Hernando",
       "email": "dlskfj@wh.com",
       "password": "yomama"
+    },
+    {
+      "id": 2,
+      "userName": "Bob",
+      "email": "dude@dude.com",
+      "password": "123"
+    },
+    {
+      "id": 1,
+      "userName": "Sally",
+      "email": "bird@msn.com",
+      "password": "Sally123"
     }
   ],
-  "news": [
+  "newsItems": [
     {
       "id": 1,
       "userId": 2,
@@ -56,6 +68,11 @@
       "id": 1,
       "userId": 1,
       "otherFriendId": 3
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "otherFriendId": 1
     }
   ],
   "messages": [
