@@ -1,3 +1,4 @@
-import domComponents from "./domComponents";
+import events from "./events";
 
-domComponents.buildNavigation()
+events.currentEvent()
+console.log("hello")
