@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "Hernando",
+      "email": "dlskfj@wh.com",
+      "password": "yomama",
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "userId": 2,
+      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
+      "title": "Wormholes Allow Information to Escape Black Holes",
+      "synopsis": "Check out this recent discovery about workholes"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "userId": 1,
+      "eventName": "toga party",
+      "eventDate": "2-12",
+      "eventTime": "3:00pm",
+      "eventLocation": "Vegas"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "userId": 1,
+      "task": "save world"
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "userId": 1,
+      "otherFriendId": 3
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 1,
+      "message": "Yo."
+    }
+  ]
+}
