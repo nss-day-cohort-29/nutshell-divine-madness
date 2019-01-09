@@ -1,7 +1,6 @@
 const nomadData = {
   connectToData({dataSet, fetchType, dataBaseObject}) {
-    console.log("hello", 
-    data)
+    console.log("hello",data)
     // Default options are marked with *
       return fetch(`http://localhost:8088/${dataSet}`, {
           method: `${fetchType}`, // *GET, POST, PUT, DELETE, etc.

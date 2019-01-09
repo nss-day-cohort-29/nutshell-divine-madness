@@ -1,5 +1,4 @@
-const domRenderer = {
+import events from "./events";
 
-}
-
-export default domRenderer
+events.currentEvent()
+console.log("hello")
