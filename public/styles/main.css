@@ -1,0 +1,43 @@
+body{
+  margin:0;
+  padding:0;
+  font-family:'Montserrat Alternates', sans-serif;
+}
+/* NAVIGATION BAR STYLING */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(81, 78, 78);
+  opacity:0.9;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  line-height:1.7;
+  text-decoration: none;
+  font-size:20px;
+  font-weight:bold;
+  
+}
+#logo{
+  float:right;
+}
+#logo > a{
+  color:rgb(214, 191, 17);
+}
+.active{
+  background:rgb(214, 191, 17)
+}
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
