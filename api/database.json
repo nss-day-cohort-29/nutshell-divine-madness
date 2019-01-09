@@ -8,6 +8,7 @@
     },
     {
       "id": 2,
+<<<<<<< HEAD
       "userName": "Bob",
       "email": "dude@dude.com",
       "password": "123"
@@ -20,6 +21,14 @@
     }
   ],
   "newsItems": [
+=======
+      "userName": "Lorenzo",
+      "email": "dlskfj@wh.com",
+      "password": "yomama"
+    }
+  ],
+  "newsitems": [
+>>>>>>> master
     {
       "id": 1,
       "userId": 2,
@@ -80,7 +89,25 @@
       "id": 1,
       "userId": 1,
       "message": "Yo.",
-      "timeStamp": "3:00pm"
+      "timeStamp": "3:00:00pm"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "message": "Sup.",
+      "timeStamp": "3:01:00pm"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "message": "NM.",
+      "timeStamp": "3:02:00pm"
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "message": "Cool.",
+      "timeStamp": "3:03:00pm"
     }
   ]
 }

@@ -78,3 +78,6 @@ sessionStorage.removeItem("activeUser")
 To help you along, here is a visualization of the features, and behaviors of the application to get you started.
 
 ![nutshell features](./Nutshell.png)
+
+![image](https://user-images.githubusercontent.com/43594378/50925174-24759600-1417-11e9-8ec1-f17fd7b362f2.png)
+
