@@ -1,47 +1,38 @@
 import events from "./events";
 import nomadData from "./nomadData";
-console.log("I'm working")
+import messages from "./messages";
 
-// template for object to pass into nomadData.connectToData() if you are doing a GET
 
-// let fetchTest = {
+// messages.createMessageBoard();
 
-//     "dataSet" : "users",
-//     "fetchType" : "GET",
-//     "dataBaseObject" : "",
-//     "embedItem" : "?_embed=events"
-// }
+function userLogin () {
 
-// template for object to pass into nomadData.connectToData() if you are doing a POST
+    let userName = "Hernando";
+    let password = "yomama";
 
-// let fetchTest2 = {
+    nomadData.connectToData({
 
-//     "dataSet" : "events",
-//     "fetchType" : "POST",
-//     "dataBaseObject" : {
-//       "userId": 1,
-//       "eventName": "yet another toga party",
-//       "eventDate": "2-12",
-//       "eventTime": "3:00pm",
-//       "eventLocation": "Vegas"
-//     }
-// }
+        "dataSet" : "users",
+        "fetchType" : "GET",
+        "embedItem" : "?_embed=events"
 
-// template for object to pass into nomadData.connectToData() if you are doing a PUT
+    }).then(parsedUsers => {
 
-// let fetchTest3 = {
+        parsedUsers.forEach(user => {
 
-//     "putId" : 2,
-//     "dataSet" : "events",
-//     "fetchType" : "PUT",
-//     "dataBaseObject" : {
-//       "id" : 2,
-//       "userId": 1,
-//       "eventName": "another toga party",
-//       "eventDate": "2-15",
-//       "eventTime": "3:00pm",
-//       "eventLocation": "Vegas"
-//     }
-// }
+            if (userName === user.userName && password === user.password) {
 
-// nomadData.connectToData(fetchTest3)
+                sessionStorage.setItem('userId', user.id)
+            }
+        });
+    })
+    let userId = sessionStorage.getItem('userId');
+    loadDashboard(userId)
+    // console.log("UserId = ", sessionStorage.getItem('userId'))
+}
+
+userLogin();
+
+function loadDashboard (userId) {
+    console.log(`Thanks for passing the userId.  The userId is ${userId}`)
+}
