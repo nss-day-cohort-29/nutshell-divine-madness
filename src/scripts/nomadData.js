@@ -42,4 +42,4 @@ const nomadData = {
     }
 }
 
-    export default nomadData
+export default nomadData

@@ -1,6 +1,16 @@
-import events from "./events";
-import nomadData from "./nomadData";
-console.log("I'm working")
+// import events from "./events";
+// import nomadData from "./nomadData";
+
+import domComponents from "./domComponents";
+import eventListeners from "./eventListeners";
+
+//BUILDS NAIGATIONBAR//
+// domComponents.createNavBar()
+domComponents.buildLoginForm()
+eventListeners.toggleInputForms()
+
+
+// console.log("I'm working")
 
 // template for object to pass into nomadData.connectToData() if you are doing a GET
 
