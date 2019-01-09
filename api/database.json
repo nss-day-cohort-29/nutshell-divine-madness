@@ -24,13 +24,31 @@
       "eventDate": "2-12",
       "eventTime": "3:00pm",
       "eventLocation": "Vegas"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "eventName": "another toga party",
+      "eventDate": "2-15",
+      "eventTime": "3:00pm",
+      "eventLocation": "Vegas"
+    },
+    {
+      "userId": 1,
+      "eventName": "yet another toga party",
+      "eventDate": "2-12",
+      "eventTime": "3:00pm",
+      "eventLocation": "Vegas",
+      "id": 3
     }
   ],
   "tasks": [
     {
       "id": 1,
       "userId": 1,
-      "task": "save world"
+      "task": "save world",
+      "expectedCompletionDate": "2-12",
+      "complete": false
     }
   ],
   "friends": [
@@ -44,7 +62,8 @@
     {
       "id": 1,
       "userId": 1,
-      "message": "Yo."
+      "message": "Yo.",
+      "timeStamp": "3:00pm"
     }
   ]
 }
