@@ -24,6 +24,22 @@
       "eventDate": "2-12",
       "eventTime": "3:00pm",
       "eventLocation": "Vegas"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "eventName": "another toga party",
+      "eventDate": "2-15",
+      "eventTime": "3:00pm",
+      "eventLocation": "Vegas"
+    },
+    {
+      "userId": 1,
+      "eventName": "yet another toga party",
+      "eventDate": "2-12",
+      "eventTime": "3:00pm",
+      "eventLocation": "Vegas",
+      "id": 3
     }
   ],
   "tasks": [
