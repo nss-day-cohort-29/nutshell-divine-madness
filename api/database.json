@@ -30,7 +30,9 @@
     {
       "id": 1,
       "userId": 1,
-      "task": "save world"
+      "task": "save world",
+      "expectedCompletionDate": "2-12",
+      "complete": false
     }
   ],
   "friends": [
@@ -44,7 +46,8 @@
     {
       "id": 1,
       "userId": 1,
-      "message": "Yo."
+      "message": "Yo.",
+      "timeStamp": "3:00pm"
     }
   ]
 }
