@@ -68,7 +68,7 @@ const messages = {
                 let messageId = message.id;
                 let messageTimeStamp = message.timeStamp;
                 let messageUser = `${message.userId}`;
-                let loggedInUser = sessionStorage.getItem('userId');
+                let loggedInUser = sessionStorage.getItem("userId");
 
                 let messageElement = domComponents.createDomElement({
 

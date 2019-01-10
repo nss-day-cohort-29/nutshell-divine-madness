@@ -88,7 +88,7 @@ const eventListeners = {
             dataSet : "messages",
             fetchType : "POST",
             dataBaseObject : {
-                userId : sessionStorage.getItem('userId'),
+                userId : sessionStorage.getItem("userId"),
                 message : messageInput.value,
                 timeStamp : timeStamp
             }
