@@ -1,5 +1,6 @@
 import events from "./events";
 import nomadData from "./nomadData";
+import news from "./news"
 console.log("I'm working")
 
 // template for object to pass into nomadData.connectToData() if you are doing a GET
@@ -45,3 +46,6 @@ console.log("I'm working")
 // }
 
 // nomadData.connectToData(fetchTest3)
+
+news.save();
+news.allSaved();

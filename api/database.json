@@ -7,13 +7,41 @@
       "password": "yomama"
     }
   ],
-  "news": [
+  "newsItems": [
     {
       "id": 1,
       "userId": 2,
       "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
       "title": "Wormholes Allow Information to Escape Black Holes",
       "synopsis": "Check out this recent discovery about workholes"
+    },
+    {
+      "userId": 1,
+      "url": "www.fuckoff.com",
+      "title": "Read above",
+      "synopsis": "blah blah blah",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "url": "www.fuckoff.com",
+      "title": "Read above",
+      "synopsis": "blah blah blah",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "url": "www.fuckoff.com",
+      "title": "Read above",
+      "synopsis": "blah blah blah",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "url": "www.fuckoff.com",
+      "title": "Read above",
+      "synopsis": "blah blah blah",
+      "id": 5
     }
   ],
   "events": [
@@ -40,6 +68,27 @@
       "eventTime": "3:00pm",
       "eventLocation": "Vegas",
       "id": 3
+    },
+    {
+      "userId": 1,
+      "url": "www.fuckoff.com",
+      "title": "Read above",
+      "synopsis": "blah blah blah",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "url": "www.fuckoff.com",
+      "title": "Read above",
+      "synopsis": "blah blah blah",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "url": "www.fuckoff.com",
+      "title": "Read above",
+      "synopsis": "blah blah blah",
+      "id": 6
     }
   ],
   "tasks": [
