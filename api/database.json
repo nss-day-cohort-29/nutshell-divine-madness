@@ -22,32 +22,7 @@
       "synopsis": "Check out this recent discovery about workholes"
     }
   ],
-  "events": [
-    {
-      "id": 1,
-      "userId": 1,
-      "eventName": "toga party",
-      "eventDate": "2-12",
-      "eventTime": "3:00pm",
-      "eventLocation": "Vegas"
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "eventName": "another toga party",
-      "eventDate": "2-15",
-      "eventTime": "3:00pm",
-      "eventLocation": "Vegas"
-    },
-    {
-      "userId": 1,
-      "eventName": "yet another toga party",
-      "eventDate": "2-12",
-      "eventTime": "3:00pm",
-      "eventLocation": "Vegas",
-      "id": 3
-    }
-  ],
+  "events": [],
   "tasks": [
     {
       "id": 1,

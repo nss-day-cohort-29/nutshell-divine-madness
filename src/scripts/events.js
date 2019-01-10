@@ -2,33 +2,51 @@
 
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
+import eventListeners from "./eventListeners";
 
 const events = {
-  getAllEvents() {
-    const getFetchObject = {
-      "dataSet": "events",
-      "fetchType": "GET",
-      "dataBaseObject": "",
-      "embedItem": "?_embed=events"
-    };
-
-    nomadData.connectToData(getFetchObject)
+  showEventForm () {
+    const output = document.querySelector("#output");
+    const eventForm = domComponents.createEventInput();
+    output.appendChild(eventForm);
+    const eventLog = document.createElement("article")
+    eventLog.setAttribute("id", "eventLog");
+    output.appendChild(eventLog);
+  },
+  appendUserEvents() {
+    const eventLog = document.querySelector("#eventLog");
+    nomadData.connectToData({
+      dataSet: "events",
+      fetchType: "GET",
+      dataBaseObject: {
+        userId: sessionStorage.getItem("userId")
+        },
+      embedItem: "?_embed=events"
+    })
     .then(parsedResponse => {
       let docuFrag = document.createDocumentFragment();
-      let output = document.querySelector(".output");
       parsedResponse.forEach(event => {
-        const eventItem = domComponents.createEventsElement(event);
+        while (eventLog.firstChild) {
+          eventLog.removeChild(eventLog.firstChild)
+        };
+        const eventItem = domComponents.createEventItem(event);
+
         docuFrag.appendChild(eventItem);
       });
-      output.appendChild(docuFrag);
+      eventLog.appendChild(docuFrag);
     });
   },
-  saveEvent() {
-    nomadData.connectToData({})
-    .then();
+  deleteEvent() {
+    const saveButton = document.querySelector("#saveEvent");
+    saveButton.addEventListener("click", eventListeners.handleEventSaveButton);
+  },
+  editEvent() {
+
   }
 };
 
-events.getAllEvents();
+events.showEventForm();
+events.appendUserEvents();
+events.deleteEvent();
 
 export default events;
