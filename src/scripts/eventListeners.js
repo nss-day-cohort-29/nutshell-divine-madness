@@ -20,7 +20,7 @@ const eventListeners = {
             dataSet: "events",
             fetchType: "POST",
             dataBaseObject: {
-                userId: sessionStorage.getItem("userId"),
+                userId: Number(sessionStorage.getItem("userId")),
                 eventName: eventObject.eventName,
                 eventDate: eventObject.eventDate,
                 eventTime: eventObject.eventTime,
@@ -47,9 +47,21 @@ const eventListeners = {
     },
     handleEventEditButton() {
         const idToEdit = event.target.id.split("--")[1];
-        const eventObject =
-        domComponents.createEventEditInput(idToEdit, )
+        nomadData.connectToData({
+            dataSet: "events",
+            fetchType: "GET",
+            dataBaseObject: {
+              userId: Number(sessionStorage.getItem("userId")),
+              },
+            embedItem: `/${idToEdit}`
+// Above is a bit of a hacky solution in order to get a specific event. Maybe need to add specific get function to nomadData
+          })
+        .then(parsedResponse => {
+        let thing = parsedResponse.eventName;
+        events.createEventEditInput(idToEdit, parsedResponse);
+        });
     },
+
     handleEventUpdateButton() {
 
     },
