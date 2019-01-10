@@ -24,28 +24,36 @@
   ],
   "events": [
     {
-      "id": 1,
-      "userId": 1,
-      "eventName": "toga party",
-      "eventDate": "2-12",
-      "eventTime": "3:00pm",
-      "eventLocation": "Vegas"
+      "userId": "1",
+      "eventName": "test",
+      "eventDate": "2019-01-08",
+      "eventTime": "11:11",
+      "eventLocation": "test",
+      "id": 1
     },
     {
-      "id": 2,
-      "userId": 1,
-      "eventName": "another toga party",
-      "eventDate": "2-15",
-      "eventTime": "3:00pm",
-      "eventLocation": "Vegas"
+      "userId": "1",
+      "eventName": "test2",
+      "eventDate": "2019-01-08",
+      "eventTime": "11:11",
+      "eventLocation": "test2",
+      "id": 2
     },
     {
-      "userId": 1,
-      "eventName": "yet another toga party",
-      "eventDate": "2-12",
-      "eventTime": "3:00pm",
-      "eventLocation": "Vegas",
-      "id": 3
+      "userId": "1",
+      "eventName": "test4",
+      "eventDate": "2019-01-08",
+      "eventTime": "11:11",
+      "eventLocation": "test4",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "eventName": "test5",
+      "eventDate": "2019-01-08",
+      "eventTime": "11:11",
+      "eventLocation": "test5",
+      "id": 5
     }
   ],
   "tasks": [
