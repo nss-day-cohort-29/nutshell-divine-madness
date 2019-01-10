@@ -99,7 +99,7 @@ const domComponents = {
     locationFieldset.appendChild(locationInput);
 
     const updateButton = this.createDomElement({elementType: "button", content: "Update", attributes: {type: "button", id: "submitEdits"}});
-    updateButton.addEventListener("click", eventListeners.handleEventUpdateButton);
+    // updateButton.addEventListener("click", eventListeners.handleEventUpdateButton);
 
     formContainer.appendChild(nameFieldset);
     formContainer.appendChild(dateFieldset);
