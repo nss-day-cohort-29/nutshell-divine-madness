@@ -30,7 +30,6 @@ const events = {
           eventLog.removeChild(eventLog.firstChild)
         };
         const eventItem = domComponents.createEventItem(event);
-
         docuFrag.appendChild(eventItem);
       });
       eventLog.appendChild(docuFrag);

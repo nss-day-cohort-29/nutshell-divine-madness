@@ -47,6 +47,14 @@ const eventListeners = {
             events.appendUserEvents();
         });
     }
+    handleEventEditButton() {
+        const idToEdit = event.target.id.split("--")[1];
+
+
+    },
+    handleEventUpdateButton() {
+
+    }
 };
 
 export default eventListeners
