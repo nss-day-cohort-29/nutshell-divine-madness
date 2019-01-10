@@ -36,18 +36,17 @@ const domComponents = {
       <h1 class = "t-border">Nomads</h1>
         <section class = "form">
           <form action="" class = registerForm>
-            <input type="text" placeholder = "Name" required>
-            <input type="email" placeholder = "Email" required>
-            <input type="text" placeholder = "Username" required>
-            <input type="password" placeholder = "Password" required>
-            <input type="password" placeholder = "Confirm Password" required>
+            <input id = "regUserName" type="text" placeholder = "Username" required>
+            <input id = "regEmail" type="email" placeholder = "Email" required>
+            <input id = "regPassword" type="password" placeholder = "Password" required>
+            <input id = "regConfirmPassword" type="password" placeholder = "Confirm Password" required>
             <button>Create Account</button>
             <p class = "message">Already a Registered Member? <a href = "#">LogIn </a></p>
           </form>
           <form class = "login-form">
-            <input type="text" placeholder = "Username">
-            <input type="password" placeholder = "Password">
-            <button>Login</button>
+            <input id = "userNameVal" type="text" placeholder = "Username">
+            <input id = "passwordVal" type="password" placeholder = "Password">
+            <button id = "logIn">Login</button>
             <button id = "modalButton">Nomads Mission</button>
             <p class = "message">Don't have an account? <a href = "#">Register</a></p>
           </form>
@@ -70,14 +69,8 @@ const domComponents = {
         `
         $("#output").html(formHTML)
         eventListeners.modalDisplayAnimation()
-        //this will target the output article container
-        // let logInPage = document.querySelector("#output")
-        // logInPage.innerHTML = formHTML
-        // $(".login-page").html(formHTML)
-        /*applying toggleInputForms event listener to register link on bottom of log
-        in form and on the login link of the register page*/
-        // eventListeners.toggleInputForms()
-        
+        $("#logIn").click(eventListeners.userLogin)
+        $("#logIn").click(eventListeners.loadDashboard)
       }
   }
 

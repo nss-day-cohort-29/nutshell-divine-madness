@@ -143,10 +143,10 @@ li a {
 }
 #logo > a{
   font-size:20px;
-  color:rgb(214, 191, 17);
+  color:rgb( 191, 162, 44);
 }
 .active{
-  background:rgb(214, 191, 17)
+  background:rgb( 191, 162, 44);
 }
 /* Change the link color to #111 (black) on hover */
 li a:hover {
@@ -214,7 +214,7 @@ NOMAD MISSION MODAL WINDOW
 .modal-header {
   padding: 2px 16px;
   background-color: rgb(81, 78, 78);
-  color: rgb(214, 191, 17);
+  color: rgb( 191, 162, 44);
 }
 
 .modal-body {padding: 2px 16px;}
@@ -222,5 +222,5 @@ NOMAD MISSION MODAL WINDOW
 .modal-footer {
   padding: 2px 16px;
   background-color: rgb(81, 78, 78);
-  color: rgb(214, 191, 17);
+  color: rgb( 191, 162, 44);
 }

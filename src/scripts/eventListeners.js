@@ -1,31 +1,91 @@
+import nomadData from "./nomadData";
+import domComponents from "./domComponents";
+
 // import domComponents from "./domComponents";
 
 const eventListeners = {
-  modalDisplayAnimation(){
-        // target  modal
-    let modal = document.getElementById("nomadModal");
-    // target modal to open modal
-    let btn = document.getElementById("modalButton");
+    modalDisplayAnimation(){
+      let modal = document.getElementById("nomadModal");
 
-    // Get the <span> element that closes the modal
-    let span = document.getElementsByClassName("close")[0];
+      // target modal to open it
+      let btn = document.getElementById("modalButton");
 
-    // When the user clicks the button, open the modal
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
+      // Get the <span> element that closes the modal
+      let span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
         modal.style.display = "none";
       }
-    }
-    $(".message a").click(function(){
-      $("form").animate({height: "toggle", opacity: "toggle"}, "slow")
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      $(".message a").click(function(){
+        $("form").animate({height: "toggle", opacity: "toggle"}, "slow")
+        })
+    },
+    /*===============================================================================================================
+    LOGIN FORM: user enters Username and Password. when User clicks login, the input field and NOMADS header disappear
+    and the user will be displayed the "Dashboard" and the navigation bar. Upon login, sessionStorage is started. In the Console
+    you will be able to see Who is logged in and what their userId is. ie. 1,2,3,4 etc.
+    =================================================================================================================*/
+    userLogin(){
+      let logInVal = document.querySelector("#userNameVal").value
+      let passwordVal = document.querySelector("#passwordVal").value
+      //get to compare
+      nomadData.connectToData({
+
+        "dataSet" : "users",
+        "fetchType" : "GET",
+        "embedItem" : "?_embed=users"
+
+    }).then(parsedUsers => {
+
+        parsedUsers.forEach(user => {
+              /*If login credentials match those in database.json. We want the user to be displayed their "dashboad"
+              and navigation bar. So we need to set display to none and invoke the function - createNavBar()*/
+            if(logInVal === user.userName && passwordVal === user.password) {
+              //hides NOMAD heading
+              $(".t-border").hide()
+              //hides the form
+              $(".form").hide()
+              //displays navigatin bar
+              domComponents.createNavBar()
+              //session storage
+              sessionStorage.setItem("userId", user.id)
+              let userId = sessionStorage.getItem("userId")
+              //console.log verifying that credentials match and user is logged in
+              console.log("logged in as" + " " + user.userName)
+              console.log("your user ID is: " + userId)
+            }else if(logInVal !== user.userName && passwordVal !== user.password){
+              alert("Register an account")
+            }
+          });
+        })
+      },
+    userRegistration(){
+      let regUserName = document.querySelector("#regUserName").value
+      let regEmail = document.querySelector("#regUserName").value
+      let regPassword = document.querySelector("#regUserName").value
+      let regConfirmPassword = document.querySelector("#regUserName").value
+
+      nomadData.connectToData({
+
+          "dataSet" : "users",
+          "fetchType" : "POST",
+          "dataBaseObject" : {
+            "Id": 1,
+            "userName":"userName",
+            "email":"email",
+            "password":"password"
+          }
       })
     }
   }
