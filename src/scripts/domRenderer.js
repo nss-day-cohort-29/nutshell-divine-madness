@@ -1,6 +1,7 @@
-import events from "./events";
-import nomadgit Data from "./nomadData";
-import messages from "./messages";
+// import events from "./events";
+import nomadData from "./nomadData";
+// import messages from "./messages";
+import friends from "./friends";
 
 
 // messages.createMessageBoard();
@@ -34,5 +35,7 @@ function userLogin () {
 userLogin();
 
 function loadDashboard (userId) {
-    console.log(`Thanks for passing the userId.  The userId is ${userId}`)
+    // console.log(`Thanks for passing the userId.  The userId is ${userId}`)
 }
+
+friends.checkCurrentUsersFriends()

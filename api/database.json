@@ -8,27 +8,36 @@
     },
     {
       "id": 2,
-<<<<<<< HEAD
-      "userName": "Bob",
-      "email": "dude@dude.com",
+      "userName": "Lorenzo",
+      "email": "dafud@msn.com",
       "password": "123"
     },
     {
-      "id": 1,
+      "id": 3,
+      "userName": "Jaleandro",
+      "email": "rad@rad.com",
+      "password": "neato"
+    },
+    {
+      "id": 4,
       "userName": "Sally",
-      "email": "bird@msn.com",
-      "password": "Sally123"
-    }
-  ],
-  "newsItems": [
-=======
-      "userName": "Lorenzo",
-      "email": "dlskfj@wh.com",
-      "password": "yomama"
+      "email": "Sally@game.com",
+      "password": "1984"
+    },
+    {
+      "id": 5,
+      "userName": "Julia Gulia",
+      "email": "knifefighter@explorer.com",
+      "password": "word"
+    },
+    {
+      "id": 6,
+      "userName": "Jimbo Gimbo",
+      "email": "James@yahoo.com",
+      "password": "pass"
     }
   ],
   "newsitems": [
->>>>>>> master
     {
       "id": 1,
       "userId": 2,
@@ -76,11 +85,41 @@
     {
       "id": 1,
       "userId": 1,
-      "otherFriendId": 3
+      "otherFriendId": 1
     },
     {
       "id": 2,
-      "userId": 2,
+      "userId": 1,
+      "otherFriendId": 2
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "otherFriendId": 3
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "otherFriendId": 4
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "otherFriendId": 5
+    },
+    {
+      "id": 7,
+      "userId": 4,
+      "otherFriendId": 6
+    },
+    {
+      "id": 8,
+      "userId": 4,
+      "otherFriendId": 5
+    },
+    {
+      "id": 9,
+      "userId": 4,
       "otherFriendId": 1
     }
   ],

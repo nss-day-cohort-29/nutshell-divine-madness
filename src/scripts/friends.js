@@ -2,9 +2,11 @@ import nomadData from "./nomadData"
 
 const friends = {
 
-  buildFriendPage () {
+  
+  checkCurrentUsersFriends () {
+    const currentUser = 4;
 // PULL FROM FRIENDS JSON-------------------------
-    let friendIntersectionTable = {
+    const friendIntersectionTable = {
     "dataSet" : "friends",
     "fetchType" : "GET",
     "dataBaseObject" : "",
@@ -15,22 +17,22 @@ nomadData.connectToData(friendIntersectionTable)
   console.log(fromFriends)
   fromFriends.forEach(friendData => {
     // console.log(friendData)
+    if (friendData.userId === currentUser) {
+      // PULL FROM USERS JSON -----------------------
+          const userInfo = {
+            "dataSet" : "users",
+            "fetchType" : "GET",
+            "dataBaseObject" : "",
+            "embedItem" : "?_embed=users"
+          }
+          nomadData.connectToData(userInfo)
+          .then(fromUserData => {
+            console.log(fromUserData[friendData.otherFriendId].userName)
+          })
+      
+    }
   })
 })
-// PULL FROM USERS JSON -----------------------
-    let userInfo = {
-      "dataSet" : "users",
-      "fetchType" : "GET",
-      "dataBaseObject" : "",
-      "embedItem" : "?_embed=events"
-    }
-    nomadData.connectToData(userInfo)
-    .then(fromUserData => {
-      console.log(fromUserData)
-      fromUserData.forEach(userData => {
-        // console.log(userData)
-      })
-    })
     
 
   
