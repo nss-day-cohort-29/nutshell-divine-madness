@@ -1,4 +1,4 @@
-import events from "./events";
+// import events from "./events";
 import nomadData from "./nomadData";
 import news from "./news"
 console.log("I'm working")

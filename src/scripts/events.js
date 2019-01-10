@@ -37,8 +37,8 @@ const events = {
   }
 };
 
-events.showEventForm();
-events.appendUserEvents();
-events.deleteEvent();
+// events.showEventForm();
+// events.appendUserEvents();
+// events.deleteEvent();
 
 export default events;

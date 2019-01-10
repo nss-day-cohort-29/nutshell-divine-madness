@@ -35,7 +35,7 @@
       "synopsis": "blah blah blah",
       "id": 3
     },
-    
+
     {
       "userId": 1,
       "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
@@ -62,7 +62,6 @@
       "id": 2
     },
     {
-<<<<<<< HEAD
       "userId": 1,
       "eventName": "yet another toga party",
       "eventDate": "2-12",
@@ -90,22 +89,6 @@
       "title": "Read above",
       "synopsis": "blah blah blah",
       "id": 6
-=======
-      "userId": "1",
-      "eventName": "test4",
-      "eventDate": "2019-01-08",
-      "eventTime": "11:11",
-      "eventLocation": "test4",
-      "id": 4
-    },
-    {
-      "userId": "1",
-      "eventName": "test5",
-      "eventDate": "2019-01-08",
-      "eventTime": "11:11",
-      "eventLocation": "test5",
-      "id": 5
->>>>>>> ff75cacc9c3c568a40467302ea8935b1919e0f19
     }
   ],
   "tasks": [
