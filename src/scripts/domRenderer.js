@@ -7,8 +7,7 @@ import eventListeners from "./eventListeners";
 //BUILDS NAIGATIONBAR//
 // domComponents.createNavBar()
 domComponents.buildLoginForm()
-// eventListeners.toggleInputForms()
-
+$("modalButton").click(eventListeners.modalDisplayAnimation)
 
 // console.log("I'm working")
 

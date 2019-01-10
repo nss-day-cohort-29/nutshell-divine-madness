@@ -34,7 +34,7 @@ const domComponents = {
       //using string interpolation to create the form
       let formHTML = `
       <h1 class = "t-border">Nomads</h1>
-        <div class = "form">
+        <section class = "form">
           <form action="" class = registerForm>
             <input type="text" placeholder = "Name" required>
             <input type="email" placeholder = "Email" required>
@@ -45,34 +45,39 @@ const domComponents = {
             <p class = "message">Already a Registered Member? <a href = "#">LogIn </a></p>
           </form>
           <form class = "login-form">
-            <input type="text" placeholder = "Username" required>
-            <input type="password" placeholder = "Password" required>
+            <input type="text" placeholder = "Username">
+            <input type="password" placeholder = "Password">
             <button>Login</button>
             <button id = "modalButton">Nomads Mission</button>
             <p class = "message">Don't have an account? <a href = "#">Register</a></p>
           </form>
-        </div>
-        <div id="nomadModal" class="modal">
+        </section>
+        <section id="nomadModal" class="modal">
         <!-- Modal content -->
-          <div class="modal-content">
-            <div class="modal-header">
+          <section class="modal-content">
+            <section class="modal-header">
               <span class="close">&times;</span>
               <h2>The Purpose Behind Nomads</h2>
-            </div>
-            <div class="modal-body">
+            </section>
+            <section class="modal-body">
               <p>As outdoorsman, environmentalist, and filmmakers continue to grow. So do the adventurous spirits of those who embrace conscious consumerism and sustainable living. The purpose is to make a point of plugging into modern life and connecting with your fellow nomads from anywhere you may be. Share your location, Meet up, Exchange stories, Create relationships with people who have similar interest and enhance your traveling experience with nomads. What are you waiting for? 
-            </div>
-            <div class="modal-footer">
+            </section>
+            <section class="modal-footer">
               <h3>Created By: Divine Madness&copy</h3>
-            </div>
-          </div>
-        </div>
+            </section>
+          </section>
+        </section>
         `
-        eventListeners.toggleInputForms()
+        $("#output").html(formHTML)
+        eventListeners.modalDisplayAnimation()
         //this will target the output article container
-        let logInPage = document.querySelector("#output")
-        logInPage.innerHTML = formHTML
+        // let logInPage = document.querySelector("#output")
+        // logInPage.innerHTML = formHTML
         // $(".login-page").html(formHTML)
+        /*applying toggleInputForms event listener to register link on bottom of log
+        in form and on the login link of the register page*/
+        // eventListeners.toggleInputForms()
+        
       }
   }
 

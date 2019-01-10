@@ -1,3 +1,5 @@
+// import domComponents from "./domComponents";
+
 const eventListeners = {
   modalDisplayAnimation(){
         // target  modal
@@ -22,12 +24,10 @@ const eventListeners = {
         modal.style.display = "none";
       }
     }
-  },
-  toggleInputForms(){
     $(".message a").click(function(){
       $("form").animate({height: "toggle", opacity: "toggle"}, "slow")
       })
+    }
   }
-}
 
 export default eventListeners
