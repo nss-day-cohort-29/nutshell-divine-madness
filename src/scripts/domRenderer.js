@@ -7,7 +7,7 @@ import eventListeners from "./eventListeners";
 //BUILDS NAIGATIONBAR//
 // domComponents.createNavBar()
 domComponents.buildLoginForm()
-eventListeners.toggleInputForms()
+// eventListeners.toggleInputForms()
 
 
 // console.log("I'm working")
@@ -55,9 +55,9 @@ eventListeners.toggleInputForms()
 // }
 
 // nomadData.connectToData(fetchTest3)
-import events from "./events";
+// import events from "./events";
 import nomadData from "./nomadData";
-import messages from "./messages";
+// import messages from "./messages";
 
 
 // messages.createMessageBoard();
@@ -79,11 +79,11 @@ function userLogin () {
 
             if (userName === user.userName && password === user.password) {
 
-                sessionStorage.setItem('userId', user.id)
+                sessionStorage.setItem("'userId'", user.id)
             }
         });
     })
-    let userId = sessionStorage.getItem('userId');
+    let userId = sessionStorage.getItem("'userId'");
     loadDashboard(userId)
     // console.log("UserId = ", sessionStorage.getItem('userId'))
 }

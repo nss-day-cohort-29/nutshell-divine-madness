@@ -64,7 +64,8 @@ const messages = {
 
                     "elementType" : "p",
                     "cssClass" : "message",
-                    "content" : `${userName}:  ${messageText}`
+                    "content" : `${userName}:  ${messageText}`,
+                    "time":`${timeStamp}`
 
                 }), messageInput)
             });

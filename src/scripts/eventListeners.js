@@ -1,14 +1,14 @@
 const eventListeners = {
   modalDisplayAnimation(){
         // target  modal
-    let modal = document.getElementById('nomadModal');
+    let modal = document.getElementById("nomadModal");
     // target modal to open modal
     let btn = document.getElementById("modalButton");
 
     // Get the <span> element that closes the modal
     let span = document.getElementsByClassName("close")[0];
 
-    // When the user clicks the button, open the modal 
+    // When the user clicks the button, open the modal
     btn.onclick = function() {
       modal.style.display = "block";
     }
