@@ -34,13 +34,6 @@ const events = {
       });
       eventLog.appendChild(docuFrag);
     });
-  },
-  deleteEvent() {
-    const saveButton = document.querySelector("#saveEvent");
-    saveButton.addEventListener("click", eventListeners.handleEventSaveButton);
-  },
-  editEvent() {
-
   }
 };
 
