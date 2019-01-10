@@ -40,7 +40,7 @@ const domComponents = {
             <input id = "regEmail" type="email" placeholder = "Email" required>
             <input id = "regPassword" type="password" placeholder = "Password" required>
             <input id = "regConfirmPassword" type="password" placeholder = "Confirm Password" required>
-            <button>Create Account</button>
+            <button id = "registerButton">Create Account</button>
             <p class = "message">Already a Registered Member? <a href = "#">LogIn </a></p>
           </form>
           <form class = "login-form">
@@ -71,6 +71,9 @@ const domComponents = {
         eventListeners.modalDisplayAnimation()
         $("#logIn").click(eventListeners.userLogin)
         $("#logIn").click(eventListeners.loadDashboard)
+
+        $("#registerButton").click(eventListeners.userRegistration)
+
       }
   }
 
