@@ -53,7 +53,35 @@
       "id": 1,
       "userId": 1,
       "task": "save world",
-      "expectedCompletionDate": "2-12",
+      "expectedCompletionDate": "2019-01-10",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "task": "destroy world",
+      "expectedCompletionDate": "2019-01-11",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "task": "save world",
+      "expectedCompletionDate": "2019-01-12",
+      "complete": false
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "task": "destroy world",
+      "expectedCompletionDate": "2019-01-13",
+      "complete": false
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "task": "save world",
+      "expectedCompletionDate": "2019-01-14",
       "complete": false
     }
   ],
