@@ -50,22 +50,21 @@ const eventListeners = {
               /*If login credentials match those in database.json. We want the user to be displayed their "dashboad"
               and navigation bar. So we need to set display to none and invoke the function - createNavBar()*/
             if(logInVal === user.userName && passwordVal === user.password) {
-                //hides NOMAD heading
-                $(".t-border").hide()
-                //hides the form
-                $(".form").hide()
-                //displays navigatin bar
-                domComponents.createNavBar()
-                //session storage
-                sessionStorage.setItem("userId", user.id)
-                let userId = sessionStorage.getItem("userId")
-                //console.log verifying that credentials match and user is logged in
-                console.log("logged in as" + " " + user.userName)
-                console.log("your user ID is: " + userId)
-            }else if(logInVal !== user.userName && passwordVal !== user.password){
-                alert("Register an account")
-            }
-            });
+                    //hides NOMAD heading
+                    $(".t-border").hide()
+                    //hides the form
+                    $(".form").hide()
+                    //displays navigatin bar
+                    domComponents.createNavBar()
+                    //session storage
+                    sessionStorage.setItem("userId", user.id)
+                    let userId = sessionStorage.getItem("userId")
+                    //console.log verifying that credentials match and user is logged in
+                    console.log("logged in as" + " " + user.userName)
+                    console.log("your user ID is: " + userId)
+                
+                }
+            })
         })
     },
     userRegistration(){
@@ -81,9 +80,15 @@ const eventListeners = {
                 "dataBaseObject" : {
                     "userName": regUserName,
                     "email": regEmail,
-                    "regPassword": regPassword
+                    "password": regPassword
                 }
             })
+                //hides NOMAD heading
+                $(".t-border").hide()
+                //hides the form
+                $(".form").hide()
+                //displays navigatin bar
+                domComponents.createNavBar()
         },
     handleEventSaveButton() {
         const nameInputted = document.querySelector("#eventName").value;
@@ -129,7 +134,7 @@ const eventListeners = {
     },
     handleEventEditButton() {
         const idToEdit = event.target.id.split("--")[1];
-        const eventObject =
+        // const eventObject =
         domComponents.createEventEditInput(idToEdit, )
     },
     handleEventUpdateButton() {
@@ -230,8 +235,4 @@ const eventListeners = {
     }
 };
 
-<<<<<<< HEAD
-export default eventListeners
-=======
 export default eventListeners;
->>>>>>> master

@@ -2,12 +2,12 @@
 
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
-import eventListeners from "./eventListeners";
+// import eventListeners from "./eventListeners";
 
 const events = {
   showEventForm () {
     const output = document.querySelector("#output");
-    const eventForm = domComponents.createEventInput();
+    //const eventForm = domComponents.createEventInput();
     output.appendChild(eventForm);
     const eventLog = document.createElement("article")
     eventLog.setAttribute("id", "eventLog");
@@ -37,8 +37,8 @@ const events = {
   }
 };
 
-events.showEventForm();
-events.appendUserEvents();
-events.deleteEvent();
+// events.showEventForm();
+// events.appendUserEvents();
+// events.deleteEvent();
 
 export default events;
