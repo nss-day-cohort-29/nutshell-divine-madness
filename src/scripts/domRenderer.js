@@ -1,5 +1,11 @@
-import events from "./events";
+// import events from "./events";
 import nomadData from "./nomadData";
+<<<<<<< HEAD
+// import messages from "./messages";
+import friends from "./friends";
+import eventListeners from "./eventListeners";
+=======
+>>>>>>> master
 import news from "./news"
 console.log("I'm working")
 
@@ -50,7 +56,11 @@ console.log("I'm working")
 // news.save();
 // news.allSaved();
 // news.getNews();
+<<<<<<< HEAD
+// news.newsElementCreator();
+=======
 news.newsElementCreator();
+>>>>>>> master
 
 import messages from "./messages";
 
@@ -86,5 +96,12 @@ function userLogin () {
 userLogin();
 
 function loadDashboard (userId) {
+<<<<<<< HEAD
+    // console.log(`Thanks for passing the userId.  The userId is ${userId}`)
+}
+
+friends.defineCurrentUsersFriends()
+=======
     console.log(`Thanks for passing the userId.  The userId is ${userId}`)
 }
+>>>>>>> master
