@@ -5,9 +5,15 @@
       "userName": "Hernando",
       "email": "dlskfj@wh.com",
       "password": "yomama"
+    },
+    {
+      "id": 2,
+      "userName": "Lorenzo",
+      "email": "dlskfj@wh.com",
+      "password": "yomama"
     }
   ],
-  "newsItems": [
+  "newsitems": [
     {
       "id": 1,
       "userId": 2,
@@ -42,6 +48,125 @@
       "title": "Read above",
       "synopsis": "blah blah blah",
       "id": 5
+    },
+    {
+      "userId": 1,
+      "url": "www.fuckoff.com",
+      "title": "Read above",
+      "synopsis": "blah blah blah",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "url": "www.fuckoff.com",
+      "title": "Read above",
+      "synopsis": "blah blah blah",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "url": "www.fuckoff.com",
+      "title": "Read above",
+      "synopsis": "blah blah blah",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "url": "www.fuckoff.com",
+      "title": "Read above",
+      "synopsis": "blah blah blah",
+      "id": 21
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 22
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 23
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 24
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 25
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 26
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 27
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 28
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 29
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 30
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 31
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 32
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 33
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 34
     }
   ],
   "events": [
@@ -112,7 +237,25 @@
       "id": 1,
       "userId": 1,
       "message": "Yo.",
-      "timeStamp": "3:00pm"
+      "timeStamp": "3:00:00pm"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "message": "Sup.",
+      "timeStamp": "3:01:00pm"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "message": "NM.",
+      "timeStamp": "3:02:00pm"
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "message": "Cool.",
+      "timeStamp": "3:03:00pm"
     }
   ]
 }

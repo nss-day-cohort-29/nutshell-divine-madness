@@ -1,4 +1,5 @@
 import nomadData from "./nomadData";
+import domComponents from "./domComponents";
 //pull from api then display to dom.
 // create save button send saved articles to Json
 // create button to pull all saved materials in json.
@@ -7,54 +8,80 @@ const news = {
 
     getNews(){
         //pull then send pulled data to dom
-    
-            return fetch("https://data.nashville.gov/resource/xbru-cfzi.json?$$app_token=lfAtpDX8XuYvee5T9U6FnVpFP",
-            {Authorization: {Bearer: "lfAtpDX8XuYvee5T9U6FnVpFP"}})
-            .then(newsContainer => newsItems.json());
-
-            
-          },
-
-
-    save(){
+       return fetch("http://jsonplaceholder.typicode.com/posts/1")
+            .then(newsItems => newsItems.json())
+    },
+    save() {
         //This is functioning and writing to JSON.
-        const testnewsObj = {
+        this.getNews().then(post =>{
+        const newsObject = {
                 "dataSet" : "newsItems",
                 "fetchType" : "POST",
                 "dataBaseObject" : {
                     "userId": 1,
-                    "url": "www.fuckoff.com",
-                    "title": "Read above",
+                    "url": `${post.title}`,
+                    "title": `${post.body}`,
                     "synopsis": "blah blah blah"
                 }
-                
         }
-        nomadData.connectToData(testnewsObj);
-        
+        // console.log(testnewsObj);
+        nomadData.connectToData(newsObject);
+    })
     },
-    
-    allSaved(){
 
-        const testnewsObj1 = {
+    allSaved(){
+        nomadData.connectToData(testnewsObj)
+    },
+
+    deleteDB(){
+        
+
+    },
+
+    newsElementCreator(){
+        const newsContainer = document.querySelector("#output")
+        let newsCreatorKey = {
             "dataSet" : "newsItems",
             "fetchType" : "GET",
             "dataBaseObject" : "",
-            "embedItem" : "?_embed=events"
-            }
+            "embedItem" : "?_embed=newsItems"
+        }
+        nomadData.connectToData(newsCreatorKey)
+        .then (dbGrabs => {
+            dbGrabs.forEach(dbGrab =>  {
+                console.log(dbGrab);
+                newsContainer.appendChild(domComponents.createDomElement({
+                    elementType: "button",
+                    content: "SAVE BITCH",
+                    cssClass: "newsSaveButton"    
+                }))
+                newsContainer.appendChild(domComponents.createDomElement({
+                    elementType: "h2",
+                    content: dbGrab.title,
+                    cssClass: "newsTitle"    
+                }))
+                newsContainer.appendChild(domComponents.createDomElement({
+                    elementType: "p",
+                    content: dbGrab.synopsis,        
+                    cssClass: "newsBody"   
+                }))
+                newsContainer.appendChild(domComponents.createDomElement({
+                    elementType: "a",
+                    content: dbGrab.url,        
+                    cssClass: "newsURL",
+                    attributes:{
+                        href:`${dbGrab.url}`
+                    }   
+                }))
+                
+            })
 
-        nomadData.connectToData(testnewsObj1)
-        .then(testnews => console.log(testnews))
+        })
+        
+        // const NewsTest = domComponents.createDomElement("h2",testPass,"testObj",null);
+        // output.appendChild(NewsTest);
         
 
-    },
-
-    delete(){
-
-
     }
-
-
-
 }
-
 export default news
