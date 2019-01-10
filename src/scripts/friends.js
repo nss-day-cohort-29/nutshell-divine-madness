@@ -1,5 +1,6 @@
 import nomadData from "./nomadData"
 import domComponents from "./domComponents";
+import eventListeners from "./eventListeners";
 
 const friends = {
 
@@ -62,6 +63,10 @@ loadCurrentUsersFriends (friend) {
       deleteFriend.classList.add(`delete-friend-${friend}`)
       deleteFriend.textContent = "DELETE";
       friendContainer.appendChild(deleteFriend);
+      deleteFriend.addEventListener("click", () => {
+        eventListeners.friendsDeleteFriend()
+      })
+
       let friendDomBuilder = [];
       nomadData.connectToData(userInfo)
       .then(fromUserData => {

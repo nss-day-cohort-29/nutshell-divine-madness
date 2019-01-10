@@ -2,6 +2,7 @@
 import nomadData from "./nomadData";
 // import messages from "./messages";
 import friends from "./friends";
+import eventListeners from "./eventListeners";
 
 
 // messages.createMessageBoard();
