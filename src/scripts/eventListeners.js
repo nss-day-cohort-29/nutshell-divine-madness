@@ -4,7 +4,8 @@ import events from "./events";
 
 const eventListeners = {
   friendsDeleteFriend () {
-    console.log(event.target)
+    console.log(event.target);
+    
   },
     handleEventSaveButton() {
         const nameInputted = document.querySelector("#eventName").value;
