@@ -88,7 +88,10 @@ loadCurrentUsersFriends (friend) {
                   // console.log(event.eventName);
                   const eventHolder = {
                     elementType: "p",
-                    content: `Your fellow nomads upcoming event: ${event.eventName} on ${event.eventDate}`
+                    content: `Your fellow nomads upcoming event: ${event.eventName} on ${event.eventDate}`,
+                    attributes: {
+                      id: `event-${event.id}`,
+                    }
                   }
                   friendDomBuilder.push(eventHolder)
                 }
@@ -103,7 +106,10 @@ loadCurrentUsersFriends (friend) {
                   console.log(userSpecificArticles.title)
                   const articleHolder = {
                     elementType: "p",
-                    content: userSpecificArticles.title
+                    content: userSpecificArticles.title,
+                    attributes: {
+                      id: `article-${userSpecificArticles.id}`,
+                    }
                   }
                   friendDomBuilder.push(articleHolder)
                 }
