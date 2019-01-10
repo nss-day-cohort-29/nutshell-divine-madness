@@ -2,11 +2,12 @@ const nomadData = {
 
     connectToData(fetchObject) {
 
-    let dataSet = fetchObject.dataSet;
-    let embedItem = fetchObject.embedItem;
-    let fetchType = fetchObject.fetchType;
-    let dataBaseObject = fetchObject.dataBaseObject;
-    let putId = fetchObject.putId;
+      let dataSet = fetchObject.dataSet;
+      let embedItem = fetchObject.embedItem;
+      let fetchType = fetchObject.fetchType;
+      let dataBaseObject = fetchObject.dataBaseObject;
+      let putId = fetchObject.putId;
+      let deleteId = fetchObject.deleteId;
 
         if (fetchType == "GET") {
 
@@ -35,6 +36,15 @@ const nomadData = {
             },
             // referrer: "no-referrer", // no-referrer, *client
             body: JSON.stringify(dataBaseObject), // body data type must match "Content-Type" header
+        })
+        } else if (fetchType === "DELETE") {
+        return fetch(`http://localhost:8088/${dataSet}/${deleteId}`, {
+            method: `${fetchType}`, // *GET, POST, PUT, DELETE, etc.
+            headers: {
+                "Content-Type": "application/json; charset=utf-8",
+                // "Content-Type": "application/x-www-form-urlencoded",
+            },
+            // referrer: "no-referrer", // no-referrer, *client
         })
         } else {
             console.log ("YOU SCREWED IT UP")
