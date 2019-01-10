@@ -136,7 +136,13 @@ const events = {
   }
 };
 
+<<<<<<< HEAD
 events.showEventForm();
 events.appendUserEvents();
+=======
+// events.showEventForm();
+// events.appendUserEvents();
+// events.deleteEvent();
+>>>>>>> master
 
 export default events;

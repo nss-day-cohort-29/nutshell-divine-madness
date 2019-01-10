@@ -3,6 +3,10 @@ import domComponents from "./domComponents";
 import events from "./events";
 
 const eventListeners = {
+  friendsDeleteFriend () {
+    console.log(event.target);
+    
+  },
     handleEventSaveButton() {
         const nameInputted = document.querySelector("#eventName").value;
         const dateInputted = document.querySelector("#eventDate").value;
@@ -15,6 +19,7 @@ const eventListeners = {
             eventTime: timeInputted,
             eventLocation: locationInputted
         };
+
 
         nomadData.connectToData({
             dataSet: "events",
