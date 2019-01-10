@@ -1,5 +1,6 @@
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
+import eventListeners from "./eventListeners";
 
 const messages = {
 
@@ -9,36 +10,36 @@ const messages = {
 
         //create display container
         let messagesContainer = domComponents.createDomElement({
-            "elementType" : "div",
-            "cssClass" : "messagesContainer",
-            "attributes" : {
+            elementType : "section",
+            cssClass : "messagesContainer",
+            attributes : {
                 id : "messagesContainer"
             }});
 
         //create message input field
         let messageInput = domComponents.createDomElement({
-            "elementType" : "input",
-            "cssClass" : "messageInput",
-            "attributes" : {
+            elementType : "input",
+            cssClass : "messageInput",
+            attributes : {
                 id : "messageInput",
                 placeholder: "Enter Message Here"
             }});
-        //create submit button for input field
 
+        //create submit button for input field
         let messageSubmitButton = domComponents.createDomElement({
-            "elementType" : "button",
-            "cssClass" : "messageSubmitButton",
-            "content" : "Submit",
-            "attributes" : {
+            elementType : "button",
+            cssClass : "messageSubmitButton",
+            content : "Submit",
+            attributes : {
                 id : "messageSubmitButton"
             }});
 
+        messageSubmitButton.addEventListener("click", eventListeners.postNewMessage);
         messagesContainer.appendChild(messageInput);
         messagesContainer.appendChild(messageSubmitButton);
         outputArticle.appendChild(messagesContainer);
 
         this.getMessages()
-
     },
 
     getMessages() {
@@ -46,47 +47,71 @@ const messages = {
         //GET fetch & .then to build object(s) for createDomElement() using _expand to display UN: message
         nomadData.connectToData({
 
-                "dataSet" : "messages",
-                "fetchType" : "GET",
-                "embedItem" : "?_expand=user"
+                dataSet : "messages",
+                fetchType : "GET",
+                embedItem : "?_expand=user"
 
-        }).then(parsedMessages => {
+        }).then(messages => {
 
             let messageContainer = document.getElementById("messagesContainer");
             let messageInput = document.getElementById("messageInput");
 
-            parsedMessages.forEach(message => {
+            //sort messages by timeStamp
+            messages.sort(function(a,b){
+                return new Date(a.timeStamp) - new Date(b.timeStamp);
+            });
+
+            //build DOM Component for each message and append
+            messages.forEach(message => {
                 let messageText = message.message;
                 let userName = message.user.userName;
-                let timeStamp = message.timeStamp;
+                let messageId = message.id;
+                let messageTimeStamp = message.timeStamp;
+                let messageUser = `${message.userId}`;
+                let loggedInUser = sessionStorage.getItem('userId');
 
-                messageContainer.insertBefore(domComponents.createDomElement({
+                let messageElement = domComponents.createDomElement({
 
-                    "elementType" : "p",
-                    "cssClass" : "message",
-                    "content" : `${userName}:  ${messageText}`
+                    elementType : "h3",
+                    cssClass : "messageUserName",
+                    content : `${userName}:`,
+                    attributes : {
+                        id: `message${messageId}`
+                    }
+                })
 
-                }), messageInput)
+                let messageElement2 = domComponents.createDomElement({
+                    elementType : "p",
+                    cssClass : "messageText",
+                    content : `${messageText}`,
+                    attributes : {
+                        id: messageId
+                    }
+                })
+                if (messageUser === loggedInUser) {
+
+                    let messageEditButton = domComponents.createDomElement({
+
+                        elementType : "button",
+                        cssClass : "messageEditButton",
+                        content : "Edit",
+                        attributes : {
+                            id: `messageEditButton_${messageId}`,
+                            name: messageTimeStamp
+                        }
+                    })
+                    messageEditButton.addEventListener("click", eventListeners.editMessage, {once: true})
+                    messageElement.appendChild(messageElement2)
+                    messageElement.appendChild(messageEditButton)
+                    messageContainer.insertBefore(messageElement, messageInput)
+                } else {
+
+                    messageElement.appendChild(messageElement2)
+                    messageContainer.insertBefore(messageElement, messageInput)
+                }
             });
         })
     },
-
-    postNewMessage() {
-
-        //called by eventListener on submit button
-        //perform POST fetch
-        //call domRefresh function
-    },
-
-    editMessage() {
-
-        //bring up message in a prepopulated form
-        //for contains a submit button (same one as in postNewMessage()?)
-        //allow edits
-        //do PUT fetch
-    },
-
-
 }
 
 export default messages;
