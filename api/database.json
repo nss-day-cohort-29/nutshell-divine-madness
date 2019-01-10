@@ -40,10 +40,31 @@
   "newsitems": [
     {
       "id": 1,
-      "userId": 2,
+      "userId": 1,
       "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
       "title": "Wormholes Allow Information to Escape Black Holes",
       "synopsis": "Check out this recent discovery about workholes"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "url": "https://www.bbc.com/news/world-africa-46819303",
+      "title": "DR Congo presidential election: Outcry as Tshisekedi named winner",
+      "synopsis": "Some people are bummed"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "url": "https://www.bbc.com/news/technology-46818797",
+      "title": "CES 2019: Amazon and Google Assistant carve up tech expo",
+      "synopsis": "Tech makes me excited about life"
+    },
+    {
+      "id": 4,
+      "userId": 5,
+      "url": "https://www.cnbc.com/2019/01/07/these-are-the-best-jobs-to-have-in-2019-according-to-us-news--world-report.html",
+      "title": "These are the 13 best jobs to have in 2019, according to US News & World Report",
+      "synopsis": "Developer no.1 yo"
     }
   ],
   "events": [
@@ -57,14 +78,14 @@
     },
     {
       "id": 2,
-      "userId": 1,
+      "userId": 2,
       "eventName": "another toga party",
       "eventDate": "2-15",
       "eventTime": "3:00pm",
       "eventLocation": "Vegas"
     },
     {
-      "userId": 1,
+      "userId": 3,
       "eventName": "yet another toga party",
       "eventDate": "2-12",
       "eventTime": "3:00pm",

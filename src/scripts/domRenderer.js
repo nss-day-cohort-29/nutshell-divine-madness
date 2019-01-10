@@ -38,4 +38,4 @@ function loadDashboard (userId) {
     // console.log(`Thanks for passing the userId.  The userId is ${userId}`)
 }
 
-friends.checkCurrentUsersFriends()
+friends.defineCurrentUsersFriends()
