@@ -73,7 +73,6 @@ const domComponents = {
   },
   createEventEditInput(containerId, eventObject) {
     const formContainer = this.createDomElement({elementType: "form", attribues: {class: "eventEdit"}});
-    formContainer.appendChild(formHeader);
 
     const nameFieldset = this.createDomElement({elementType: "fieldset"});
     const nameLabel = this.createDomElement({elementType: "label", content: "Edit Name:", attributes: {for: "eventName"}});

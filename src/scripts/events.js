@@ -40,7 +40,7 @@ const events = {
     saveButton.addEventListener("click", eventListeners.handleEventSaveButton);
   },
   editEvent() {
-    const
+
   }
 };
 

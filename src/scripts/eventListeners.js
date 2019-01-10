@@ -27,7 +27,7 @@ const eventListeners = {
                 eventLocation: eventObject.eventLocation
             }
         })
-        .then(parsedResponse => {
+        .then( () => {
             events.appendUserEvents();
         });
     },
@@ -41,14 +41,14 @@ const eventListeners = {
                 userId: sessionStorage.getItem("userId")
             }
         })
-        .then(parsedResponse => {
+        .then( () => {
             events.appendUserEvents();
         });
     },
     handleEventEditButton() {
         const idToEdit = event.target.id.split("--")[1];
-
-
+        const eventObject =
+        domComponents.createEventEditInput(idToEdit, )
     },
     handleEventUpdateButton() {
 
