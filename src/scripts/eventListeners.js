@@ -69,8 +69,8 @@ const eventListeners = {
     },
     userRegistration(){
         let regUserName = document.querySelector("#regUserName").value
-        let regEmail = document.querySelector("#regUserName").value
-        let regPassword = document.querySelector("#regUserName").value
+        let regEmail = document.querySelector("#regEmail").value
+        let regPassword = document.querySelector("#regPassword").value
         // let regConfirmPassword = document.querySelector("#regUserName").value
 
         nomadData.connectToData({
@@ -78,7 +78,6 @@ const eventListeners = {
                 "dataSet" : "users",
                 "fetchType" : "POST",
                 "dataBaseObject" : {
-                    "id": 1,
                     "userName": regUserName,
                     "email": regEmail,
                     "regPassword": regPassword
