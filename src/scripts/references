@@ -39,3 +39,15 @@ let fetchTest3 = {
       "eventLocation": "Vegas"
     }
 }
+
+template for object to pass into nomadData.connectToData() if you are doing a DELETE
+
+let fetchTest4 = {
+
+    "deleteId" : 2,
+    "dataSet" : "events",
+    "fetchType" : "DELETE",
+    "dataBaseObject" : {
+      "userId": sessionStorage.getItem("userId")
+    }
+}
