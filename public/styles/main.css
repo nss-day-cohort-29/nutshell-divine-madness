@@ -1,0 +1,13 @@
+.tasksContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.taskDiv{
+    display: flex;
+    flex-direction: row;
+}
+
+.taskDueDate {
+    padding-left: 10px;
+}
