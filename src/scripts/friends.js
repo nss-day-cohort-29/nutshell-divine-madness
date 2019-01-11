@@ -11,13 +11,12 @@ const friends = {
     // console.log(currentUser, userId)
     let friendHolder = [];
 // PULL FROM FRIENDS JSON-------------------------
-    const friendIntersectionTable = {
-    "dataSet" : "friends",
-    "fetchType" : "GET",
-    "dataBaseObject" : "",
-    "embedItem" : "?_embed=events"
-}
-nomadData.connectToData(friendIntersectionTable)
+
+nomadData.connectToData({    
+"dataSet" : "friends",
+"fetchType" : "GET",
+"dataBaseObject" : "",
+"embedItem" : "?_embed=events"})
 .then(fromFriends => {
   // console.log(fromFriends)
   fromFriends.forEach(friendData => {
@@ -34,24 +33,6 @@ nomadData.connectToData(friendIntersectionTable)
 loadCurrentUsersFriends (friend) {
   // PULL FROM USERS JSON -----------------------
   // console.log(friend)
-      const userInfo = {
-        "dataSet" : "users",
-        "fetchType" : "GET",
-        "dataBaseObject" : "",
-        "embedItem" : "?_embed=events"
-      }
-      const userEvents = {
-        "dataSet" : "events",
-        "fetchType" : "GET",
-        "dataBaseObject" : "",
-        "embedItem" : "?_embed=events"
-      }
-      const usersSavedArticle = {
-        "dataSet" : "newsitems",
-        "fetchType" : "GET",
-        "dataBaseObject" : "",
-        "embedItem" : "?_embed=newsitems"
-      }
       const targetContainer = document.getElementById("output")
       targetContainer.appendChild(domComponents.createDomElement({
         elementType: "section",
@@ -64,7 +45,11 @@ loadCurrentUsersFriends (friend) {
 
 
       let friendDomBuilder = [];
-      nomadData.connectToData(userInfo)
+      nomadData.connectToData({
+      "dataSet" : "users",
+      "fetchType" : "GET",
+      "dataBaseObject" : "",
+      "embedItem" : "?_embed=events"})
       .then(fromUserData => {
         // console.log(fromUserData);
         fromUserData.forEach(userInfo => {
@@ -77,7 +62,11 @@ loadCurrentUsersFriends (friend) {
             }
             friendDomBuilder.push(friendIdentifier)
             // PULL FROM EVENTS JSON ------
-            nomadData.connectToData(userEvents)
+            nomadData.connectToData({
+                "dataSet" : "events",
+            "fetchType" : "GET",
+            "dataBaseObject" : "",
+            "embedItem" : "?_embed=events"})
             .then(events => {
               events.forEach(event => {
                 if (event.userId === friend) {
@@ -94,7 +83,11 @@ loadCurrentUsersFriends (friend) {
               })
             })
             // PULL FROM NEWSITEMS JSON ------
-            nomadData.connectToData(usersSavedArticle)
+            nomadData.connectToData({
+            "dataSet" : "newsitems",
+            "fetchType" : "GET",
+            "dataBaseObject" : "",
+            "embedItem" : "?_embed=newsitems"})
             .then(newsShiz => {
               // console.log(newsShiz)
               newsShiz.forEach(userSpecificArticles => {
