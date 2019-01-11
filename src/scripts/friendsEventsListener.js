@@ -55,7 +55,7 @@ const friendsEventsListener = {
       "fetchType" : "POST",
       "dataBaseObject" : {
         "userId": currentUser,
-        "otherFriendId": friendToBeAdded,
+        "otherFriendId": Number(friendToBeAdded),
       }
     })
   }

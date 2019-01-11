@@ -62,8 +62,8 @@ friends.initializePotentialFriends();
 
 function userLogin () {
 
-    let userName = "Lorenzo";
-    let password = "123";
+    let userName = "Hernando";
+    let password = "yomama";
 
     nomadData.connectToData({
 

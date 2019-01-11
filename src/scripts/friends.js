@@ -61,13 +61,7 @@ loadCurrentUsersFriends (friend) {
         }
       }))
       const friendContainer = document.getElementById(`friend-${friend}`)
-      const deleteFriend = document.createElement("button")
-      deleteFriend.classList.add(`delete-friend-${friend}`)
-      deleteFriend.textContent = "DELETE";
-      friendContainer.appendChild(deleteFriend);
-      deleteFriend.addEventListener("click", () => {
-        friendsEventsListener.friendsDeleteFriend()
-      })
+
 
       let friendDomBuilder = [];
       nomadData.connectToData(userInfo)
@@ -120,6 +114,13 @@ loadCurrentUsersFriends (friend) {
               friendDomBuilder.forEach(object => {
                 // console.log(object);
                 friendContainer.appendChild(domComponents.createDomElement(object))
+              })
+              const deleteFriend = document.createElement("button")
+              deleteFriend.classList.add(`delete-friend-${friend}`)
+              deleteFriend.textContent = "DELETE";
+              friendContainer.appendChild(deleteFriend);
+              deleteFriend.addEventListener("click", () => {
+                friendsEventsListener.friendsDeleteFriend()
               })
             })
           }

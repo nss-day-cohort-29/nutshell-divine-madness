@@ -104,54 +104,39 @@
   ],
   "friends": [
     {
-      "id": 1,
-      "userId": 1,
-      "otherFriendId": 6
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "otherFriendId": 2
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "otherFriendId": 3
-    },
-    {
-      "id": 5,
-      "userId": 1,
-      "otherFriendId": 4
-    },
-    {
-      "id": 6,
-      "userId": 1,
-      "otherFriendId": 5
-    },
-    {
-      "id": 7,
-      "userId": 4,
-      "otherFriendId": 6
-    },
-    {
-      "id": 8,
-      "userId": 4,
-      "otherFriendId": 5
-    },
-    {
-      "id": 9,
-      "userId": 4,
-      "otherFriendId": 1
-    },
-    {
       "userId": 2,
-      "otherFriendId": "6",
+      "otherFriendId": 6,
       "id": 10
     },
     {
       "userId": 2,
-      "otherFriendId": "1",
+      "otherFriendId": 1,
       "id": 11
+    },
+    {
+      "userId": 4,
+      "otherFriendId": 1,
+      "id": 12
+    },
+    {
+      "userId": 4,
+      "otherFriendId": 2,
+      "id": 13
+    },
+    {
+      "userId": 4,
+      "otherFriendId": 3,
+      "id": 14
+    },
+    {
+      "userId": 4,
+      "otherFriendId": 5,
+      "id": 15
+    },
+    {
+      "userId": 4,
+      "otherFriendId": 6,
+      "id": 16
     }
   ],
   "messages": [
