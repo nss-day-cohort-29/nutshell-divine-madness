@@ -7,7 +7,7 @@ import domComponents from "./domComponents";
 const events = {
   showEventForm () {
     const output = document.querySelector("#output");
-    //const eventForm = domComponents.createEventInput();
+    const eventForm = domComponents.createEventInput();
     output.appendChild(eventForm);
     const eventLog = document.createElement("article")
     eventLog.setAttribute("id", "eventLog");

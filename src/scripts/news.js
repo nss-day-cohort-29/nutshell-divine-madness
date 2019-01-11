@@ -8,7 +8,7 @@ const news = {
 
     getNews(){
         //pull then send pulled data to dom
-       return fetch("http://jsonplaceholder.typicode.com/posts/1")
+        return fetch("http://jsonplaceholder.typicode.com/posts/1")
             .then(newsItems => newsItems.json())
     },
     save() {
@@ -30,7 +30,7 @@ const news = {
     },
 
     allSaved(){
-        nomadData.connectToData(testnewsObj)
+        // nomadData.connectToData(testnewsObj)
     },
 
     deleteDB(){
@@ -53,25 +53,25 @@ const news = {
                 newsContainer.appendChild(domComponents.createDomElement({
                     elementType: "button",
                     content: "SAVE BITCH",
-                    cssClass: "newsSaveButton"    
+                    cssClass: "newsSaveButton"
                 }))
                 newsContainer.appendChild(domComponents.createDomElement({
                     elementType: "h2",
                     content: dbGrab.title,
-                    cssClass: "newsTitle"    
+                    cssClass: "newsTitle"
                 }))
                 newsContainer.appendChild(domComponents.createDomElement({
                     elementType: "p",
-                    content: dbGrab.synopsis,        
-                    cssClass: "newsBody"   
+                    content: dbGrab.synopsis,
+                    cssClass: "newsBody"
                 }))
                 newsContainer.appendChild(domComponents.createDomElement({
                     elementType: "a",
-                    content: dbGrab.url,        
+                    content: dbGrab.url,
                     cssClass: "newsURL",
                     attributes:{
                         href:`${dbGrab.url}`
-                    }   
+                    }
                 }))
                 
             })

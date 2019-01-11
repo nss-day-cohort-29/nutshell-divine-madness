@@ -9,7 +9,7 @@ const dashboard = {
           <li><a href = "#">Tasks</a></li>
           <li><a href = "#">Friends</a></li>
           <li><a href = "#">Messages</a></li>
-          <li id = "logo" ><a href="#about">Nomads</a></li>
+          <li id = "logo" ><a href="#">Nomads</a></li>
         </ul>
       </nav>
     `
@@ -56,8 +56,9 @@ const dashboard = {
         $("#output").html(formHTML)
         eventListeners.modalDisplayAnimation()
         $("#logIn").click(eventListeners.userLogin)
-        $("#logIn").click(eventListeners.loadDashboard)
+        // $("#logIn").click(eventListeners.loadDashboard)
         $("#registerButton").click(eventListeners.userRegistration)
+        $("#registerButton").click(eventListeners.userLogin)
   
       }
 }

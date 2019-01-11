@@ -5,42 +5,6 @@
       "userName": "Hernando",
       "email": "dlskfj@wh.com",
       "password": "yomama"
-    },
-    {
-      "id": 2,
-      "userName": "Lorenzo",
-      "email": "dlskfj@wh.com",
-      "password": "yomama"
-    },
-    {
-      "userName": "ColeB",
-      "email": "cole@cole.com",
-      "password": "1",
-      "id": 3
-    },
-    {
-      "userName": "JoeyThePoonSlayer",
-      "email": "joey@joey.com",
-      "password": "poon",
-      "id": 4
-    },
-    {
-      "userName": "Russ",
-      "email": "russ@russ.com",
-      "password": "4",
-      "id": 5
-    },
-    {
-      "userName": "JD",
-      "email": "jd@jd.com",
-      "password": "2",
-      "id": 6
-    },
-    {
-      "userName": "Emily",
-      "email": "emlem@nss.com",
-      "password": "lemmons",
-      "id": 7
     }
   ],
   "newsitems": [
