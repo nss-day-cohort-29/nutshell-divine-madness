@@ -106,21 +106,23 @@ const eventListeners = {
     NAVBAR LI ELISTENERS: When user clicks an item in the NAVBAR the content associated with that tab will populate the DOM
     =================================================================================================================*/
     messagesNavLink(){
-        messages.createMessageBoard()
-        messages.getMessages()
+        messages.createMessageBoard(),
+        messages.getMessages(),
         console.log("working")
+
     },
     eventsNavLink(){
-        console.log("events clicked")
-        // domComponents.createEventInput()
-        // domComponents.createEventItem()
-        // domComponents.createEventEditInput()
-        events.showEventForm()
-        // events.appendUserEvents()
-        // events.handleEventUpdateButton()
-        // events.handleEventSaveButton()
-        // events.handleEventDeleteButton()
-        // events.handleEventEditButton()
+            console.log("events clicked"),
+            // domComponents.createEventInput()
+            // domComponents.createEventItem()
+            // domComponents.createEventEditInput()
+            events.showEventForm()
+            // events.appendUserEvents()
+            // events.handleEventUpdateButton()
+            // events.handleEventSaveButton()
+            // events.handleEventDeleteButton()
+            // events.handleEventEditButton()
+
     },
     friendsNavLink(){
         console.log("friends nav link clicked")
