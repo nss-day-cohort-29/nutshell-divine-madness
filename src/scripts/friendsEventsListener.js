@@ -42,10 +42,22 @@ const friendsEventsListener = {
     let userId = sessionStorage.getItem('userId');
     let currentUser = Number(userId);
 
+    
     const friendToBeAdded = (event.target.id).split("-")[3];
     console.log(`user${currentUser}`,`Adding Friend${friendToBeAdded}`)
-
     
+    let goodByeNonFriend = document.getElementById(`potentialFriend-${friendToBeAdded}`);
+    goodByeNonFriend.parentNode.removeChild(goodByeNonFriend);
+    alert(`${event.target.previousSibling.innerText} is now your friend!`);
+
+    nomadData.connectToData({
+      "dataSet" : "friends",
+      "fetchType" : "POST",
+      "dataBaseObject" : {
+        "userId": currentUser,
+        "otherFriendId": friendToBeAdded,
+      }
+    })
   }
 }
 

@@ -142,6 +142,16 @@
       "id": 9,
       "userId": 4,
       "otherFriendId": 1
+    },
+    {
+      "userId": 2,
+      "otherFriendId": "6",
+      "id": 10
+    },
+    {
+      "userId": 2,
+      "otherFriendId": "1",
+      "id": 11
     }
   ],
   "messages": [
