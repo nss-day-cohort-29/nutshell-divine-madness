@@ -1,0 +1,140 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "Hernando",
+      "email": "dlskfj@wh.com",
+      "password": "yomama"
+    },
+    {
+      "id": 2,
+      "userName": "Lorenzo",
+      "email": "dlskfj@wh.com",
+      "password": "yomama"
+    }
+  ],
+  "newsItems": [
+    {
+      "id": 1,
+      "userId": 2,
+      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
+      "title": "Wormholes Allow Information to Escape Black Holes",
+      "synopsis": "Check out this recent discovery about workholes"
+    },
+    {
+      "userId": 1,
+      "url": "www.fuckoff.com",
+      "title": "Read above",
+      "synopsis": "blah blah blah",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "url": "www.fuckoff.com",
+      "title": "Read above",
+      "synopsis": "blah blah blah",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 34
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "userId": 1,
+      "eventName": "Nomad Fiesta",
+      "eventDate": "2019-01-11",
+      "eventTime": "12:30",
+      "eventLocation": "Mexico"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "eventName": "Outdoor yoga",
+      "eventDate": "2019-02-04",
+      "eventTime": "05:00",
+      "eventLocation": "Yosemite"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "eventName": "Camping",
+      "eventDate": "2019-01-09",
+      "eventTime": "17:00",
+      "eventLocation": "Yosemite"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "eventName": "Hiking",
+      "eventDate": "2019-05-21",
+      "eventTime": "20:00",
+      "eventLocation": "Yosemite"
+    },
+    {
+      "userId": 2,
+      "eventName": "Skiing",
+      "eventDate": "2019-05-19",
+      "eventTime": "20:00",
+      "eventLocation": "Rockies",
+      "id": 5
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "userId": 1,
+      "task": "save world",
+      "expectedCompletionDate": "2-12",
+      "complete": false
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "userId": 1,
+      "otherFriendId": 3
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "otherFriendId": 2
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "otherFriendId": 3
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 1,
+      "message": "Yo.",
+      "timeStamp": "3:00:00pm"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "message": "Sup.",
+      "timeStamp": "3:01:00pm"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "message": "NM.",
+      "timeStamp": "3:02:00pm"
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "message": "Cool.",
+      "timeStamp": "3:03:00pm"
+    }
+  ]
+}
