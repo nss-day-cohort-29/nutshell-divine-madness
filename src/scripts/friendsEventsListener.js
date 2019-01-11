@@ -19,19 +19,21 @@ const friendsEventsListener = {
       destroyFriendsHeart.forEach(goodbyeFriend => {
         console.log(goodbyeFriend.userId, Number(currentUser))
         if (goodbyeFriend.otherFriendId === Number(friendToDelete) && goodbyeFriend.userId === Number(currentUser)) {
-            console.log("PeaceOut",goodbyeFriend.id)
+            console.log("PeaceOut",goodbyeFriend.id);
+            finalNumberSendForDelete = goodbyeFriend.id;
+            
+        }
+      })
+      console.log(finalNumberSendForDelete)
+      nomadData.connectToData({
+        "deleteId" : finalNumberSendForDelete,
+        "dataSet" : "friends",
+        "fetchType" : "DELETE",
+        "dataBaseObject" : {
+          "userId": sessionStorage.getItem("userId")
         }
       })
     })
-    
-  // nomadData.connectToData({
-  //   "deleteId" : 2,
-  //   "dataSet" : "friends",
-  //   "fetchType" : "DELETE",
-  //   "dataBaseObject" : {
-  //     "userId": sessionStorage.getItem("userId")
-  //   }
-  // })
   },
 }
 
