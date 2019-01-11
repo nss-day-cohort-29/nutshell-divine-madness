@@ -1,10 +1,11 @@
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
-import eventListeners from "./eventListeners";
+import tasksEventListeners from "./tasksEventListeners";
+import tasksPopup from "./tasksPopup";
 
 const tasks = {
 
-    createTaskList() {
+    createTaskTables() {
 
         let outputArticle = document.getElementById("output")
 
@@ -16,6 +17,121 @@ const tasks = {
                 id : "tasksContainer"
             }});
 
+        //create tasks tables
+        let activeTasksTable = domComponents.createDomElement({
+            elementType : "table",
+            cssClass : "activeTasksTable",
+            attributes : {
+                id : "activeTasksTable"
+            }
+        });
+
+        let activeTasksTableTitle = domComponents.createDomElement({
+            elementType : "caption",
+            cssClass : "activeTasksTableTitle",
+            content : "ACTIVE TASKS"
+        });
+
+        let completedTasksTable = domComponents.createDomElement({
+            elementType : "table",
+            cssClass : "completedTasksTable",
+            attributes : {
+                id : "completedTasksTable"
+            }
+        });
+
+        let completedTasksTableTitle = domComponents.createDomElement({
+            elementType : "caption",
+            cssClass : "completedTasksTableTitle",
+            content : "COMPLETED TASKS"
+        })
+
+        //create row with column headers
+        let activeTasksHeaderRow = domComponents.createDomElement({
+            elementType : "tr",
+            cssClass : "activeTasksHeaderRow",
+            attributes : {
+                id : "activeTasksHeaderRow"
+            }
+        });
+
+        let completedTasksHeaderRow = domComponents.createDomElement({
+            elementType : "tr",
+            cssClass : "completedTasksHeaderRow",
+            attributes : {
+                id : "completedTasksHeaderRow"
+            }
+        });
+
+        //create column headers
+        let activeTasksHeader = domComponents.createDomElement({
+            elementType : "th",
+            cssClass : "activeTasksHeader",
+            content: "Task",
+            attributes : {
+                id : "activeTasksHeader"
+            }
+        });
+
+        let activeTasksDueDateHeader = domComponents.createDomElement({
+            elementType : "th",
+            cssClass : "activeTasksDueDateHeader",
+            content: "Due Date",
+            attributes : {
+                id : "activeTasksDueDateHeader"
+            }
+        });
+
+        let completedTasksHeader = domComponents.createDomElement({
+            elementType : "th",
+            cssClass : "completedTasksHeader",
+            content: "Task",
+            attributes : {
+                id : "completedTasksHeader"
+            }
+        });
+
+        let completedTasksDueDateHeader = domComponents.createDomElement({
+            elementType : "th",
+            cssClass : "completedTasksDueDateHeader",
+            content: "Due Date",
+            attributes : {
+                id : "completedTasksDueDateHeader"
+            }
+        });
+        //create button to make new tasks
+        let createTaskButton = domComponents.createDomElement({
+            elementType : "button",
+            cssClass : "createTaskButton",
+            content : "Create New Task",
+            attributes : {
+                id : "createTaskButton"
+            }
+        });
+
+        //append header row to table and table to container
+        activeTasksTable.appendChild(activeTasksTableTitle);
+        completedTasksTable.appendChild(completedTasksTableTitle);
+        activeTasksHeaderRow.appendChild(activeTasksHeader)
+        activeTasksHeaderRow.appendChild(activeTasksDueDateHeader);
+        activeTasksTable.appendChild(activeTasksHeaderRow);
+        tasksContainer.appendChild(activeTasksTable);
+        completedTasksHeaderRow.appendChild(completedTasksHeader)
+        completedTasksHeaderRow.appendChild(completedTasksDueDateHeader);
+        completedTasksTable.appendChild(completedTasksHeaderRow);
+        tasksContainer.appendChild(completedTasksTable);
+        createTaskButton.addEventListener("click", tasksPopup.createNewTaskForm);
+        tasksContainer.appendChild(createTaskButton);
+        outputArticle.appendChild(tasksContainer);
+
+        this.getTasks();
+    },
+
+    getTasks() {
+
+        let currentUser = Number(sessionStorage.getItem('userId'));
+
+        //populate tasks
         nomadData.connectToData({
 
             dataSet : "tasks",
@@ -24,9 +140,44 @@ const tasks = {
 
         }).then(tasks => {
 
+            tasks.sort(function(a,b){
+                return new Date(a.expectedCompletionDate) - new Date(b.expectedCompletionDate);
+            });
+
             tasks.forEach(task => {
 
-                // create the task label
+                if (task.userId === currentUser) {
+
+                let status = task.complete;
+                let activeTasksTable = document.getElementById("activeTasksTable");
+                let completedTasksTable = document.getElementById("completedTasksTable");
+                // create a new table row for each task
+                let taskRow = domComponents.createDomElement({
+                    elementType : "tr",
+                    cssClass : "taskTableRow",
+                    attributes : {
+                        id : `taskTableRow_${task.id}`
+                    }
+                })
+
+                //create cells to hold task and due date
+                let taskCell = domComponents.createDomElement({
+                    elementType : "td",
+                    cssClass : "taskCell",
+                    attributes : {
+                        id : `taskCell_${task.id}`
+                    }
+                })
+
+                let dueDateCell = domComponents.createDomElement({
+                    elementType : "td",
+                    cssClass : "dueDateCell",
+                    attributes : {
+                        id : `dueDateCell_${task.id}`
+                    }
+                })
+
+                //create task checkbox and title
                 let taskLabel = domComponents.createDomElement({
                     elementType : "label",
                     cssClass : "taskLabel",
@@ -47,89 +198,38 @@ const tasks = {
                         value : `${task.task}`
                     }
                 })
+                //create task dute date
+                let dueDateArray = new Date(task.expectedCompletionDate).toDateString().split(" ")
+                let dueDate = `${dueDateArray[1]} ${dueDateArray[2]}, ${dueDateArray[3]}`
 
-                //append all elements, this order is necessary to have the checkbox to the left of the title
-                tasksContainer.appendChild(taskLabel);
+                let taskDueDate = domComponents.createDomElement({
+                    elementType : "p",
+                    cssClass : "taskDueDate",
+                    content : dueDate,
+                    attributes : {
+                        id : `taskDueDate_${task.id}`
+                    }
+                })
+                //append -- order is important for checkbox and label to ensure box in on the left
+                taskCheckbox.addEventListener("change", tasksEventListeners.markTaskComplete)
                 taskLabel.appendChild(taskCheckbox);
                 taskLabel.appendChild(taskTitle);
-            });
+                taskCell.appendChild(taskLabel);
+                dueDateCell.appendChild(taskDueDate);
+                taskRow.appendChild(taskCell);
+                taskRow.appendChild(dueDateCell);
+
+                if (status) {
+
+                    completedTasksTable.appendChild(taskRow);
+                    taskCheckbox.setAttribute("checked", "")
+
+                } else {
+                    activeTasksTable.appendChild(taskRow);
+                }
+            }});
         })
-
-        outputArticle.appendChild(tasksContainer);
-
-        // this.getTasks()
-    },
-
-    // getMessages() {
-
-    //     //GET fetch & .then to build object(s) for createDomElement() using _expand to display UN: message
-    //     nomadData.connectToData({
-
-    //             dataSet : "messages",
-    //             fetchType : "GET",
-    //             embedItem : "?_expand=user"
-
-    //     }).then(messages => {
-
-    //         let messageContainer = document.getElementById("messagesContainer");
-    //         let messageInput = document.getElementById("messageInput");
-
-    //         //sort messages by timeStamp
-    //         messages.sort(function(a,b){
-    //             return new Date(a.timeStamp) - new Date(b.timeStamp);
-    //         });
-
-    //         //build DOM Component for each message and append
-    //         messages.forEach(message => {
-    //             let messageText = message.message;
-    //             let userName = message.user.userName;
-    //             let messageId = message.id;
-    //             let messageTimeStamp = message.timeStamp;
-    //             let messageUser = `${message.userId}`;
-    //             let loggedInUser = sessionStorage.getItem('userId');
-
-    //             let messageElement = domComponents.createDomElement({
-
-    //                 elementType : "h3",
-    //                 cssClass : "messageUserName",
-    //                 content : `${userName}:`,
-    //                 attributes : {
-    //                     id: `message${messageId}`
-    //                 }
-    //             })
-
-    //             let messageElement2 = domComponents.createDomElement({
-    //                 elementType : "p",
-    //                 cssClass : "messageText",
-    //                 content : `${messageText}`,
-    //                 attributes : {
-    //                     id: messageId
-    //                 }
-    //             })
-    //             if (messageUser === loggedInUser) {
-
-    //                 let messageEditButton = domComponents.createDomElement({
-
-    //                     elementType : "button",
-    //                     cssClass : "messageEditButton",
-    //                     content : "Edit",
-    //                     attributes : {
-    //                         id: `messageEditButton_${messageId}`,
-    //                         name: messageTimeStamp
-    //                     }
-    //                 })
-    //                 messageEditButton.addEventListener("click", eventListeners.editMessage, {once: true})
-    //                 messageElement.appendChild(messageElement2)
-    //                 messageElement.appendChild(messageEditButton)
-    //                 messageContainer.insertBefore(messageElement, messageInput)
-    //             } else {
-
-    //                 messageElement.appendChild(messageElement2)
-    //                 messageContainer.insertBefore(messageElement, messageInput)
-    //             }
-    //         });
-    //     })
-    // },
+    }
 }
 
 export default tasks;
