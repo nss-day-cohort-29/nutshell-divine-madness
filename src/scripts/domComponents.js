@@ -12,7 +12,6 @@ const domComponents = {
     }
     return element;
   },
-  
   createEventInput() {
     const formContainer = this.createDomElement({elementType: "form", attribues: {class: "eventInput"}});
     const formHeader = this.createDomElement({elementType: "h1", content: "Add a New Event:"});
@@ -113,6 +112,7 @@ const domComponents = {
 
     return formContainer;
   }
+  
 }
 
 export default domComponents

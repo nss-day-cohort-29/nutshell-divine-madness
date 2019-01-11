@@ -30,7 +30,7 @@ const news = {
     },
 
     allSaved(){
-        // nomadData.connectToData(testnewsObj)
+        nomadData.connectToData(testnewsObj)
     },
 
     deleteDB(){
@@ -79,7 +79,7 @@ const news = {
         })
         
         // const NewsTest = domComponents.createDomElement("h2",testPass,"testObj",null);
-        // output.appendChild(NewsTest);
+        //output.appendChild(NewsTest);
         
 
     }

@@ -2,6 +2,9 @@ import nomadData from "./nomadData";
 import domComponents from "./domComponents";
 import events from "./events";
 import dashboard from "./dashboard"
+import messages from "./messages";
+import friends from "./friends";
+import news from "./news";
 
 const eventListeners = {
     /*===============================================================================================================
@@ -99,7 +102,39 @@ const eventListeners = {
         $("form").animate({height: "toggle", opacity: "toggle"}, "slow")
         })
     },
-
+    /*===============================================================================================================
+    NAVBAR LI ELISTENERS: When user clicks an item in the NAVBAR the content associated with that tab will populate the DOM
+    =================================================================================================================*/
+    messagesNavLink(){
+        messages.createMessageBoard()
+        messages.getMessages()
+        console.log("working")
+    },
+    eventsNavLink(){
+        console.log("events clicked")
+        // domComponents.createEventInput()
+        // domComponents.createEventItem()
+        // domComponents.createEventEditInput()
+        events.showEventForm()
+        // events.appendUserEvents()
+        // events.handleEventUpdateButton()
+        // events.handleEventSaveButton()
+        // events.handleEventDeleteButton()
+        // events.handleEventEditButton()
+    },
+    friendsNavLink(){
+        console.log("friends nav link clicked")
+        friends.loadCurrentUsersFriends()
+        friends.defineCurrentUsersFriends()
+    },
+    newsNavLink(){
+        //NEWS SECTION
+        news.save();
+        news.allSaved();
+        news.getNews();
+        news.newsElementCreator();
+        console.log("news link clicked")
+    },
     friendsDeleteFriend () {
         console.log(event.target);
     
@@ -109,15 +144,15 @@ const eventListeners = {
         const dateInputted = document.querySelector("#eventDate").value;
         const timeInputted = document.querySelector("#eventTime").value;
         const locationInputted = document.querySelector("#eventLocation").value;
-
+    
         const eventObject = {
             eventName: nameInputted,
             eventDate: dateInputted,
             eventTime: timeInputted,
             eventLocation: locationInputted
         };
-
-
+    
+    
         nomadData.connectToData({
             dataSet: "events",
             fetchType: "POST",
@@ -132,8 +167,8 @@ const eventListeners = {
         .then( () => {
             events.appendUserEvents();
         });
-    },
-    handleEventDeleteButton() {
+      },
+      handleEventDeleteButton() {
         const idToDelete = event.target.id.split("--")[1];
         nomadData.connectToData({
             deleteId: idToDelete,
@@ -146,15 +181,15 @@ const eventListeners = {
         .then( () => {
             events.appendUserEvents();
         });
-    },
-    handleEventEditButton() {
+      },
+      handleEventEditButton() {
         const idToEdit = event.target.id.split("--")[1];
         // const eventObject =
         domComponents.createEventEditInput(idToEdit, )
-    },
-    handleEventUpdateButton() {
-
-    },
+      },
+      handleEventUpdateButton() {
+    
+      },
     postNewMessage() {
 
         let messageInput = document.getElementById("messageInput");

@@ -4,17 +4,21 @@ const dashboard = {
     let navHTML = ` 
       <nav>
         <ul>
-          <li><a class = "active" href = "#">Articles</a></li>
-          <li><a href = "#">Events</a></li>
+          <li id = "newsLink"><a class = "active" href = "#">Articles</a></li>
+          <li id = "eventLink"><a href = "#">Events</a></li>
           <li><a href = "#">Tasks</a></li>
-          <li><a href = "#">Friends</a></li>
-          <li><a href = "#">Messages</a></li>
+          <li id = "friendsLink"><a href = "#">Friends</a></li>
+          <li id = "messagesLink"><a href = "#">Messages</a></li>
           <li id = "logo" ><a href="#">Nomads</a></li>
         </ul>
       </nav>
     `
     let navBarContainer = document.querySelector("#main-nav")
     navBarContainer.innerHTML = navHTML
+    $("#messagesLink").click(eventListeners.messagesNavLink)
+    $("#eventLink").click(eventListeners.eventsNavLink)
+    $("#friendsLink").click(eventListeners.friendsNavLink)
+    $("#newsLink").click(eventListeners.newsNavLink)
     },
     buildLoginForm(){
       //using string interpolation to create the form

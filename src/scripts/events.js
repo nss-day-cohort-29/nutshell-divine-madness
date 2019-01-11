@@ -2,7 +2,7 @@
 
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
-// import eventListeners from "./eventListeners";
+//import eventListeners from "./eventListeners";
 
 const events = {
   showEventForm () {
@@ -35,6 +35,7 @@ const events = {
       eventLog.appendChild(docuFrag);
     });
   }
+
 };
 
 // events.showEventForm();
