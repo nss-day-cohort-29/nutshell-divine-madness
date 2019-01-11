@@ -40,7 +40,7 @@ const eventPageListeners = {
         const formContainer = document.querySelector(".eventInput");
         output.removeChild(formContainer);
         const showButton = domComponents.createDomElement({elementType: "button", content: "Create a New Event", attributes: {type: "button", id: "showForm"}});
-        showButton.addEventListener("click", eventPageListeners.handleShowButton);
+        showButton.addEventListener("click", this.handleShowButton);
         output.insertBefore(showButton, output.firstChild);
     },
     handleDeleteButton() {
