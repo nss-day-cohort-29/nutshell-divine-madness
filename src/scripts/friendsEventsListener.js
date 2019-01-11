@@ -24,6 +24,9 @@ const friendsEventsListener = {
             
         }
       })
+      let goodByeSearchResults = document.getElementById(`friend-${friendToDelete}`);
+      goodByeSearchResults.parentNode.removeChild(goodByeSearchResults);
+
       console.log(finalNumberSendForDelete)
       nomadData.connectToData({
         "deleteId" : finalNumberSendForDelete,

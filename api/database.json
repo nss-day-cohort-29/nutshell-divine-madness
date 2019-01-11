@@ -109,6 +109,11 @@
       "otherFriendId": 6
     },
     {
+      "id": 2,
+      "userId": 1,
+      "otherFriendId": 2
+    },
+    {
       "id": 3,
       "userId": 1,
       "otherFriendId": 3
