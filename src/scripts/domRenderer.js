@@ -55,14 +55,15 @@ console.log("DomRenderer is working")
 import messages from "./messages";
 import friends from "./friends";
 
-friends.defineCurrentUsersFriends();
+// friends.defineCurrentUsersFriends();
+friends.initializePotentialFriends();
 
 // messages.createMessageBoard();
 
 function userLogin () {
 
-    let userName = "Hernando";
-    let password = "yomama";
+    let userName = "Lorenzo";
+    let password = "123";
 
     nomadData.connectToData({
 

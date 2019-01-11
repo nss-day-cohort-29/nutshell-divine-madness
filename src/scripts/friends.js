@@ -127,9 +127,117 @@ loadCurrentUsersFriends (friend) {
       })
 
   },
-  showUserPotentialFriends () {
+  initializePotentialFriends () {
+    let userId = sessionStorage.getItem('userId');
+    let currentUser = Number(userId);
+    // console.log("friends Page user id is-",currentUser);
+
+    const targetContainer = document.getElementById("output");
+    const findNewFriendContainer = document.createElement("section");
+    let friendsIHave = [];
+    findNewFriendContainer.setAttribute("id", "future-friends");
+    targetContainer.appendChild(findNewFriendContainer);
+
+    nomadData.connectToData({
+      "dataSet" : "friends",
+      "fetchType" : "GET",
+      "dataBaseObject" : "",
+      "embedItem" : "?_embed=friends"
+    })
+    .then(fromFriends => {
+      // console.log(fromFriends)
+      fromFriends.forEach(friendData => {
+        // console.log(friendData)
+        if (friendData.userId === currentUser) {
+          friendsIHave.push(friendData.otherFriendId)
+        }
+      })
+      // console.log(friendsIHave)
+      
+        this.showUserPotentialFriends(friendsIHave)
+    })
+  },
+  showUserPotentialFriends (friend) {
+    let userId = sessionStorage.getItem('userId');
+    let currentUser = Number(userId);
+    // console.log(friend)
+    let allTheUsers = []
+    friend.push(currentUser)
+    nomadData.connectToData({
+      "dataSet" : "users",
+      "fetchType" : "GET",
+      "dataBaseObject" : "",
+      "embedItem" : "?_embed=users"
+    })
+    .then(allUsers => {
+      allUsers.forEach(user => {
+        // console.log(user.id)
+        allTheUsers.push(user.id)
+      })
+      console.log("everyone",allTheUsers, "user and friends",friend)
+      let notCurrentFriend = this.differenceOf2Arrays(allTheUsers, friend)
+      notCurrentFriend.forEach(noFriendOfMine => {
+        this.printPotentialFriendsToBrowser(noFriendOfMine)
+        
+      })
+    })
+  },
+   differenceOf2Arrays (array1, array2) {
+    var temp = [];
+    array1 = array1.toString().split(',').map(Number);
+    array2 = array2.toString().split(',').map(Number);
     
-  }
+    for (var i in array1) {
+    if(array2.indexOf(array1[i]) === -1) temp.push(array1[i]);
+    }
+    for(i in array2) {
+    if(array1.indexOf(array2[i]) === -1) temp.push(array2[i]);
+    }
+    return temp.sort((a,b) => a-b);
+    },
+    printPotentialFriendsToBrowser (notAFriend) {
+      // console.log(notAFriend)
+      const targetSectionContainer = document.getElementById("future-friends");
+      targetSectionContainer.appendChild(domComponents.createDomElement({
+        elementType: "div",
+        attributes: {
+          id: `potentialFriend-${notAFriend}`
+        }
+      }))
+
+      nomadData.connectToData({
+        "dataSet" : "users",
+        "fetchType" : "GET",
+        "dataBaseObject" : "",
+        "embedItem" : "?_embed=users"
+      })
+      .then(usersInfo => {
+        usersInfo.forEach(user => {
+          if (user.id === notAFriend) {
+            console.log(user.id, "is no friend")
+            const potentialFriendContainer = document.getElementById(`potentialFriend-${notAFriend}`)
+            potentialFriendContainer.appendChild(domComponents.createDomElement({
+              elementType: 'h2',
+              content: user.userName,
+              cssClass: `potential-friend-${user.id}`
+            }))
+            potentialFriendContainer.appendChild(domComponents.createDomElement({
+              elementType: "button",
+              content: "Add Friend",
+              attributes: {
+                id: `add-friend-button-${user.id}`
+              }
+            }))
+            const forAddButton = document.getElementById(`add-friend-button-${user.id}`);
+            forAddButton.addEventListener("click", () => {
+              friendsEventsListener.friendsAddFriend()
+            })
+          }
+        })
+      })
+      // console.log(notAFriend)
+    }
+
 }
 
 export default friends

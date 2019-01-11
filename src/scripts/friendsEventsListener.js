@@ -38,6 +38,15 @@ const friendsEventsListener = {
       })
     })
   },
+  friendsAddFriend () {
+    let userId = sessionStorage.getItem('userId');
+    let currentUser = Number(userId);
+
+    const friendToBeAdded = (event.target.id).split("-")[3];
+    console.log(`user${currentUser}`,`Adding Friend${friendToBeAdded}`)
+
+    
+  }
 }
 
 export default friendsEventsListener
