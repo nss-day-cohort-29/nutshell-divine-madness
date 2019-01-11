@@ -59,18 +59,32 @@ const eventListeners = {
                 "dataSet" : "users",
                 "fetchType" : "POST",
                 "dataBaseObject" : {
-                    // "id":sessionStorage.setItem("userId", .id),
                     "userName": regUserName,
                     "email": regEmail,
                     "password": regPassword
                 }
-            })
+            }).then(
+            nomadData.connectToData({
+                "dataSet" : "users",
+                "fetchType" : "GET",
+                "embedItem" : `?userName=${regUserName}`
+            }).then(user =>{
+                console.log(user)
+                user.forEach( x =>{
+                    sessionStorage.setItem("userId", x.id)
+
                 //hides NOMAD heading
                 $(".t-border").hide()
                 //hides the form
                 $(".form").hide()
                 //displays navigatin bar
                 dashboard.createNavBar()
+                let userId = sessionStorage.getItem("userId")
+                //console.log verifying that credentials match and user is logged in
+                console.log("logged in as" + " " + x.userName)
+                console.log("your user ID is: " + userId)
+                })
+            }))
         },
     /*===============================================================================================================
     MODAL: user will click the NOMAD MISSION button and a modal will pop up describing what the application is about
@@ -104,25 +118,19 @@ const eventListeners = {
     },
     /*===============================================================================================================
     NAVBAR LI ELISTENERS: When user clicks an item in the NAVBAR the content associated with that tab will populate the DOM
+
+    THESE 5 ARRAY METHODS ARE GOING TO STAY IN THE MAIN EVENTLISTENERS FILE EVEYTHING ELSE WILL BE SEPERATED INTO SEPERATE
+    EL FILES
     =================================================================================================================*/
     messagesNavLink(){
-        messages.createMessageBoard(),
-        messages.getMessages(),
+        messages.createMessageBoard()
         console.log("working")
 
     },
     eventsNavLink(){
-            console.log("events clicked"),
-            // domComponents.createEventInput()
-            // domComponents.createEventItem()
-            // domComponents.createEventEditInput()
             events.showEventForm()
-            // events.appendUserEvents()
-            // events.handleEventUpdateButton()
-            // events.handleEventSaveButton()
-            // events.handleEventDeleteButton()
-            // events.handleEventEditButton()
-
+            //appendUserEvent
+            console.log("events clicked")
     },
     friendsNavLink(){
         console.log("friends nav link clicked")
@@ -202,14 +210,14 @@ const eventListeners = {
             dataSet : "messages",
             fetchType : "POST",
             dataBaseObject : {
-                userId : sessionStorage.getItem("userId"),
+                userId : Number(sessionStorage.getItem("userId")),
                 message : messageInput.value,
                 timeStamp : timeStamp
             }
 
         })
-
-        location.reload(); //replace with DOM refresh function once built
+ 
+        // this.messagesNavLink();//replace with DOM refresh function once built
     },
     editMessage() {
         let number = event.currentTarget.id;
@@ -259,12 +267,17 @@ const eventListeners = {
                 name: messageTimeStamp
             }
         });
-
         messageEditSubmitButton.addEventListener("click", eventListeners.handleEditSubmitButton)
+        // messageEditSubmitButton.addEventListener("click", eventListeners.editMessage)
         messageEditFieldset.appendChild(messageEditInput)
         messageEditFieldset.appendChild(messageEditSubmitButton)
         messageEditForm.appendChild(messageEditFieldset)
         messageContainer.appendChild(messageEditForm)
+
+        // this.handleEditSubmitButton()
+
+        // this.messageNavLink()
+        
     },
     handleEditSubmitButton() {
         let number = event.currentTarget.id;
@@ -283,7 +296,14 @@ const eventListeners = {
                 message: `${messageEditInput.value}`,
                 timeStamp: `${messageTimeStamp}`
             }
+        }).then(response => response.json())
+        .then(newPost => {
+            $("#output").empty()
+            newPost.messages.createMessageBoard()
         })
+        // window.location.reload()
+        // $("#output").empty()
+        // messages.createMessageBoard()
     }
 };
 

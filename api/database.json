@@ -5,6 +5,18 @@
       "userName": "Hernando",
       "email": "dlskfj@wh.com",
       "password": "yomama"
+    },
+    {
+      "userName": "MyNameJeff",
+      "email": "jeff@gmail.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "userName": "Asia",
+      "email": "asia@asia.com",
+      "password": "asd",
+      "id": 3
     }
   ],
   "newsitems": [
@@ -21,6 +33,160 @@
       "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
       "synopsis": "blah blah blah",
       "id": 2
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 19
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 20
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 21
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 22
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 23
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 24
     }
   ],
   "events": [
@@ -76,15 +242,15 @@
   "messages": [
     {
       "userId": 1,
-      "message": "hello",
+      "message": "yo",
       "timeStamp": "3:00:00pm",
       "id": 1
     },
     {
-      "id": 2,
       "userId": 2,
-      "message": "Sup.",
-      "timeStamp": "3:01:00pm"
+      "message": "who are you?",
+      "timeStamp": "3:01:00pm",
+      "id": 2
     },
     {
       "id": 3,
@@ -99,10 +265,28 @@
       "timeStamp": "3:03:00pm"
     },
     {
-      "userId": "1",
-      "message": "Anyone there",
-      "timeStamp": "2019-01-11T07:22:50.639Z",
-      "id": 5
+      "userId": 1,
+      "message": "hi",
+      "timeStamp": "2019-01-11T18:04:07.557Z",
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "message": "sup",
+      "timeStamp": "2019-01-11T18:05:11.709Z",
+      "id": 17
+    },
+    {
+      "userId": 3,
+      "message": "",
+      "timeStamp": "2019-01-11T20:17:00.301Z",
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "message": "as",
+      "timeStamp": "2019-01-11T20:30:56.645Z",
+      "id": 19
     }
   ]
 }

@@ -6,6 +6,7 @@ const friends = {
 
   
   defineCurrentUsersFriends () {
+    $("#output").empty()
     const currentUser = 1;
     let friendHolder = [];
 // PULL FROM FRIENDS JSON-------------------------

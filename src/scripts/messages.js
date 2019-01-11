@@ -5,7 +5,8 @@ import eventListeners from "./eventListeners";
 const messages = {
 
     createMessageBoard() {
-
+        $("#output").empty()
+        
         let outputArticle = document.getElementById("output")
 
         //create display container
@@ -39,7 +40,7 @@ const messages = {
         messagesContainer.appendChild(messageSubmitButton);
         outputArticle.appendChild(messagesContainer);
 
-        this.getMessages()
+            this.getMessages()
     },
 
     getMessages() {
@@ -63,6 +64,7 @@ const messages = {
 
             //build DOM Component for each message and append
             messages.forEach(message => {
+                console.log(message)
                 let messageText = message.message;
                 let userName = message.user.userName;
                 let messageId = message.id;

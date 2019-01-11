@@ -49,7 +49,9 @@ const dashboard = {
               <h2>The Purpose Behind Nomads</h2>
             </section>
             <section class="modal-body">
-              <p>As outdoorsman, environmentalist, and filmmakers continue to grow. So do the adventurous spirits of those who embrace conscious consumerism and sustainable living. The purpose is to make a point of plugging into modern life and connecting with your fellow nomads from anywhere you may be. Share your location, Meet up, Exchange stories, Create relationships with people who have similar interest and enhance your traveling experience with nomads. What are you waiting for? 
+              <h3>The minds behing Nomads</h3>
+              <img id = "creatorsImage" src = "images/nomadCreators.jpg" alt = "application creators">
+              <p>As outdoorsman, environmentalist, and filmmakers continue to grow. So do the adventurous spirits of those who embrace conscious consumerism and sustainable living. The purpose is to make a point of plugging into modern life and connecting with your fellow nomads from anywhere you may be. Share your location, Meet up, Exchange stories, Create relationships with people who have similar interest and enhance your traveling experience with nomads.</p> 
             </section>
             <section class="modal-footer">
               <h3>Created By: Divine Madness&copy</h3>
@@ -60,9 +62,9 @@ const dashboard = {
         $("#output").html(formHTML)
         eventListeners.modalDisplayAnimation()
         $("#logIn").click(eventListeners.userLogin)
-        // $("#logIn").click(eventListeners.loadDashboard)
         $("#registerButton").click(eventListeners.userRegistration)
         $("#registerButton").click(eventListeners.userLogin)
+        // $("#logIn").click(eventListeners.loadDashboard)
   
       }
 }

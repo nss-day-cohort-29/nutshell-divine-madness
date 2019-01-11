@@ -30,7 +30,7 @@ const news = {
     },
 
     allSaved(){
-        nomadData.connectToData(testnewsObj)
+    // nomadData.connectToData(testnewsObj)
     },
 
     deleteDB(){
@@ -39,6 +39,7 @@ const news = {
     },
 
     newsElementCreator(){
+        $("#output").empty()
         const newsContainer = document.querySelector("#output")
         let newsCreatorKey = {
             "dataSet" : "newsItems",

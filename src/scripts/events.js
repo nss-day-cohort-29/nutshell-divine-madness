@@ -4,8 +4,11 @@ import nomadData from "./nomadData";
 import domComponents from "./domComponents";
 //import eventListeners from "./eventListeners";
 
+
+//createEventInput and createEventItem will be added to this object. so dombuilder.
 const events = {
   showEventForm () {
+    $("#output").empty()
     const output = document.querySelector("#output");
     const eventForm = domComponents.createEventInput();
     output.appendChild(eventForm);
