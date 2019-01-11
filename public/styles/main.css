@@ -1,6 +1,3 @@
-/* ====================================
-GLOBAL SELECTORS
-========================================= */
 *{
   box-sizing:border-box;
 }
@@ -229,4 +226,17 @@ Adding image of the devs behind NOMADS
 #creatorsImage{
   width:100%;
   height:20%;
+}
+.tasksContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.taskDiv{
+    display: flex;
+    flex-direction: row;
+}
+
+.taskDueDate {
+    padding-left: 10px;
 }

@@ -1,6 +1,7 @@
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
-import eventListeners from "./eventListeners";
+import messagesEventListeners from "./messagesEventListeners";
+import friendsEventListeners from "./friendsEventListeners.js";
 
 const messages = {
 
@@ -32,10 +33,11 @@ const messages = {
             cssClass : "messageSubmitButton",
             content : "Submit",
             attributes : {
-                id : "messageSubmitButton"
+                id : "messageSubmitButton",
+                type : "submit"
             }});
 
-        messageSubmitButton.addEventListener("click", eventListeners.postNewMessage);
+        messageSubmitButton.addEventListener("click", messagesEventListeners.postNewMessage, {once: true});
         messagesContainer.appendChild(messageInput);
         messagesContainer.appendChild(messageSubmitButton);
         outputArticle.appendChild(messagesContainer);
@@ -78,7 +80,8 @@ const messages = {
                     cssClass : "messageUserName",
                     content : `${userName}:`,
                     attributes : {
-                        id: `message${messageId}`
+                        id: `message${messageId}`,
+                        name : parserInt(messageUser)
                     }
                 })
 
@@ -102,7 +105,7 @@ const messages = {
                             name: messageTimeStamp
                         }
                     })
-                    messageEditButton.addEventListener("click", eventListeners.editMessage, {once: true})
+                    messageEditButton.addEventListener("click", messagesEventListeners.editMessage, {once: true})
                     messageElement.appendChild(messageElement2)
                     messageElement.appendChild(messageEditButton)
                     messageContainer.insertBefore(messageElement, messageInput)
@@ -111,6 +114,7 @@ const messages = {
                     messageElement.appendChild(messageElement2)
                     messageContainer.insertBefore(messageElement, messageInput)
                 }
+                messageElement.addEventListener("click", friendsEventListeners.shiz)
             });
         })
     },
