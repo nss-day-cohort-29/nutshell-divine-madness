@@ -126,6 +126,9 @@ loadCurrentUsersFriends (friend) {
         })
       })
 
+  },
+  showUserPotentialFriends () {
+    
   }
 }
 
