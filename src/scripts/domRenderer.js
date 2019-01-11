@@ -1,7 +1,7 @@
 // import events from "./events";
 import nomadData from "./nomadData";
 import news from "./news"
-console.log("I'm working")
+console.log("DomRenderer is working")
 
 // template for object to pass into nomadData.connectToData() if you are doing a GET
 
@@ -50,10 +50,12 @@ console.log("I'm working")
 // news.save();
 // news.allSaved();
 // news.getNews();
-news.newsElementCreator();
+// news.newsElementCreator();
 
 import messages from "./messages";
+import friends from "./friends";
 
+friends.defineCurrentUsersFriends();
 
 // messages.createMessageBoard();
 

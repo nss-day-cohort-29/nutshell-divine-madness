@@ -1,12 +1,14 @@
 import nomadData from "./nomadData"
 import domComponents from "./domComponents";
-import eventListeners from "./eventListeners";
+import friendsEventsListener from "./friendsEventsListener";
 
 const friends = {
 
   
   defineCurrentUsersFriends () {
-    const currentUser = 1;
+    let userId = sessionStorage.getItem('userId');
+    let currentUser = Number(userId);
+    // console.log(currentUser, userId)
     let friendHolder = [];
 // PULL FROM FRIENDS JSON-------------------------
     const friendIntersectionTable = {
@@ -64,7 +66,7 @@ loadCurrentUsersFriends (friend) {
       deleteFriend.textContent = "DELETE";
       friendContainer.appendChild(deleteFriend);
       deleteFriend.addEventListener("click", () => {
-        eventListeners.friendsDeleteFriend()
+        friendsEventsListener.friendsDeleteFriend()
       })
 
       let friendDomBuilder = [];
@@ -103,7 +105,7 @@ loadCurrentUsersFriends (friend) {
               // console.log(newsShiz)
               newsShiz.forEach(userSpecificArticles => {
                 if (userSpecificArticles.userId === friend) {
-                  console.log(userSpecificArticles.title)
+                  // console.log(userSpecificArticles.title)
                   const articleHolder = {
                     elementType: "p",
                     content: userSpecificArticles.title,
@@ -114,7 +116,7 @@ loadCurrentUsersFriends (friend) {
                   friendDomBuilder.push(articleHolder)
                 }
               })
-              console.log(friendDomBuilder)
+              // console.log(friendDomBuilder)
               friendDomBuilder.forEach(object => {
                 // console.log(object);
                 friendContainer.appendChild(domComponents.createDomElement(object))
