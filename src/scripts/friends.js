@@ -263,9 +263,25 @@ loadCurrentUsersFriends (friend) {
       return temp.sort((a,b) => a-b);
     },
     messengerAddfriendFinale (notfriends, wantedFriend) {
+      let userId = sessionStorage.getItem('userId');
+      let currentUser = Number(userId);
+
       console.log(notfriends, Number(wantedFriend))
-      const finalFriend = notfriends.map(friendsThatArent => friendsThatArent === Number(wantedFriend))
-      console.log(finalFriend)
+      const finalFriend = notfriends.filter(friendsThatArent => friendsThatArent === Number(wantedFriend))
+      // console.log(finalFriend[0], Number(wantedFriend))
+      if (finalFriend[0] === Number(wantedFriend)) {
+        nomadData.connectToData({
+          "dataSet" : "friends",
+          "fetchType" : "POST",
+          "dataBaseObject" : {
+            "userId": currentUser,
+            "otherFriendId": Number(wantedFriend),
+          }
+        })
+        alert("You've added a fellow Nomad to your friend list")
+      } else {
+        alert("Uh.... You can't friend there (it's you or someone who's already a friend).")
+      }
     }
 }
 
