@@ -137,32 +137,12 @@
       "userId": 4,
       "otherFriendId": 6,
       "id": 16
-    },
-    {
-      "userId": 1,
-      "otherFriendId": 2,
-      "id": 17
-    },
-    {
-      "userId": 1,
-      "otherFriendId": 3,
-      "id": 18
-    },
-    {
-      "userId": 1,
-      "otherFriendId": 6,
-      "id": 19
-    },
-    {
-      "userId": 1,
-      "otherFriendId": 4,
-      "id": 20
     }
   ],
   "messages": [
     {
       "userId": 1,
-      "message": "Yo",
+      "message": "Yo bro",
       "timeStamp": "3:00:00pm",
       "id": 1
     },
@@ -173,10 +153,10 @@
       "timeStamp": "3:01:00pm"
     },
     {
-      "id": 3,
       "userId": 1,
-      "message": "NM.",
-      "timeStamp": "3:02:00pm"
+      "message": "NM. dsf",
+      "timeStamp": "3:02:00pm",
+      "id": 3
     },
     {
       "id": 4,
@@ -201,6 +181,18 @@
       "message": "Hello nevermind",
       "timeStamp": "2019-01-11T01:12:20.436Z",
       "id": 7
+    },
+    {
+      "userId": "1",
+      "message": "eh man",
+      "timeStamp": "2019-01-11T18:00:18.985Z",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "message": "hello goodbye",
+      "timeStamp": "2019-01-11T18:00:25.850Z",
+      "id": 9
     }
   ]
 }

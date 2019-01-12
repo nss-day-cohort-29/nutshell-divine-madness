@@ -1,6 +1,7 @@
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
 import eventListeners from "./eventListeners";
+import friendsEventsListener from "./friendsEventsListener";
 
 const messages = {
 
@@ -63,22 +64,26 @@ const messages = {
 
             //build DOM Component for each message and append
             messages.forEach(message => {
+                console.log(message)
                 let messageText = message.message;
                 let userName = message.user.userName;
                 let messageId = message.id;
                 let messageTimeStamp = message.timeStamp;
                 let messageUser = `${message.userId}`;
                 let loggedInUser = sessionStorage.getItem('userId');
+                console.log(messageUser)
 
                 let messageElement = domComponents.createDomElement({
-
+                    // ADD LINK HERE
                     elementType : "h3",
                     cssClass : "messageUserName",
                     content : `${userName}:`,
                     attributes : {
-                        id: `message${messageId}`
+                        id: `message${messageId}`,
+                        name: parseInt(messageUser)
                     }
                 })
+                
 
                 let messageElement2 = domComponents.createDomElement({
                     elementType : "p",
@@ -109,6 +114,10 @@ const messages = {
                     messageElement.appendChild(messageElement2)
                     messageContainer.insertBefore(messageElement, messageInput)
                 }
+            
+                messageElement.addEventListener("click", () => {
+                    friendsEventsListener.shiz()
+                })
             });
         })
     },

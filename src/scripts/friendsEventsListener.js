@@ -21,7 +21,7 @@ const friendsEventsListener = {
         if (goodbyeFriend.otherFriendId === Number(friendToDelete) && goodbyeFriend.userId === Number(currentUser)) {
             console.log("PeaceOut",goodbyeFriend.id);
             finalNumberSendForDelete = goodbyeFriend.id;
-            
+
         }
       })
       let goodByeSearchResults = document.getElementById(`friend-${friendToDelete}`);
@@ -42,10 +42,10 @@ const friendsEventsListener = {
     let userId = sessionStorage.getItem('userId');
     let currentUser = Number(userId);
 
-    
+
     const friendToBeAdded = (event.target.id).split("-")[3];
     console.log(`user${currentUser}`,`Adding Friend${friendToBeAdded}`)
-    
+
     let goodByeNonFriend = document.getElementById(`potentialFriend-${friendToBeAdded}`);
     goodByeNonFriend.parentNode.removeChild(goodByeNonFriend);
     alert(`${event.target.previousSibling.innerText} is now your friend!`);
@@ -58,7 +58,33 @@ const friendsEventsListener = {
         "otherFriendId": Number(friendToBeAdded),
       }
     })
-  }
+  },
+  shiz () {
+    const friendToBeAdded = event.target.attributes.name.value;
+    const friendToBeAddedHasAName = event.target.textContent.split(":")[0]
+    let friendsIHave = []
+    let userId = sessionStorage.getItem('userId');
+    let currentUser = Number(userId);
+    nomadData.connectToData({
+      "dataSet" : "friends",
+      "fetchType" : "GET",
+      "dataBaseObject" : "",
+      "embedItem" : "?_embed=friends"
+    })
+    .then(fromFriends => {
+      // console.log(fromFriends)
+      fromFriends.forEach(friendData => {
+        // console.log(friendData)
+        if (friendData.userId === currentUser) {
+          friendsIHave.push(friendData.otherFriendId)
+        }
+      })
+      // console.log(friendsIHave)
+      let please = friends.friendSortFromMessagesSection(friendsIHave, friendToBeAdded)
+
+        // this.showUserPotentialFriends(friendsIHave)
+    })
+  },
 }
 
 export default friendsEventsListener
