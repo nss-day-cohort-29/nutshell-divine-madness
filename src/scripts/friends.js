@@ -9,7 +9,7 @@ const friends = {
     $("#output").empty()
     const currentUser = 1;
     let userId = sessionStorage.getItem('userId');
-    let currentUser = Number(userId);
+    // let currentUser = Number(userId);
     console.log(currentUser, userId)
     let friendHolder = [];
 // PULL FROM FRIENDS JSON-------------------------

@@ -1,7 +1,7 @@
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
 import messagesEventListeners from "./messagesEventListeners";
-import friendsEventListeners from "./friendsEventListeners.js";
+// import friendsEventListeners from "./friendsEventListeners.js";
 
 const messages = {
 
@@ -81,7 +81,7 @@ const messages = {
                     content : `${userName}:`,
                     attributes : {
                         id: `message${messageId}`,
-                        name : parserInt(messageUser)
+                        name : parseInt(messageUser)
                     }
                 })
 

@@ -7,23 +7,16 @@
       "password": "yomama"
     },
     {
-<<<<<<< HEAD
-      "userName": "MyNameJeff",
-      "email": "jeff@gmail.com",
-      "password": "1234",
+      "userName": "Jordan",
+      "email": "jordanrosas1203@gmail.com",
+      "password": "123",
       "id": 2
     },
     {
-      "userName": "Asia",
-      "email": "asia@asia.com",
-      "password": "asd",
+      "userName": "Emily",
+      "email": "jordanrosas1203@gmail.com",
+      "password": "w",
       "id": 3
-=======
-      "id": 2,
-      "userName": "Lorenzo",
-      "email": "dlskfj@wh.com",
-      "password": "yomama"
->>>>>>> master
     }
   ],
   "newsitems": [
@@ -36,175 +29,17 @@
     },
     {
       "userId": 1,
-<<<<<<< HEAD
       "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
       "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-=======
-      "url": "www.fuckoff.com",
-      "title": "Read above",
->>>>>>> master
       "synopsis": "blah blah blah",
       "id": 2
     },
     {
       "userId": 1,
-<<<<<<< HEAD
       "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
       "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-=======
-      "url": "www.fuckoff.com",
-      "title": "Read above",
->>>>>>> master
       "synopsis": "blah blah blah",
       "id": 3
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-<<<<<<< HEAD
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 10
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 11
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 12
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 13
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 14
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 15
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 16
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 17
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 18
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 19
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 20
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 21
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 22
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 23
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 24
     }
   ],
   "events": [
@@ -248,170 +83,29 @@
       "task": "save world",
       "expectedCompletionDate": "2-12",
       "complete": false
-=======
-      "id": 34
-    }
-  ],
-  "events": [
-    {
-      "userId": "1",
-      "eventName": "test",
-      "eventDate": "2019-01-08",
-      "eventTime": "11:11",
-      "eventLocation": "test",
-      "id": 1
-    },
-    {
-      "userId": "1",
-      "eventName": "test2",
-      "eventDate": "2019-01-08",
-      "eventTime": "11:11",
-      "eventLocation": "test2",
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "eventName": "yet another toga party",
-      "eventDate": "2-12",
-      "eventTime": "3:00pm",
-      "eventLocation": "Vegas",
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "url": "www.fuckoff.com",
-      "title": "Read above",
-      "synopsis": "blah blah blah",
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "url": "www.fuckoff.com",
-      "title": "Read above",
-      "synopsis": "blah blah blah",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "url": "www.fuckoff.com",
-      "title": "Read above",
-      "synopsis": "blah blah blah",
-      "id": 6
-    }
-  ],
-  "tasks": [
-    {
-      "id": 1,
-      "userId": 1,
-      "task": "save world",
-      "expectedCompletionDate": "Jan 10 2019",
-      "complete": false
     },
     {
       "id": 2,
       "userId": 1,
-      "task": "destroy world",
-      "expectedCompletionDate": "Jan 11 2019",
-      "complete": false
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "task": "save world",
-      "expectedCompletionDate": "Jan 12 2019",
-      "complete": false
-    },
-    {
-      "id": 4,
-      "userId": 1,
-      "task": "destroy world",
-      "expectedCompletionDate": "Jan 13 2019",
+      "task": "Reach MVP",
+      "expectedCompletionDate": "2019-01-14",
       "complete": true
     },
     {
-      "id": 5,
       "userId": 1,
-      "task": "save world",
-      "expectedCompletionDate": "Jan 14 2019",
-      "complete": true
->>>>>>> master
+      "task": "conquer the world",
+      "expectedCompletionDate": "2019-01-31",
+      "complete": false,
+      "id": 3
     }
   ],
-  "friends": [
-    {
-      "id": 1,
-      "userId": 1,
-      "otherFriendId": 3
-    }
-  ],
+  "friends": [],
   "messages": [
     {
-      "userId": 1,
-<<<<<<< HEAD
-      "message": "yo",
-=======
-      "message": "MOTHA FUCKA",
->>>>>>> master
-      "timeStamp": "3:00:00pm",
-      "id": 1
-    },
-    {
-<<<<<<< HEAD
       "userId": 2,
       "message": "who are you?",
       "timeStamp": "3:01:00pm",
       "id": 2
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "message": "NM.",
-      "timeStamp": "3:02:00pm"
-=======
-      "id": 2,
-      "userId": 2,
-      "message": "Sup.",
-      "timeStamp": "3:01:00pm"
-    },
-    {
-      "userId": 1,
-      "message": "NM.",
-      "timeStamp": "3:02:00pm",
-      "id": 3
->>>>>>> master
-    },
-    {
-      "id": 4,
-      "userId": 2,
-      "message": "Cool.",
-      "timeStamp": "3:03:00pm"
-<<<<<<< HEAD
-    },
-    {
-      "userId": 1,
-      "message": "hi",
-      "timeStamp": "2019-01-11T18:04:07.557Z",
-      "id": 16
-    },
-    {
-      "userId": 1,
-      "message": "sup",
-      "timeStamp": "2019-01-11T18:05:11.709Z",
-      "id": 17
-    },
-    {
-      "userId": 3,
-      "message": "",
-      "timeStamp": "2019-01-11T20:17:00.301Z",
-      "id": 18
-    },
-    {
-      "userId": 1,
-      "message": "as",
-      "timeStamp": "2019-01-11T20:30:56.645Z",
-      "id": 19
-=======
->>>>>>> master
     }
   ]
 }
