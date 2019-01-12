@@ -3,10 +3,6 @@
     padding: 0px;
 }
 
-/* .eventItem > form > fieldset > input {
-
-} */
-
 .eventItem > form {
     border: 1px black solid;
 }
@@ -15,4 +11,17 @@
     background: goldenrod;
     font-weight: bold;
     border: 3px solid black;
+}
+.tasksContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.taskDiv{
+    display: flex;
+    flex-direction: row;
+}
+
+.taskDueDate {
+    padding-left: 10px;
 }

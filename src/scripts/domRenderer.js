@@ -1,7 +1,7 @@
 import events from "./events";
 import nomadData from "./nomadData";
 import news from "./news"
-console.log("I'm working")
+console.log("DomRenderer is working")
 
 events.showEventForm();
 events.appendUserEvents();
@@ -55,7 +55,10 @@ events.appendUserEvents();
 // news.newsElementCreator();
 
 import messages from "./messages";
+import friends from "./friends";
 
+// friends.defineCurrentUsersFriends();
+friends.initializePotentialFriends();
 
 // messages.createMessageBoard();
 
