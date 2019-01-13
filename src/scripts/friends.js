@@ -375,13 +375,22 @@ loadCurrentUsersFriends (friend) {
       }))
       let searchIcon = document.querySelector(".fas");
       searchIcon.classList.add("fa-search");
-      this.readFriendSearchInput()
-    },
-    readFriendSearchInput () {
-      const usersSearchFriendInput = document.getElementById("friend-search-input");
 
-    }
-}
+      const usersSearchFriendInputEnter = document.getElementById("friend-search-input");
+      usersSearchFriendInputEnter.addEventListener("keypress", keyPressEvent => {
+        console.log(event.key)
+        if (keyPressEvent.charCode === 13) {
+          let userInputEnter = keyPressEvent.target.value
+          friendsEventsListener.searchInputMagic(userInputEnter);
+        }
+      })
+      const usersSearchFriendInputClick = document.getElementById("friend-icon-anchor");
+      usersSearchFriendInputClick.addEventListener("click", () => {
+        let userInputClick = usersSearchFriendInputEnter.value
+        friendsEventsListener.searchInputMagic(userInputClick);
+      })
+    },
+};
 
 export default friends
 

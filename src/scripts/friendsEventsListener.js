@@ -107,6 +107,9 @@ const friendsEventsListener = {
       })
 
     }
+  },
+  searchInputMagic (userInput) {
+    console.log(userInput)
   }
 }
 
