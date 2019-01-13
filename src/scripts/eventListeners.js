@@ -128,7 +128,7 @@ const eventListeners = {
         messageEditFieldset.appendChild(messageEditSubmitButton)
         messageEditForm.appendChild(messageEditFieldset)
         messageContainer.appendChild(messageEditForm)
-        event.stopPropagation()
+        event.stopPropagation();
     },
     handleEditSubmitButton() {
         let number = event.currentTarget.id;

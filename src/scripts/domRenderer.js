@@ -64,8 +64,8 @@ import friendsEventsListener from "./friendsEventsListener";
 
 function userLogin () {
 
-    let userName = "Hernando";
-    let password = "yomama";
+    let userName = "Julia Gulia";
+    let password = "word";
 
     nomadData.connectToData({
 
@@ -94,4 +94,6 @@ function loadDashboard (userId) {
     // console.log(`Thanks for passing the userId.  The userId is ${userId}`)
 }
 
+// friends.initializePotentialFriends();
+// friends.defineCurrentUsersFriends();
 friends.buildFriendSearchBar();

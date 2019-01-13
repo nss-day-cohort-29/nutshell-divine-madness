@@ -104,58 +104,63 @@
   ],
   "friends": [
     {
-      "userId": 2,
-      "otherFriendId": 6,
-      "id": 10
-    },
-    {
-      "userId": 2,
-      "otherFriendId": 1,
-      "id": 11
-    },
-    {
-      "userId": 4,
-      "otherFriendId": 1,
-      "id": 12
-    },
-    {
-      "userId": 4,
+      "userId": 1,
       "otherFriendId": 2,
-      "id": 13
-    },
-    {
-      "userId": 4,
-      "otherFriendId": 3,
-      "id": 14
-    },
-    {
-      "userId": 4,
-      "otherFriendId": 5,
-      "id": 15
+      "id": 24
     },
     {
       "userId": 1,
-      "otherFriendId": 2,
-      "id": 16
+      "otherFriendId": 4,
+      "id": 25
     },
     {
-      "userId": 1,
-      "otherFriendId": 3,
-      "id": 17
+      "userId": 3,
+      "otherFriendId": 1,
+      "id": 26
+    },
+    {
+      "userId": 3,
+      "otherFriendId": 2,
+      "id": 27
+    },
+    {
+      "userId": 3,
+      "otherFriendId": 4,
+      "id": 28
+    },
+    {
+      "userId": 4,
+      "otherFriendId": 1,
+      "id": 30
+    },
+    {
+      "userId": 5,
+      "otherFriendId": 2,
+      "id": 31
+    },
+    {
+      "userId": 5,
+      "otherFriendId": 4,
+      "id": 32
+    },
+    {
+      "userId": 5,
+      "otherFriendId": 1,
+      "id": 33
     }
   ],
   "messages": [
     {
       "userId": 1,
-      "message": "Yo bro!",
+      "message": "Yo bro! d",
       "timeStamp": "3:00:00pm",
       "id": 1
     },
     {
-      "id": 2,
       "userId": 2,
-      "message": "Sup.",
-      "timeStamp": "3:01:00pm"
+      "message": "Sup g.",
+      "timeStamp": "3:01:00pm",
+      "id": 2
     },
     {
       "userId": 1,
@@ -164,52 +169,34 @@
       "id": 3
     },
     {
-      "id": 4,
       "userId": 2,
-      "message": "Cool.",
-      "timeStamp": "3:03:00pm"
+      "message": "Not Cool.",
+      "timeStamp": "3:03:00pm",
+      "id": 4
     },
     {
       "userId": 1,
-      "message": "for sure",
+      "message": "for rrrrg",
       "timeStamp": "2019-01-11T01:01:53.174Z",
       "id": 5
     },
     {
-      "userId": 3,
-      "message": "yes",
-      "timeStamp": "2019-01-11T01:03:06.539Z",
+      "userId": 4,
+      "message": "hey boyzzzz",
+      "timeStamp": "2019-01-13T20:00:09.674Z",
       "id": 6
     },
     {
-      "userId": 1,
-      "message": " whoa nevermind",
-      "timeStamp": "2019-01-11T01:12:20.436Z",
+      "userId": 4,
+      "message": "wowzza dudes",
+      "timeStamp": "2019-01-13T20:01:44.398Z",
       "id": 7
     },
     {
-      "userId": 1,
-      "message": "tacos? plaeswee",
-      "timeStamp": "2019-01-11T18:00:18.985Z",
+      "userId": 5,
+      "message": "a craaazzzaaa",
+      "timeStamp": "2019-01-13T20:03:10.247Z",
       "id": 8
-    },
-    {
-      "userId": 1,
-      "message": "hells bells",
-      "timeStamp": "2019-01-11T18:00:25.850Z",
-      "id": 9
-    },
-    {
-      "userId": "1",
-      "message": "my dog ate sauce",
-      "timeStamp": "2019-01-13T02:48:33.368Z",
-      "id": 10
-    },
-    {
-      "userId": "1",
-      "message": "poop",
-      "timeStamp": "2019-01-13T03:07:45.588Z",
-      "id": 11
     }
   ]
 }

@@ -272,8 +272,11 @@ loadCurrentUsersFriends (friend) {
       const finalFriend = notfriends.filter(friendsThatArent => friendsThatArent === Number(wantedFriend))
       // console.log(finalFriend[0], Number(wantedFriend))
       if (finalFriend[0] === Number(wantedFriend)) {
-        this.modalQuestionaireOfFriendshipValidity(wantedFriend,friendToAddName)
-        // alert(`You've added a fellow Nomad ${friendToAddName} your friend list`)
+        if (friendToAddName === "modal") {
+          friendsEventsListener.searchBarAddFriendToJson(finalFriend)
+        } else {
+          this.modalQuestionaireOfFriendshipValidity(wantedFriend,friendToAddName)
+        }// alert(`You've added a fellow Nomad ${friendToAddName} your friend list`)
       } else {
         alert("Uh.... You can't friend there (it's you or someone who's already a friend).")
       }
@@ -442,13 +445,18 @@ loadCurrentUsersFriends (friend) {
       }))
       modalParentTarget.appendChild(domComponents.createDomElement({
         elementType: "button",
-        content: `Yes, make  a Friend`,
+        content: `Yes, make ${friendSearchResultDisplayed.userName} a Friend`,
         attributes: {
-          id: "friendItUp",
-          name: "bo",
+          id: "friendItUp-searchModal",
           type: "button"
         }
       }))
+
+      document.getElementById("dontFriend").addEventListener("click", () => {friendsEventsListener.closeMessageModal()
+      })
+      document.getElementById("friendItUp-searchModal").addEventListener("click", () => {
+        friendsEventsListener.searchBarFriending(friendSearchResultDisplayed.id)
+      })
 
       this.openFriendModal()
     },

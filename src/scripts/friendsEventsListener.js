@@ -80,9 +80,7 @@ const friendsEventsListener = {
         }
       })
       // console.log(friendsIHave)
-      let please = friends.friendSortFromMessagesSection(friendsIHave, friendToBeAdded, friendToBeAddedHasAName)
-
-        // this.showUserPotentialFriends(friendsIHave)
+      friends.friendSortFromMessagesSection(friendsIHave, friendToBeAdded, friendToBeAddedHasAName)
     })
   },
   closeMessageModal() {
@@ -109,6 +107,8 @@ const friendsEventsListener = {
     }
   },
   searchInputMagic (userInput) {
+    let userId = sessionStorage.getItem('userId');
+    let currentUser = Number(userId);
     // console.log(userInput)
     nomadData.connectToData({
       "dataSet" : "users",
@@ -118,9 +118,52 @@ const friendsEventsListener = {
     })
     .then(users => {
       const foundUsers = users.find(user => user.userName.includes(userInput)
-      );
-      friends.searchResultDisplayed(foundUsers)
+      ); console.log(foundUsers.id, currentUser)
+      if (foundUsers.id === currentUser) {
+        alert("Can't friend yourself");
+      } else {
+        friends.searchResultDisplayed(foundUsers);
+      }
     })
+  },
+  searchBarFriending (friendToBeFromSearchId) {
+    const definedAsFromSearchModal = "modal"
+    let friendsIHave = []
+    let userId = sessionStorage.getItem('userId');
+    let currentUser = Number(userId);
+    nomadData.connectToData({
+      "dataSet" : "friends",
+      "fetchType" : "GET",
+      "dataBaseObject" : "",
+      "embedItem" : "?_embed=friends"
+    })
+    .then(fromFriends => {
+      // console.log(fromFriends)
+      fromFriends.forEach(friendData => {
+        // console.log(friendData)
+        if (friendData.userId === currentUser) {
+          friendsIHave.push(friendData.otherFriendId)
+        }
+      })
+      // console.log(friendsIHave)
+      friends.friendSortFromMessagesSection(friendsIHave, friendToBeFromSearchId, definedAsFromSearchModal)
+    })
+  },
+  searchBarAddFriendToJson (friendToBe) {
+    let userId = sessionStorage.getItem('userId');
+    let currentUser = Number(userId);
+
+    let goodByeSearchResults = document.getElementById("modal-container");
+    goodByeSearchResults.parentNode.removeChild(goodByeSearchResults);
+
+    nomadData.connectToData({
+      "dataSet" : "friends",
+      "fetchType" : "POST",
+      "dataBaseObject" : {
+        "userId": currentUser,
+        "otherFriendId": Number(friendToBe),
+      }
+  })
   }
 }
 
