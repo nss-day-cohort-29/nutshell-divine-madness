@@ -132,31 +132,6 @@
       "userId": 4,
       "otherFriendId": 5,
       "id": 15
-    },
-    {
-      "userId": 1,
-      "otherFriendId": 4,
-      "id": 16
-    },
-    {
-      "userId": 1,
-      "otherFriendId": 5,
-      "id": 17
-    },
-    {
-      "userId": 1,
-      "otherFriendId": 6,
-      "id": 18
-    },
-    {
-      "userId": 1,
-      "otherFriendId": 3,
-      "id": 19
-    },
-    {
-      "userId": 1,
-      "otherFriendId": 2,
-      "id": 20
     }
   ],
   "messages": [
@@ -174,7 +149,7 @@
     },
     {
       "userId": 1,
-      "message": "NM. dsf lordy",
+      "message": "uhh?",
       "timeStamp": "3:02:00pm",
       "id": 3
     },
@@ -185,7 +160,7 @@
       "timeStamp": "3:03:00pm"
     },
     {
-      "userId": "1",
+      "userId": 1,
       "message": "for sure",
       "timeStamp": "2019-01-11T01:01:53.174Z",
       "id": 5
@@ -198,21 +173,33 @@
     },
     {
       "userId": 1,
-      "message": "Hello nevermind",
+      "message": " whoa nevermind",
       "timeStamp": "2019-01-11T01:12:20.436Z",
       "id": 7
     },
     {
-      "userId": "1",
-      "message": "eh man",
+      "userId": 1,
+      "message": "tacos? plaeswee",
       "timeStamp": "2019-01-11T18:00:18.985Z",
       "id": 8
     },
     {
       "userId": 1,
-      "message": "hello goodbye",
+      "message": "hells bells",
       "timeStamp": "2019-01-11T18:00:25.850Z",
       "id": 9
+    },
+    {
+      "userId": "1",
+      "message": "my dog ate sauce",
+      "timeStamp": "2019-01-13T02:48:33.368Z",
+      "id": 10
+    },
+    {
+      "userId": "1",
+      "message": "poop",
+      "timeStamp": "2019-01-13T03:07:45.588Z",
+      "id": 11
     }
   ]
 }

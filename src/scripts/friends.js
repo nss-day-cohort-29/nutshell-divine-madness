@@ -110,6 +110,7 @@ loadCurrentUsersFriends (friend) {
               })
               const deleteFriend = document.createElement("button")
               deleteFriend.classList.add(`delete-friend-${friend}`)
+              deleteFriend.setAttribute("type", "button")
               deleteFriend.textContent = "DELETE";
               friendContainer.appendChild(deleteFriend);
               deleteFriend.addEventListener("click", () => {
@@ -219,7 +220,8 @@ loadCurrentUsersFriends (friend) {
               elementType: "button",
               content: "Add Friend",
               attributes: {
-                id: `add-friend-button-${user.id}`
+                id: `add-friend-button-${user.id}`,
+                type: "button"
               }
             }))
             const forAddButton = document.getElementById(`add-friend-button-${user.id}`);
@@ -316,7 +318,8 @@ loadCurrentUsersFriends (friend) {
         elementType: "button",
         content: "Don't Friend",
         attributes: {
-          id: "dontFriend"
+          id: "dontFriend",
+          type: "button"
         }
       }))
       modalParentTarget.appendChild(domComponents.createDomElement({
@@ -324,7 +327,8 @@ loadCurrentUsersFriends (friend) {
         content: `Yes, make ${friendToAddName} a Friend`,
         attributes: {
           id: "friendItUp",
-          name: wantedFriend
+          name: wantedFriend,
+          type: "button"
         }
       }))
       document.getElementById("dontFriend").addEventListener("click", () => {friendsEventsListener.closeMessageModal()
