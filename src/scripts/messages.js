@@ -1,7 +1,7 @@
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
 import messagesEventListeners from "./messagesEventListeners";
-import friendsEventListeners from "./friendsEventListeners.js";
+import friendsEventsListener from "./friendsEventsListener.js";
 
 const messages = {
 
@@ -33,7 +33,7 @@ const messages = {
             content : "Submit",
             attributes : {
                 id : "messageSubmitButton",
-                type : "submit"
+                type : "button"
             }});
 
         messageSubmitButton.addEventListener("click", messagesEventListeners.postNewMessage, {once: true});
@@ -100,7 +100,8 @@ const messages = {
                         content : "Edit",
                         attributes : {
                             id: `messageEditButton_${messageId}`,
-                            name: messageTimeStamp
+                            name: messageTimeStamp,
+                            type : "button"
                         }
                     })
                     messageEditButton.addEventListener("click", messagesEventListeners.editMessage, {once: true})
@@ -112,7 +113,7 @@ const messages = {
                     messageElement.appendChild(messageElement2)
                     messageContainer.insertBefore(messageElement, messageInput)
                 }
-                messageElement.addEventListener("click", friendsEventListeners.shiz)
+                messageElement.addEventListener("click", friendsEventsListener.shiz)
             });
         })
     },

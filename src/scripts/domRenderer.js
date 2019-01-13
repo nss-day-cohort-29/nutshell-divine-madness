@@ -54,10 +54,11 @@ console.log("DomRenderer is working")
 
 import messages from "./messages";
 import friends from "./friends";
+import tasks from "./tasks";
 
 // friends.defineCurrentUsersFriends();
-friends.initializePotentialFriends();
-
+// friends.initializePotentialFriends();
+tasks.createTaskTables();
 // messages.createMessageBoard();
 
 function userLogin () {

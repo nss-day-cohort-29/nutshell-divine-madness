@@ -1,7 +1,7 @@
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
 import messages from "./messages";
-import friendsEventListeners from "./friendsEventListeners.js";
+import friendsEventsListener from "./friendsEventsListener.js";
 
 const messagesEventListeners = {
 
@@ -72,7 +72,7 @@ const messagesEventListeners = {
             attributes : {
                 id : `messageEditSubmitButton_${messageId}`,
                 name: messageTimeStamp,
-                type : "submit"
+                type : "button"
             }
         });
 
@@ -81,6 +81,8 @@ const messagesEventListeners = {
         messageEditFieldset.appendChild(messageEditSubmitButton)
         messageEditForm.appendChild(messageEditFieldset)
         messageContainer.appendChild(messageEditForm)
+
+        event.stopPropagation();
     },
 
     handleEditSubmitButton() {
