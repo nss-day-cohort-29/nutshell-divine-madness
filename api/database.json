@@ -135,14 +135,29 @@
     },
     {
       "userId": 1,
+      "otherFriendId": 4,
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 5,
+      "id": 19
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 6,
+      "id": 20
+    },
+    {
+      "userId": 1,
       "otherFriendId": 2,
-      "id": 16
+      "id": 21
     }
   ],
   "messages": [
     {
       "userId": 1,
-      "message": "Yo bro",
+      "message": "Yo bro rs sdf",
       "timeStamp": "3:00:00pm",
       "id": 1
     },
@@ -154,7 +169,7 @@
     },
     {
       "userId": 1,
-      "message": "NM. dsf",
+      "message": "NM. dsf lordy",
       "timeStamp": "3:02:00pm",
       "id": 3
     },

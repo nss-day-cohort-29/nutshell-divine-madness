@@ -83,7 +83,7 @@ const messages = {
                         name: parseInt(messageUser)
                     }
                 })
-                
+
 
                 let messageElement2 = domComponents.createDomElement({
                     elementType : "p",
@@ -114,7 +114,7 @@ const messages = {
                     messageElement.appendChild(messageElement2)
                     messageContainer.insertBefore(messageElement, messageInput)
                 }
-            
+
                 messageElement.addEventListener("click", () => {
                     friendsEventsListener.shiz()
                 })
