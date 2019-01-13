@@ -378,16 +378,22 @@ loadCurrentUsersFriends (friend) {
 
       const usersSearchFriendInputEnter = document.getElementById("friend-search-input");
       usersSearchFriendInputEnter.addEventListener("keypress", keyPressEvent => {
-        console.log(event.key)
+        // console.log(event.key)
         if (keyPressEvent.charCode === 13) {
-          let userInputEnter = keyPressEvent.target.value
+          let userInputEnter = keyPressEvent.target.value;
+
           friendsEventsListener.searchInputMagic(userInputEnter);
+          usersSearchFriendInputEnter.value = "";
+
         }
       })
+
+
       const usersSearchFriendInputClick = document.getElementById("friend-icon-anchor");
       usersSearchFriendInputClick.addEventListener("click", () => {
         let userInputClick = usersSearchFriendInputEnter.value
         friendsEventsListener.searchInputMagic(userInputClick);
+        usersSearchFriendInputEnter.value = "";
       })
     },
 };
