@@ -59,7 +59,7 @@ import messages from "./messages";
 import friendsEventsListener from "./friendsEventsListener";
 
 
-// messages.createMessageBoard();
+messages.createMessageBoard();
 
 
 function userLogin () {
@@ -94,4 +94,4 @@ function loadDashboard (userId) {
     // console.log(`Thanks for passing the userId.  The userId is ${userId}`)
 }
 
-friends.defineCurrentUsersFriends()
+// friends.modalQuestionaireOfFriendshipValidity();

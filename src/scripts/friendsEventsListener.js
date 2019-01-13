@@ -80,11 +80,34 @@ const friendsEventsListener = {
         }
       })
       // console.log(friendsIHave)
-      let please = friends.friendSortFromMessagesSection(friendsIHave, friendToBeAdded)
+      let please = friends.friendSortFromMessagesSection(friendsIHave, friendToBeAdded, friendToBeAddedHasAName)
 
         // this.showUserPotentialFriends(friendsIHave)
     })
   },
+  closeMessageModal() {
+    let userId = sessionStorage.getItem('userId');
+    let currentUser = Number(userId);
+
+    if (event.target.id === "dontFriend") {
+      let goodByeSearchResults = document.getElementById("modal-container");
+      goodByeSearchResults.parentNode.removeChild(goodByeSearchResults);
+    } else if (event.target.id === "friendItUp") {
+      let goodByeSearchResults = document.getElementById("modal-container");
+      goodByeSearchResults.parentNode.removeChild(goodByeSearchResults);
+      let friendTobe = event.target.attributes.name.value;
+      console.log(friendTobe)
+        nomadData.connectToData({
+          "dataSet" : "friends",
+          "fetchType" : "POST",
+          "dataBaseObject" : {
+            "userId": currentUser,
+            "otherFriendId": Number(friendTobe),
+          }
+      })
+
+    }
+  }
 }
 
 export default friendsEventsListener

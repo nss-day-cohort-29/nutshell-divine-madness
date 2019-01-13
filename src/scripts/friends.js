@@ -231,7 +231,7 @@ loadCurrentUsersFriends (friend) {
       })
       // console.log(notAFriend)
     },
-    friendSortFromMessagesSection (arrayOfFriends, friendToAdd) {
+    friendSortFromMessagesSection (arrayOfFriends, friendToAdd, friendToAddName) {
       let userId = sessionStorage.getItem('userId');
       let currentUser = Number(userId);
       arrayOfFriends.push(currentUser)
@@ -246,7 +246,7 @@ loadCurrentUsersFriends (friend) {
             arrayOfUsers.push(user.id)
           })
           let notFriendsList = this.compareMessageFriendArrays(arrayOfUsers, arrayOfFriends)
-          this.messengerAddfriendFinale(notFriendsList, friendToAdd)
+          this.messengerAddfriendFinale(notFriendsList, friendToAdd, friendToAddName)
         })
     },
     compareMessageFriendArrays (array1, array2) {
@@ -262,7 +262,7 @@ loadCurrentUsersFriends (friend) {
       }
       return temp.sort((a,b) => a-b);
     },
-    messengerAddfriendFinale (notfriends, wantedFriend) {
+    messengerAddfriendFinale (notfriends, wantedFriend, friendToAddName) {
       let userId = sessionStorage.getItem('userId');
       let currentUser = Number(userId);
 
@@ -270,18 +270,75 @@ loadCurrentUsersFriends (friend) {
       const finalFriend = notfriends.filter(friendsThatArent => friendsThatArent === Number(wantedFriend))
       // console.log(finalFriend[0], Number(wantedFriend))
       if (finalFriend[0] === Number(wantedFriend)) {
-        nomadData.connectToData({
-          "dataSet" : "friends",
-          "fetchType" : "POST",
-          "dataBaseObject" : {
-            "userId": currentUser,
-            "otherFriendId": Number(wantedFriend),
-          }
-        })
-        alert("You've added a fellow Nomad to your friend list")
+        this.modalQuestionaireOfFriendshipValidity(wantedFriend,friendToAddName)
+        // alert(`You've added a fellow Nomad ${friendToAddName} your friend list`)
       } else {
         alert("Uh.... You can't friend there (it's you or someone who's already a friend).")
       }
+    },
+    modalQuestionaireOfFriendshipValidity (wantedFriend, friendToAddName) {
+
+      document.getElementById("output").appendChild(domComponents.createDomElement({
+        elementType: "section",
+        attributes: {
+          id: "modal-container"
+        }
+      }))
+      document.getElementById("modal-container").appendChild(domComponents.createDomElement({
+        elementType: "div",
+        attributes: {
+          id: "friends__backdrop"
+        }
+      }));
+      document.getElementById("modal-container").appendChild(domComponents.createDomElement({
+        elementType: "div",
+        attributes: {
+          id: "friends__modal"
+        }
+      }))
+      const modalParentTarget = document.getElementById("friends__modal");
+      modalParentTarget.appendChild(domComponents.createDomElement({
+        elementType: "h1",
+        content: `You sure you want ${friendToAddName} as a friend?`,
+        attributes: {
+          id: "friends__content"
+        }
+      }))
+      modalParentTarget.appendChild(domComponents.createDomElement({
+        elementType: "p",
+        content: "I mean really....",
+        attributes: {
+          href: "#",
+          id: "friends__close"
+        }
+      }))
+      modalParentTarget.appendChild(domComponents.createDomElement({
+        elementType: "button",
+        content: "Don't Friend",
+        attributes: {
+          id: "dontFriend"
+        }
+      }))
+      modalParentTarget.appendChild(domComponents.createDomElement({
+        elementType: "button",
+        content: `Yes, make ${friendToAddName} a Friend`,
+        attributes: {
+          id: "friendItUp",
+          name: wantedFriend
+        }
+      }))
+      document.getElementById("dontFriend").addEventListener("click", () => {friendsEventsListener.closeMessageModal()
+      })
+      document.getElementById("friendItUp").addEventListener("click", () => {
+        friendsEventsListener.closeMessageModal()
+      })
+      this.openFriendModal()
+    },
+    openFriendModal () {
+      let backdrop = document.getElementById("friends__backdrop");
+      let modal = document.getElementById("friends__modal");
+      backdrop.style.display = "block";
+      modal.style.display = "block";
     }
 }
 
