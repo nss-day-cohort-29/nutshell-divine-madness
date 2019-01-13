@@ -396,6 +396,62 @@ loadCurrentUsersFriends (friend) {
         usersSearchFriendInputEnter.value = "";
       })
     },
+    searchResultDisplayed (friendSearchResultDisplayed) {
+      console.log("yo")
+      document.getElementById("output").appendChild(domComponents.createDomElement({
+        elementType: "section",
+        attributes: {
+          id: "modal-container"
+        }
+      }))
+      document.getElementById("modal-container").appendChild(domComponents.createDomElement({
+        elementType: "div",
+        attributes: {
+          id: "friends__backdrop"
+        }
+      }));
+      document.getElementById("modal-container").appendChild(domComponents.createDomElement({
+        elementType: "div",
+        attributes: {
+          id: "friends__modal"
+        }
+      }))
+      const modalParentTarget = document.getElementById("friends__modal");
+      modalParentTarget.appendChild(domComponents.createDomElement({
+        elementType: "h1",
+        content: `Would you like to be friends with ${friendSearchResultDisplayed.userName}?`,
+        attributes: {
+          id: "friends__content"
+        }
+      }))
+      modalParentTarget.appendChild(domComponents.createDomElement({
+        elementType: "p",
+        content: `I mean ${friendSearchResultDisplayed.userName} is pretty cool...`,
+        attributes: {
+          href: "#",
+          id: "friends__close"
+        }
+      }))
+      modalParentTarget.appendChild(domComponents.createDomElement({
+        elementType: "button",
+        content: "Don't Friend",
+        attributes: {
+          id: "dontFriend",
+          type: "button"
+        }
+      }))
+      modalParentTarget.appendChild(domComponents.createDomElement({
+        elementType: "button",
+        content: `Yes, make  a Friend`,
+        attributes: {
+          id: "friendItUp",
+          name: "bo",
+          type: "button"
+        }
+      }))
+
+      this.openFriendModal()
+    },
 };
 
 export default friends

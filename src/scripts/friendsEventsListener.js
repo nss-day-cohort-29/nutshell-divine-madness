@@ -109,7 +109,7 @@ const friendsEventsListener = {
     }
   },
   searchInputMagic (userInput) {
-    console.log(userInput)
+    // console.log(userInput)
     nomadData.connectToData({
       "dataSet" : "users",
       "fetchType" : "GET",
@@ -119,7 +119,7 @@ const friendsEventsListener = {
     .then(users => {
       const foundUsers = users.find(user => user.userName.includes(userInput)
       );
-      console.log(foundUsers)
+      friends.searchResultDisplayed(foundUsers)
     })
   }
 }
