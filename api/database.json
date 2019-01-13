@@ -136,28 +136,33 @@
     {
       "userId": 1,
       "otherFriendId": 4,
-      "id": 18
+      "id": 16
     },
     {
       "userId": 1,
       "otherFriendId": 5,
-      "id": 19
+      "id": 17
     },
     {
       "userId": 1,
       "otherFriendId": 6,
-      "id": 20
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 3,
+      "id": 19
     },
     {
       "userId": 1,
       "otherFriendId": 2,
-      "id": 21
+      "id": 20
     }
   ],
   "messages": [
     {
       "userId": 1,
-      "message": "Yo bro rs sdf",
+      "message": "Yo bro!",
       "timeStamp": "3:00:00pm",
       "id": 1
     },
