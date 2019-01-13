@@ -34,7 +34,7 @@ const news = {
     },
 
     deleteDB(){
-        
+
 
     },
 
@@ -53,34 +53,34 @@ const news = {
                 newsContainer.appendChild(domComponents.createDomElement({
                     elementType: "button",
                     content: "SAVE BITCH",
-                    cssClass: "newsSaveButton"    
+                    cssClass: "newsSaveButton"
                 }))
                 newsContainer.appendChild(domComponents.createDomElement({
                     elementType: "h2",
                     content: dbGrab.title,
-                    cssClass: "newsTitle"    
+                    cssClass: "newsTitle"
                 }))
                 newsContainer.appendChild(domComponents.createDomElement({
                     elementType: "p",
-                    content: dbGrab.synopsis,        
-                    cssClass: "newsBody"   
+                    content: dbGrab.synopsis,
+                    cssClass: "newsBody"
                 }))
                 newsContainer.appendChild(domComponents.createDomElement({
                     elementType: "a",
-                    content: dbGrab.url,        
+                    content: dbGrab.url,
                     cssClass: "newsURL",
                     attributes:{
                         href:`${dbGrab.url}`
-                    }   
+                    }
                 }))
-                
+
             })
 
         })
-        
+
         // const NewsTest = domComponents.createDomElement("h2",testPass,"testObj",null);
         // output.appendChild(NewsTest);
-        
+
 
     }
 }
