@@ -343,6 +343,43 @@ loadCurrentUsersFriends (friend) {
       let modal = document.getElementById("friends__modal");
       backdrop.style.display = "block";
       modal.style.display = "block";
+    },
+    buildFriendSearchBar () {
+      document.getElementById("output").appendChild(domComponents.createDomElement({
+        elementType: "div",
+        attributes: {
+          id: "friend-search-box"
+        }
+      }))
+      document.getElementById("friend-search-box").appendChild(domComponents.createDomElement({
+        elementType: "input",
+        attributes: {
+          id: "friend-search-input",
+          class: "search-txt",
+          type: "text",
+          name: "",
+          placeholder: "Search For Friends"
+        }
+      }))
+      document.getElementById("friend-search-box").appendChild(domComponents.createDomElement({
+        elementType: "a",
+        attributes: {
+          class: "friend-search-btn",
+          href: "#",
+          id: "friend-icon-anchor"
+        }
+      }))
+      document.getElementById("friend-icon-anchor").appendChild(domComponents.createDomElement({
+        elementType: "i",
+        cssClass: "fas"
+      }))
+      let searchIcon = document.querySelector(".fas");
+      searchIcon.classList.add("fa-search");
+      this.readFriendSearchInput()
+    },
+    readFriendSearchInput () {
+      const usersSearchFriendInput = document.getElementById("friend-search-input");
+
     }
 }
 
