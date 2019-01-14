@@ -1,7 +1,3 @@
 node_modules
-<<<<<<< HEAD
 pubilc/bundle.js
 database.json
-=======
-public/bundle.js
->>>>>>> master
