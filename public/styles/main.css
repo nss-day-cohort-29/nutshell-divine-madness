@@ -1,3 +1,235 @@
+*{
+  box-sizing:border-box;
+}
+body{
+  background-image:linear-gradient(rgba(0,0,0,0,0.6), rgba(0,0,0,0,0.6));
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  margin:0;
+  padding:0;
+  font-family:'Montserrat Alternates', sans-serif;
+  overflow:hidden;
+}
+h1{
+  font-weight: bold;
+  color:white;
+  text-align: center;
+  margin-top:150px;
+  padding:0;
+  font-size:70px;
+  text-shadow: 4px 4px 8px black;
+} 
+
+
+.t-border{
+  padding-bottom:25px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+/* =======================================================
+CLASS SELECTORS 
+
+.login-page{
+  width:360px;
+  /* padding:10% 0 0 ; */
+  /* padding-top:-50px;
+  margin:auto;
+} */
+.form{
+  position:relative;
+  z-index:1;
+  background: rgb(81, 78, 78);
+  opacity:0.9;
+  max-width:360px;
+  margin:0 auto 100px;
+  padding:45px;
+  text-align:center;
+  box-shadow: 4px 4px 10px black;
+  border-radius:5%;
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline:1;
+  background:#f2f2f2;
+  opacity:1;
+  width:100%;
+  border:0;
+  margin:0 0 15px;
+  padding:15px;
+  box-sizing:border-box;
+  font-size: 14px;
+}
+.form button{
+  font-family: "Roboto", sans-serif;
+  text-transform:uppercase;
+  outline:0;
+  background:#4CAF50;
+  width:100%;
+  border:0;
+  padding:15px;
+  color:#fff;
+  font-size:14px;
+  cursor:pointer;
+}
+.form button:hover, .form button:active{
+  background:#43A047 ;
+}
+.form .message{
+  margin:15px 0 0 ;
+  color:aliceblue;
+  font-size:15px;
+}
+.form .message a{
+  color:#fff;
+  font-weight:bold;
+  text-decoration:none;
+}
+.form .registerForm{
+  display:none;
+}
+.form #modalButton{
+  font-family: "Roboto", sans-serif;
+  text-transform:uppercase;
+  outline:0;
+  background:#5595fc;
+  width:100%;
+  border:0;
+  padding:15px;
+  color:#fff;
+  font-size:14px;
+  margin-top:5px;
+  cursor:pointer;
+}
+.form #modalButton:hover, .form #modalButton:active{
+  background:#458af9;
+}
+
+/*====================================
+NAVIGATION BAR 
+========================================*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(81, 78, 78);
+  opacity:0.9;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index: 1;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  line-height:1.7;
+  text-decoration: none;
+  font-size:20px;
+  font-weight:bold;
+  
+}
+#logo{
+  float:right;
+}
+#logo > a{
+  font-size:20px;
+  color:rgb( 191, 162, 44);
+}
+.active{
+  background:rgb( 191, 162, 44);
+}
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+/*============================================
+NOMAD MISSION MODAL WINDOW 
+================================================*/
+/* The Modal (background) */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; /* Sit on top */
+  padding-top:0px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity to give tint to backgorund image */
+}
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 40%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: rgb(81, 78, 78);
+  color: rgb( 191, 162, 44);
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: rgb(81, 78, 78);
+  color: rgb( 191, 162, 44);
+}
+/*============================================
+Adding image of the devs behind NOMADS
+==============================================*/
+#creatorsImage{
+  width:100%;
+  height:20%;
+}
 .eventItem > form > fieldset {
     border: none;
     padding: 0px;
@@ -24,4 +256,76 @@
 
 .taskDueDate {
     padding-left: 10px;
+}
+
+/*=================================================================
+Messages Styling
+===================================================================*/
+.messagesContainer{
+  /* display:flex;
+  flex-direction:column; */
+  height:100vh;
+  padding-right:25px;
+  margin-top:85px;
+  /* overflow:scroll; */
+}
+.messageUserName{
+  /* display:flex;*/
+  background:rgb(81, 78, 78);
+  opacity:0.8;
+  width:70%;
+  margin:0 auto;
+  margin-top:18px;
+  color:white;
+  padding-left:10px;
+  box-shadow: 2px 2px 5px black;
+  border-radius:15px;
+  transition:1s;
+}
+.messageUserName:hover{
+  transform:scale(1);
+  cursor:pointer;
+}
+#messageInput{
+  margin-top:6px;
+  line-height:2;
+  margin-left:350px;
+  width:61%;
+  margin-left:150px;
+}
+#messageSubmitButton{
+  /* justify-content: flex-end; */
+  border:0;
+  line-height:2;
+  width:9%;
+  background:rgb(81, 78, 78);
+  color:rgb( 191, 162, 44);
+  line-height: 2;
+}
+.messageEditButton{
+  border:0;
+  background:rgb(81, 78, 78);
+  color:rgb( 191, 162, 44);
+}
+/*=================================================================
+EVENT FORM STYLES
+===================================================================*/
+#showForm{
+  position:absolute;
+  top:300px;
+}
+.eventInput{
+  margin-top:300px;
+  background:rgb(81, 78, 78);
+  opacity:0.8;
+  width:70%;
+  margin:0 auto;
+  margin-top:18px;
+  color:white;
+  padding-left:10px;
+  box-shadow: 2px 2px 5px black;
+  border-radius:15px;
+}
+fieldset{
+  margin-top:6px;
 }
