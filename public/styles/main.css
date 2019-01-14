@@ -314,3 +314,18 @@ EVENT FORM STYLES
   position:absolute;
   top:300px;
 }
+.eventInput{
+  margin-top:300px;
+  background:rgb(81, 78, 78);
+  opacity:0.8;
+  width:70%;
+  margin:0 auto;
+  margin-top:18px;
+  color:white;
+  padding-left:10px;
+  box-shadow: 2px 2px 5px black;
+  border-radius:15px;
+}
+fieldset{
+  margin-top:6px;
+}

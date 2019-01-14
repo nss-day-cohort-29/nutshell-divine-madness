@@ -10,7 +10,8 @@ const events = {
   showEventForm () {
     $("#output").empty()
     const output = document.querySelector("#output");
-    this.addShowButton();
+    const eventsForm = this.createEventInput();
+    output.appendChild(eventsForm)
     const eventLog = document.createElement("article")
     eventLog.setAttribute("id", "eventLog");
     output.appendChild(eventLog);
@@ -67,10 +68,11 @@ const events = {
     });
   },
   createEventInput() {
-    const formContainer = domComponents.createDomElement({elementType: "form", attributes: {class: "eventInput"}});
-    const formHeader = domComponents.createDomElement({elementType: "h1", content: "Add a New Event:"});
+  
+    const formContainer = document.querySelector("#output")
+    const formHeader = domComponents.createDomElement({elementType: "h2", content: "Add a New Event:"});
     formContainer.appendChild(formHeader);
-
+    const eventForm = domComponents.createDomElement({elementType: "form", attributes: {class: "eventInput"}});
     const nameFieldset = domComponents.createDomElement({elementType: "fieldset"});
     const nameLabel = domComponents.createDomElement({elementType: "label", content: "Event Name:", attributes: {for: "eventName"}});
     const nameInput = domComponents.createDomElement({elementType: "input", attributes: {type: "text", name: "eventName", id: "eventName"}});
@@ -100,15 +102,15 @@ const events = {
 
     const hideButton = domComponents.createDomElement({elementType: "button", content: "Hide Event Input", attributes: {type: "button", id: "hideEvent"}});
     hideButton.addEventListener("click", eventPageListeners.handleHideButton);
-
-    formContainer.appendChild(nameFieldset);
-    formContainer.appendChild(dateFieldset);
-    formContainer.appendChild(timeFieldset);
-    formContainer.appendChild(locationFieldset);
-    formContainer.appendChild(saveButton);
-    formContainer.appendChild(hideButton);
-
-    return formContainer;
+    formContainer.appendChild(eventForm)
+    eventForm.appendChild(nameFieldset);
+    eventForm.appendChild(dateFieldset);
+    eventForm.appendChild(timeFieldset);
+    eventForm.appendChild(locationFieldset);
+    eventForm.appendChild(saveButton);
+    eventForm.appendChild(hideButton);
+    // formContainer.appendChild(eventForm)
+    return eventForm;
   },
   createEventItem (eventObject) {
     const eventItem = domComponents.createDomElement({elementType: "article", attributes: {class: "eventItem", id: `eventItem--${eventObject.id}`}});
