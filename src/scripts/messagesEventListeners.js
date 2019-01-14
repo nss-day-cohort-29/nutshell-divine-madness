@@ -80,6 +80,8 @@ const messagesEventListeners = {
         messageEditFieldset.appendChild(messageEditSubmitButton)
         messageEditForm.appendChild(messageEditFieldset)
         messageContainer.appendChild(messageEditForm)
+
+        event.stopPropagation();
     },
 
     handleEditSubmitButton() {

@@ -19,7 +19,6 @@ $("modalButton").click(eventListeners.modalDisplayAnimation)
 // news.allSaved();
 // news.getNews();
 
-
 // news.newsElementCreator();
 // news.newsElementCreator();
 

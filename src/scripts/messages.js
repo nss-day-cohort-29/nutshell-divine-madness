@@ -34,7 +34,7 @@ const messages = {
             content : "Submit",
             attributes : {
                 id : "messageSubmitButton",
-                type : "submit"
+                type : "button"
             }});
 
         messageSubmitButton.addEventListener("click", messagesEventListeners.postNewMessage, {once: true});
@@ -102,7 +102,8 @@ const messages = {
                         content : "Edit",
                         attributes : {
                             id: `messageEditButton_${messageId}`,
-                            name: messageTimeStamp
+                            name: messageTimeStamp,
+                            type : "button"
                         }
                     })
                     messageEditButton.addEventListener("click", messagesEventListeners.editMessage, {once: true})

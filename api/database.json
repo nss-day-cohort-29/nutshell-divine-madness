@@ -66,35 +66,43 @@
   ],
   "events": [
     {
-      "userId": "1",
-      "eventName": "test",
-      "eventDate": "2019-01-08",
-      "eventTime": "11:11",
-      "eventLocation": "test",
+      "userId": 1,
+      "eventName": "Hiking",
+      "eventDate": "2019-01-14",
+      "eventTime": "15:00",
+      "eventLocation": "Yosemite",
       "id": 1
     },
     {
-      "userId": "1",
-      "eventName": "test2",
-      "eventDate": "2019-01-08",
-      "eventTime": "11:11",
-      "eventLocation": "test2",
-      "id": 2
+      "id": 2,
+      "userId": 1,
+      "eventName": "Skiing",
+      "eventDate": "2019-01-15",
+      "eventTime": "08:00",
+      "eventLocation": "Rockies"
     },
     {
-      "userId": "1",
-      "eventName": "test4",
-      "eventDate": "2019-01-08",
-      "eventTime": "11:11",
-      "eventLocation": "test4",
+      "userId": 1,
+      "eventName": "Outdoor Yoga",
+      "eventDate": "2019-01-18",
+      "eventTime": "08:00",
+      "eventLocation": "Outside",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "eventName": "Concert",
+      "eventDate": "2019-01-20",
+      "eventTime": "16:00",
+      "eventLocation": "Red Rock",
       "id": 4
     },
     {
-      "userId": "1",
-      "eventName": "test5",
-      "eventDate": "2019-01-08",
-      "eventTime": "11:11",
-      "eventLocation": "test5",
+      "userId": 3,
+      "eventName": "Picnic",
+      "eventDate": "2019-01-17",
+      "eventTime": "12:00",
+      "eventLocation": "A Park",
       "id": 5
     }
   ],

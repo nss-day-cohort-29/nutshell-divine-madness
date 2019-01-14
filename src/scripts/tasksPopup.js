@@ -59,7 +59,7 @@ const tasksPopup = {
             content : "Submit",
             attributes : {
                 id : "submitNewTaskButton",
-                // type : "submit"
+                type : "button"
             }
         });
 
