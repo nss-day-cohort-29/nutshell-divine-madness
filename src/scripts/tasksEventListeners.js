@@ -1,13 +1,17 @@
 import nomadData from "./nomadData";
 import tasks from "./tasks";
+import domComponents from "./domComponents"
 
 const tasksEventListeners = {
 
     createNewTask() {
 
         let taskTitle = document.getElementById("taskTitleInput").value;
-        let dueDate = document.getElementById("taskDateInput").value;
-        let userId = Number(sessionStorage.getItem("userId"));
+        let dueDateFieldValiue = document.getElementById("taskDateInput").value;
+        let userId = Number(sessionStorage.getItem('userId'));
+
+        let dueDateArray = dueDateFieldValiue.split("-")
+        let dueDate = `${dueDateArray[1]} ${dueDateArray[2]} ${dueDateArray[0]}`;
 
         nomadData.connectToData({
 
@@ -23,7 +27,7 @@ const tasksEventListeners = {
         .then(shit => {
             console.log(shit)
             $("#output").empty()
-            tasks.createTaskTables()
+            tasks.createTaskTables();
         })
     },
 
@@ -69,6 +73,88 @@ const tasksEventListeners = {
                 $("#output").empty()
                 tasks.createTaskTables()
             })
+        })
+    },
+
+    taskEditButton() {
+
+        let number = event.currentTarget.id;
+        let taskArray = number.split("_");
+        let taskId = taskArray[1];
+
+        let taskCellToEmpty = document.getElementById(`taskCell_${taskId}`);
+        let taskLableToRemove = document.getElementById(`taskLabel_${taskId}`);
+        let dueDateCellToEmpty = document.getElementById(`dueDateCell_${taskId}`);
+        let dueDateToRemove = document.getElementById(`taskDueDate_${taskId}`);
+        let taskEditCellToEmpty = document.getElementById(`taskEditCell_${taskId}`);
+        let taskEditButtonToRemove = document.getElementById(`taskEditButton_${taskId}`);
+
+        let taskToEditText = taskLableToRemove.innerText;
+        console.log(taskToEditText)
+
+        let taskToEditTitle = domComponents.createDomElement({
+            elementType : "input",
+            cssClass : "taskToEditTitle",
+            attributes : {
+                id : `taskToEditTitle_${taskId}`,
+                value : `${taskToEditText}`
+            }
+        })
+
+        let taskDueDateToEdit = domComponents.createDomElement({
+            elementType : "input",
+            cssClass : "taskDueDateToEdit",
+            attributes : {
+                id : `taskDueDateToEdit_${taskId}`,
+                type : "date"
+            }
+        })
+
+        let editedTaskSubmitButton = domComponents.createDomElement({
+            elementType : "button",
+            cssClass : "editedTaskSubmitButton",
+            content : "Sumbit",
+            attributes : {
+                id : `editedTaskSubmitButton_${number}`,
+                type : "button"
+            }
+        })
+
+        taskCellToEmpty.removeChild(taskLableToRemove);
+        taskCellToEmpty.appendChild(taskToEditTitle)
+        dueDateCellToEmpty.removeChild(dueDateToRemove);
+        dueDateCellToEmpty.appendChild(taskDueDateToEdit);
+        taskEditCellToEmpty.removeChild(taskEditButtonToRemove);
+        taskEditCellToEmpty.appendChild(editedTaskSubmitButton);
+        editedTaskSubmitButton.addEventListener("click", tasksEventListeners.saveTaskEdit)
+
+    },
+    saveTaskEdit() {
+        let taskNumber = event.currentTarget.id;
+        let taskArray = taskNumber.split("_");
+        let taskId = taskArray[2];
+        let taskEditInput = document.getElementById(`taskToEditTitle_${taskId}`).value;
+        let taskEditDate = document.getElementById(`taskDueDateToEdit_${taskId}`).value;
+
+        let dueDateArray = taskEditDate.split("-")
+        let dueDate = `${dueDateArray[1]} ${dueDateArray[2]} ${dueDateArray[0]}`;
+
+
+        nomadData.connectToData({
+
+            putId : taskId,
+            dataSet : "tasks",
+            fetchType : "PUT",
+            dataBaseObject : {
+                userId : Number(sessionStorage.getItem("userId")),
+                task: taskEditInput,
+                expectedCompletionDate: dueDate,
+                complete : false
+            }
+        }).then(shit => {
+            console.log(shit)
+            $("#output").empty();
+            tasks.createTaskTables();
         })
     }
 }
