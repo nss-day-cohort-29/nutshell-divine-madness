@@ -1,7 +1,7 @@
 import eventListeners from "./eventListeners"
 const dashboard = {
   createNavBar(){
-    let navHTML = ` 
+    let navHTML = `
       <nav>
         <ul>
           <li id = "newsLink"><a class = "active" href = "#">Articles</a></li>
@@ -36,7 +36,7 @@ const dashboard = {
           <form class = "login-form">
             <input id = "userNameVal" type="text" placeholder = "Username">
             <input id = "passwordVal" type="password" placeholder = "Password">
-            <button id = "logIn">Login</button>
+            <button type="button" id = "logIn">Login</button>
             <button id = "modalButton">Nomads Mission</button>
             <p class = "message">Don't have an account? <a href = "#">Register</a></p>
           </form>
@@ -51,7 +51,7 @@ const dashboard = {
             <section class="modal-body">
               <h3>The minds behing Nomads</h3>
               <img id = "creatorsImage" src = "images/nomadCreators.jpg" alt = "application creators">
-              <p>As outdoorsman, environmentalist, and filmmakers continue to grow. So do the adventurous spirits of those who embrace conscious consumerism and sustainable living. The purpose is to make a point of plugging into modern life and connecting with your fellow nomads from anywhere you may be. Share your location, Meet up, Exchange stories, Create relationships with people who have similar interest and enhance your traveling experience with nomads.</p> 
+              <p>As outdoorsman, environmentalist, and filmmakers continue to grow. So do the adventurous spirits of those who embrace conscious consumerism and sustainable living. The purpose is to make a point of plugging into modern life and connecting with your fellow nomads from anywhere you may be. Share your location, Meet up, Exchange stories, Create relationships with people who have similar interest and enhance your traveling experience with nomads.</p>
             </section>
             <section class="modal-footer">
               <h3>Created By: Divine Madness&copy</h3>
@@ -65,7 +65,7 @@ const dashboard = {
         $("#registerButton").click(eventListeners.userRegistration)
         $("#registerButton").click(eventListeners.userLogin)
         // $("#logIn").click(eventListeners.loadDashboard)
-  
+
       }
 }
 export default dashboard

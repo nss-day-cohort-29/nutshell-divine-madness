@@ -58,8 +58,8 @@ body {
 
 #friend-search-box {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 3%;
+  left: 68%;
   transform: translate(-50%,-50%);
   background: #2f3640;
   height: 40px;
@@ -77,7 +77,7 @@ padding: 0 6px;
 }
 
 .friend-search-btn {
-  color: #e84118;
+  color: rgb( 191, 162, 44);
   float: right;
   width: 40px;
   height: 40px;

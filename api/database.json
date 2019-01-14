@@ -1,4 +1,3 @@
-
 {
   "users": [
     {
@@ -66,6 +65,20 @@
       "url": "https://www.cnbc.com/2019/01/07/these-are-the-best-jobs-to-have-in-2019-according-to-us-news--world-report.html",
       "title": "These are the 13 best jobs to have in 2019, according to US News & World Report",
       "synopsis": "Developer no.1 yo"
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 6
     }
   ],
   "events": [
@@ -105,16 +118,6 @@
   ],
   "friends": [
     {
-      "userId": 1,
-      "otherFriendId": 2,
-      "id": 24
-    },
-    {
-      "userId": 1,
-      "otherFriendId": 4,
-      "id": 25
-    },
-    {
       "userId": 3,
       "otherFriendId": 1,
       "id": 26
@@ -140,14 +143,19 @@
       "id": 31
     },
     {
-      "userId": 5,
-      "otherFriendId": 4,
-      "id": 32
+      "userId": 1,
+      "otherFriendId": 2,
+      "id": 39
     },
     {
-      "userId": 5,
-      "otherFriendId": 1,
-      "id": 33
+      "userId": 1,
+      "otherFriendId": 4,
+      "id": 40
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 6,
+      "id": 41
     }
   ],
   "messages": [
@@ -177,7 +185,7 @@
     },
     {
       "userId": 1,
-      "message": "for rrrrg",
+      "message": "for rrrrg sdf",
       "timeStamp": "2019-01-11T01:01:53.174Z",
       "id": 5
     },

@@ -1,7 +1,7 @@
 import nomadData from "./nomadData";
+import dashboard from "./dashboard";
 import domComponents from "./domComponents";
 import events from "./events";
-import dashboard from "./dashboard"
 import messages from "./messages";
 import friends from "./friends";
 import news from "./news";
@@ -134,8 +134,9 @@ const eventListeners = {
     },
     friendsNavLink(){
         console.log("friends nav link clicked")
-        friends.loadCurrentUsersFriends()
-        friends.defineCurrentUsersFriends()
+        friends.defineCurrentUsersFriends();
+        friends.initializePotentialFriends();
+        friends.buildFriendSearchBar()
     },
     newsNavLink(){
         //NEWS SECTION
