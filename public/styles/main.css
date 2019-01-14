@@ -1,3 +1,17 @@
+.eventItem > form > fieldset {
+    border: none;
+    padding: 0px;
+}
+
+.eventItem > form {
+    border: 1px black solid;
+}
+
+#eventLog > article:first-child {
+    background: goldenrod;
+    font-weight: bold;
+    border: 3px solid black;
+}
 .tasksContainer {
     display: flex;
     flex-direction: column;

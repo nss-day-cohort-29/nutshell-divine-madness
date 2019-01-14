@@ -49,7 +49,7 @@ const news = {
         nomadData.connectToData(newsCreatorKey)
         .then (dbGrabs => {
             dbGrabs.forEach(dbGrab =>  {
-                console.log(dbGrab);
+                // console.log(dbGrab);
                 newsContainer.appendChild(domComponents.createDomElement({
                     elementType: "button",
                     content: "SAVE BITCH",

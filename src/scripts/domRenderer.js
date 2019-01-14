@@ -1,8 +1,10 @@
-// import events from "./events";
+import events from "./events";
 import nomadData from "./nomadData";
 import news from "./news"
 console.log("DomRenderer is working")
 
+events.showEventForm();
+events.appendUserAndFriendEvents();
 // template for object to pass into nomadData.connectToData() if you are doing a GET
 
 // let fetchTest = {
