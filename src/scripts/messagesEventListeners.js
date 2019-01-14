@@ -71,7 +71,7 @@ const messagesEventListeners = {
             attributes : {
                 id : `messageEditSubmitButton_${messageId}`,
                 name: messageTimeStamp,
-                type : "submit"
+                type : "button"
             }
         });
 
@@ -80,6 +80,8 @@ const messagesEventListeners = {
         messageEditFieldset.appendChild(messageEditSubmitButton)
         messageEditForm.appendChild(messageEditFieldset)
         messageContainer.appendChild(messageEditForm)
+
+        event.stopPropagation();
     },
 
     handleEditSubmitButton() {

@@ -1076,7 +1076,7 @@ const messages = {
       content: "Submit",
       attributes: {
         id: "messageSubmitButton",
-        type: "submit"
+        type: "button"
       }
     });
 
@@ -1137,7 +1137,8 @@ const messages = {
             content: "Edit",
             attributes: {
               id: `messageEditButton_${messageId}`,
-              name: messageTimeStamp
+              name: messageTimeStamp,
+              type: "button"
             }
           });
 
@@ -1174,6 +1175,8 @@ var _nomadData = _interopRequireDefault(require("./nomadData"));
 var _domComponents = _interopRequireDefault(require("./domComponents"));
 
 var _messages = _interopRequireDefault(require("./messages"));
+
+var _friendsEventsListener = _interopRequireDefault(require("./friendsEventsListener.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1239,7 +1242,7 @@ const messagesEventListeners = {
       attributes: {
         id: `messageEditSubmitButton_${messageId}`,
         name: messageTimeStamp,
-        type: "submit"
+        type: "button"
       }
     });
 
@@ -1248,6 +1251,7 @@ const messagesEventListeners = {
     messageEditFieldset.appendChild(messageEditSubmitButton);
     messageEditForm.appendChild(messageEditFieldset);
     messageContainer.appendChild(messageEditForm);
+    event.stopPropagation();
   },
 
   handleEditSubmitButton() {
