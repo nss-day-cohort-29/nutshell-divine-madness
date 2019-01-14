@@ -7,38 +7,21 @@ import eventPageListeners from "./eventPageListeners";
 const events = {
   showEventForm() {
     const output = document.querySelector("#output");
-    const showButton = domComponents.createDomElement({elementType: "button", content: "Create a New Event", attributes: {type: "button", id: "showForm"}});
-    showButton.addEventListener("click", eventPageListeners.handleShowButton);
-    output.appendChild(showButton);
+    this.addShowButton();
     const eventLog = document.createElement("article")
     eventLog.setAttribute("id", "eventLog");
     output.appendChild(eventLog);
   },
-  appendUserEvents() {
-    const eventLog = document.querySelector("#eventLog");
-    nomadData.connectToData({
-      dataSet: "events",
-      fetchType: "GET",
-      dataBaseObject: "",
-      embedItem: "?_embed=events"
-    })
-    .then(parsedResponse => {
-      const sortedResponse = parsedResponse.sort( (a, b) => {
-        return new Date(a.eventDate) - new Date(b.eventDate);
-      });
-      const docuFrag = document.createDocumentFragment();
-      sortedResponse.forEach(event => {
-        while (eventLog.firstChild) {
-          eventLog.removeChild(eventLog.firstChild)
-        };
-        const eventItem = this.createEventItem(event);
-        docuFrag.appendChild(eventItem);
-      });
-      eventLog.appendChild(docuFrag);
-    });
+  addShowButton() {
+    const output = document.querySelector("#output");
+    const showButton = domComponents.createDomElement({elementType: "button", content: "Create a New Event", attributes: {type: "button", id: "showForm"}});
+    showButton.addEventListener("click", eventPageListeners.handleShowButton);
+    output.insertBefore(showButton, output.firstChild);
   },
-  getUserFriendIds() {
-    const friendHolder = [];
+  appendUserAndFriendEvents() {
+    const eventLog = document.querySelector("#eventLog");
+    const eventHolder = [];
+    const userHolder = [Number(sessionStorage.getItem("userId"))];
     nomadData.connectToData({
       dataSet: "friends",
       fetchType: "GET",
@@ -48,24 +31,36 @@ const events = {
     .then(parsedResponse => {
       parsedResponse.forEach(response => {
         if(response.userId === Number(sessionStorage.getItem("userId"))) {
-          friendHolder.push(response.otherFriendId);
-          friendHolder.forEach(friendId => {
-            nomadData.connectToData({
-              dataSet: "events",
-              fetchType: "GET",
-              dataBaseObject: "",
-              embedItem: "?_embed=events"
-            })
-            .then(parsedResponse => {
-              parsedResponse.forEach(response => {
-                if (response.userId === friendId) {
-                  console.log(response);
-                };
-              });
-            });
-          });
+          userHolder.push(response.otherFriendId);
         };
       })
+      userHolder.forEach(userId => {
+        nomadData.connectToData({
+          dataSet: "events",
+          fetchType: "GET",
+          dataBaseObject: "",
+          embedItem: `?_userId=${userId}`
+        })
+        .then(parsedResponse => {
+          parsedResponse.forEach(response => {
+            if (response.userId === userId) {
+              eventHolder.push(response);
+            };
+          });
+          const sortedEvents = eventHolder.sort( (a, b) => {
+            return new Date(a.eventDate) - new Date(b.eventDate);
+          });
+          const docuFrag = document.createDocumentFragment();
+          sortedEvents.forEach(event => {
+            while (eventLog.firstChild) {
+              eventLog.removeChild(eventLog.firstChild)
+            };
+            const eventItem = this.createEventItem(event);
+            docuFrag.appendChild(eventItem);
+          });
+          eventLog.appendChild(docuFrag);
+        });
+      });
     });
   },
   createEventInput() {
@@ -203,7 +198,5 @@ const events = {
     currentContainer.appendChild(formContainer);
   }
 };
-
-events.getUserFriendIds();
 
 export default events;

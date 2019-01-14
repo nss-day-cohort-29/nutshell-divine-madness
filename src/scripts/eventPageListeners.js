@@ -31,7 +31,7 @@ const eventPageListeners = {
                 }
             })
             .then( () => {
-                events.appendUserEvents();
+                events.appendUserAndFriendEvents();
             });
         };
     },
@@ -39,9 +39,7 @@ const eventPageListeners = {
         const output = document.querySelector("#output");
         const formContainer = document.querySelector(".eventInput");
         output.removeChild(formContainer);
-        const showButton = domComponents.createDomElement({elementType: "button", content: "Create a New Event", attributes: {type: "button", id: "showForm"}});
-        showButton.addEventListener("click", this.handleShowButton);
-        output.insertBefore(showButton, output.firstChild);
+        events.addShowButton();
     },
     handleDeleteButton() {
         const idToDelete = event.target.id.split("--")[1];
@@ -54,7 +52,7 @@ const eventPageListeners = {
             }
         })
         .then( () => {
-            events.appendUserEvents();
+            events.appendUserAndFriendEvents();
         });
     },
     handleEditButton() {
@@ -97,7 +95,7 @@ const eventPageListeners = {
                 }
             })
             .then( () => {
-                events.appendUserEvents();
+                events.appendUserAndFriendEvents();
             });
         }
     }

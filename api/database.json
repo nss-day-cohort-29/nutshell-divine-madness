@@ -11,6 +11,18 @@
       "userName": "Lorenzo",
       "email": "dlskfj@wh.com",
       "password": "yomama"
+    },
+    {
+      "id": 3,
+      "userName": "Juan",
+      "email": "dlskfj@wh.com",
+      "password": "yomama"
+    },
+    {
+      "id": 4,
+      "userName": "Jimothy",
+      "email": "dlskfj@wh.com",
+      "password": "yomama"
     }
   ],
   "newsItems": [
@@ -83,6 +95,14 @@
       "eventTime": "20:00",
       "eventLocation": "Rockies",
       "id": 5
+    },
+    {
+      "userId": 4,
+      "eventName": "Running",
+      "eventDate": "2019-05-20",
+      "eventTime": "6:00",
+      "eventLocation": "Rockies",
+      "id": 6
     }
   ],
   "tasks": [
