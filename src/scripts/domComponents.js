@@ -4,8 +4,8 @@ const domComponents = {
   createDomElement({ elementType, content = null, cssClass, attributes = {} }) {
     const element = document.createElement(elementType);
     element.textContent = content;
-    if (cssClass) {	
-      element.classList.add(cssClass);	
+    if(cssClass){
+      element.classList.add(cssClass);
     }
     for (let key in attributes) {
       element.setAttribute(key, attributes[key]);
@@ -96,14 +96,14 @@ const domComponents = {
     locationFieldset.appendChild(locationLabel);
     locationFieldset.appendChild(locationInput);
 
-    const updateButton = this.createDomElement({elementType: "button", content: "Update", attributes: {type: "button", id: "submitEdits"}});
+    //const updateButton = this.createDomElement({elementType: "button", content: "Update", attributes: {type: "button", id: "submitEdits"}});
     // updateButton.addEventListener("click", eventListeners.handleEventUpdateButton);
 
     formContainer.appendChild(nameFieldset);
     formContainer.appendChild(dateFieldset);
     formContainer.appendChild(timeFieldset);
     formContainer.appendChild(locationFieldset);
-    formContainer.appendChild(submitButton);
+    //formContainer.appendChild(submitButton);
 
     let currentContainer = document.querySelector(`#${containerId}`);
     while (currentContainer.firstChild) {
@@ -112,6 +112,7 @@ const domComponents = {
 
     return formContainer;
   }
+  
 }
 
 export default domComponents

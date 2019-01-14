@@ -8,7 +8,7 @@ const news = {
 
     getNews(){
         //pull then send pulled data to dom
-       return fetch("http://jsonplaceholder.typicode.com/posts/1")
+        return fetch("http://jsonplaceholder.typicode.com/posts/1")
             .then(newsItems => newsItems.json())
     },
     save() {
@@ -30,7 +30,7 @@ const news = {
     },
 
     allSaved(){
-        nomadData.connectToData(testnewsObj)
+    // nomadData.connectToData(testnewsObj)
     },
 
     deleteDB(){
@@ -39,6 +39,7 @@ const news = {
     },
 
     newsElementCreator(){
+        $("#output").empty()
         const newsContainer = document.querySelector("#output")
         let newsCreatorKey = {
             "dataSet" : "newsItems",
@@ -79,7 +80,7 @@ const news = {
         })
 
         // const NewsTest = domComponents.createDomElement("h2",testPass,"testObj",null);
-        // output.appendChild(NewsTest);
+        //output.appendChild(NewsTest);
 
 
     }

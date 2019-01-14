@@ -1,11 +1,12 @@
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
-import eventListeners from "./eventListeners";
-import friendsEventsListener from "./friendsEventsListener";
+import messagesEventListeners from "./messagesEventListeners";
+import friendsEventsListeners from "./friendsEventsListeners.js";
 
 const messages = {
 
     createMessageBoard() {
+        $("#output").empty()
 
         let outputArticle = document.getElementById("output")
 
@@ -32,15 +33,16 @@ const messages = {
             cssClass : "messageSubmitButton",
             content : "Submit",
             attributes : {
-                id : "messageSubmitButton"
+                id : "messageSubmitButton",
+                type : "submit"
             }});
 
-        messageSubmitButton.addEventListener("click", eventListeners.postNewMessage);
+        messageSubmitButton.addEventListener("click", messagesEventListeners.postNewMessage, {once: true});
         messagesContainer.appendChild(messageInput);
         messagesContainer.appendChild(messageSubmitButton);
         outputArticle.appendChild(messagesContainer);
 
-        this.getMessages()
+            this.getMessages()
     },
 
     getMessages() {
@@ -70,8 +72,7 @@ const messages = {
                 let messageId = message.id;
                 let messageTimeStamp = message.timeStamp;
                 let messageUser = `${message.userId}`;
-                let loggedInUser = sessionStorage.getItem('userId');
-                console.log(messageUser)
+                let loggedInUser = sessionStorage.getItem("userId");
 
                 let messageElement = domComponents.createDomElement({
                     // ADD LINK HERE
@@ -80,7 +81,7 @@ const messages = {
                     content : `${userName}:`,
                     attributes : {
                         id: `message${messageId}`,
-                        name: parseInt(messageUser)
+                        name : parserInt(messageUser)
                     }
                 })
 
@@ -105,7 +106,7 @@ const messages = {
                             name: messageTimeStamp
                         }
                     })
-                    messageEditButton.addEventListener("click", eventListeners.editMessage, {once: true})
+                    messageEditButton.addEventListener("click", messagesEventListeners.editMessage, {once: true})
                     messageElement.appendChild(messageElement2)
                     messageElement.appendChild(messageEditButton)
                     messageContainer.insertBefore(messageElement, messageInput)
@@ -114,10 +115,7 @@ const messages = {
                     messageElement.appendChild(messageElement2)
                     messageContainer.insertBefore(messageElement, messageInput)
                 }
-
-                messageElement.addEventListener("click", () => {
-                    friendsEventsListener.shiz()
-                })
+                messageElement.addEventListener("click", friendsEventsListeners.shiz)
             });
         })
     },
