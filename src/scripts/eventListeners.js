@@ -156,7 +156,6 @@ const eventListeners = {
         dashboard.buildLoginForm()
         $("nav").hide()
         sessionStorage.clear()
-        friends.buildFriendSearchBar()
         console.log("signed out")
     },
     /*========================================================================================================

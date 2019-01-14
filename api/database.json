@@ -79,6 +79,34 @@
       "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
       "synopsis": "blah blah blah",
       "id": 6
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 10
     }
   ],
   "events": [
@@ -152,9 +180,19 @@
   ],
   "friends": [
     {
-      "id": 1,
       "userId": 1,
-      "otherFriendId": 3
+      "otherFriendId": 5,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 6,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 4,
+      "id": 6
     }
   ],
   "messages": [
@@ -172,7 +210,7 @@
     },
     {
       "userId": 1,
-      "message": "NM.",
+      "message": "NM. ut all good",
       "timeStamp": "3:02:00pm",
       "id": 3
     },
