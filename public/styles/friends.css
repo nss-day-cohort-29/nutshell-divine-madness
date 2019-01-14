@@ -59,7 +59,7 @@ body {
 #friend-search-box {
   position: absolute;
   top: 3%;
-  left: 68%;
+  left: 71%;
   transform: translate(-50%,-50%);
   background: #2f3640;
   height: 40px;
@@ -86,6 +86,7 @@ padding: 0 6px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -10px;
 }
 
 .search-txt {
@@ -99,6 +100,8 @@ padding: 0 6px;
   transition: 0.4s;
   line-height: 40px;
   width: 0px;
+  text-align: center;
+  margin-bottom: 16px;
 }
 
 /* FRIEND SEARCH MODAL RESULT ------- */
