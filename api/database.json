@@ -111,118 +111,76 @@
     {
       "id": 1,
       "userId": 1,
-      "task": "save world",
-      "expectedCompletionDate": "2-12",
+      "task": "save world someday",
+      "expectedCompletionDate": "02 28 2019",
       "complete": true
     },
     {
-      "id": 2,
       "userId": 1,
-      "task": "kill git",
-      "expectedCompletionDate": "2019-01-15",
+      "task": "destroy world",
+      "expectedCompletionDate": "01 15 2019",
+      "complete": false,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "task": "save world",
+      "expectedCompletionDate": "01 12 2019",
+      "complete": false
+    },
+    {
+      "userId": 1,
+      "task": "destroy world",
+      "expectedCompletionDate": "01 13 2019",
+      "complete": false,
+      "id": 4
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "task": "save world maybe",
+      "expectedCompletionDate": "01 13 2019",
       "complete": true
+    },
+    {
+      "userId": 1,
+      "task": "aaaaaa",
+      "expectedCompletionDate": "01 30 2019",
+      "complete": false,
+      "id": 6
     }
   ],
   "friends": [
     {
-      "userId": 3,
-      "otherFriendId": 1,
-      "id": 26
-    },
-    {
-      "userId": 3,
-      "otherFriendId": 2,
-      "id": 27
-    },
-    {
-      "userId": 3,
-      "otherFriendId": 4,
-      "id": 28
-    },
-    {
-      "userId": 4,
-      "otherFriendId": 1,
-      "id": 30
-    },
-    {
-      "userId": 5,
-      "otherFriendId": 2,
-      "id": 31
-    },
-    {
-      "userId": 5,
-      "otherFriendId": 4,
-      "id": 32
-    },
-    {
-      "userId": 5,
-      "otherFriendId": 1,
-      "id": 33
-    },
-    {
+      "id": 1,
       "userId": 1,
-      "otherFriendId": 4,
-      "id": 34
-    },
-    {
-      "userId": 1,
-      "otherFriendId": 2,
-      "id": 35
-    },
-    {
-      "userId": 1,
-      "otherFriendId": 6,
-      "id": 36
+      "otherFriendId": 3
     }
   ],
   "messages": [
     {
       "userId": 1,
-      "message": "Yo bro! d",
+      "message": "MOTHA FUCKA",
       "timeStamp": "3:00:00pm",
       "id": 1
     },
     {
+      "id": 2,
       "userId": 2,
-      "message": "Sup g.",
-      "timeStamp": "3:01:00pm",
-      "id": 2
+      "message": "Sup.",
+      "timeStamp": "3:01:00pm"
     },
     {
       "userId": 1,
-      "message": "uhh?",
+      "message": "NM.",
       "timeStamp": "3:02:00pm",
       "id": 3
     },
     {
+      "id": 4,
       "userId": 2,
-      "message": "Not Cool.",
-      "timeStamp": "3:03:00pm",
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "message": "for rrrrg",
-      "timeStamp": "2019-01-11T01:01:53.174Z",
-      "id": 5
-    },
-    {
-      "userId": 4,
-      "message": "hey boyzzzz",
-      "timeStamp": "2019-01-13T20:00:09.674Z",
-      "id": 6
-    },
-    {
-      "userId": 4,
-      "message": "wowzza dudes",
-      "timeStamp": "2019-01-13T20:01:44.398Z",
-      "id": 7
-    },
-    {
-      "userId": 5,
-      "message": "a craaazzzaaa",
-      "timeStamp": "2019-01-13T20:03:10.247Z",
-      "id": 8
+      "message": "Cool.",
+      "timeStamp": "3:03:00pm"
     }
   ]
 }
