@@ -1,6 +1,6 @@
 import nomadData from "./nomadData";
 import events from "./events";
-import domComponents from "./domComponents";
+// import domComponents from "./domComponents";
 
 const eventPageListeners = {
     handleShowButton() {

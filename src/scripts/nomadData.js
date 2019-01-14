@@ -2,12 +2,12 @@ const nomadData = {
 
     connectToData(fetchObject) {
 
-      let dataSet = fetchObject.dataSet;
-      let embedItem = fetchObject.embedItem;
-      let fetchType = fetchObject.fetchType;
-      let dataBaseObject = fetchObject.dataBaseObject;
-      let putId = fetchObject.putId;
-      let deleteId = fetchObject.deleteId;
+        let dataSet = fetchObject.dataSet;
+        let embedItem = fetchObject.embedItem;
+        let fetchType = fetchObject.fetchType;
+        let dataBaseObject = fetchObject.dataBaseObject;
+        let putId = fetchObject.putId;
+        let deleteId = fetchObject.deleteId;
 
         if (fetchType == "GET") {
 
@@ -50,6 +50,6 @@ const nomadData = {
             console.log ("YOU SCREWED IT UP")
         }
     }
-  }
+}
 
-  export default nomadData
+export default nomadData

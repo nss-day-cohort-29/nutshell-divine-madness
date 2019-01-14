@@ -10,6 +10,7 @@ const domComponents = {
     }
     return element;
   }
+  
 }
 
 export default domComponents

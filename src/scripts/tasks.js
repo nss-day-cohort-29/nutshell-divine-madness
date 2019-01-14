@@ -2,10 +2,12 @@ import nomadData from "./nomadData";
 import domComponents from "./domComponents";
 import tasksEventListeners from "./tasksEventListeners";
 import tasksPopup from "./tasksPopup";
+// import eventListeners from "./eventListeners"
 
 const tasks = {
 
     createTaskTables() {
+        $("#output").empty()
 
         let outputArticle = document.getElementById("output")
 
@@ -130,7 +132,7 @@ const tasks = {
 
     getTasks() {
 
-        let currentUser = Number(sessionStorage.getItem('userId'));
+        let currentUser = Number(sessionStorage.getItem("userId"));
 
         //populate tasks
         nomadData.connectToData({
