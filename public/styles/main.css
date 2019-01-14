@@ -340,6 +340,9 @@ TASKS styles
 .activeTasksTable{
   color:white;
 }
+.taskCheckbox{
+  zoom:1.5;
+}
 /* 
 #dueDateCell_1,
 #dueDateCell_4,
@@ -391,9 +394,6 @@ TASKS styles
   font-size: 20px;
   font-weight: bold;
 }
-=======
-
-
 .tasksContainer{
   width: 70%;
   margin: 0 auto;
@@ -408,4 +408,10 @@ TASKS styles
   width: 70%;
   margin: 0 auto;
   margin-top: 85px;
+}
+#future-friends{
+  color:rgb( 191, 162, 44)
+}
+.friendContainer{
+  color:rgb( 191, 162, 44);
 }

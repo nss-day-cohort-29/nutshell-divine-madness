@@ -144,39 +144,21 @@
       "complete": true
     },
     {
+      "id": 2,
       "userId": 1,
       "task": "destroy world",
       "expectedCompletionDate": "01 15 2019",
-      "complete": false,
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "task": "save world",
-      "expectedCompletionDate": "01 12 2019",
       "complete": false
     },
     {
-      "userId": 1,
-      "task": "destroy world",
-      "expectedCompletionDate": "01 16 2019",
-      "complete": false,
-      "id": 2
-    },
-    {
+      "id": 3,
       "userId": 1,
       "task": "Reach MVP",
       "expectedCompletionDate": "undefined undefined ",
-      "complete": false,
-      "id": 3
+      "complete": true
     }
   ],
   "friends": [
-    {
-      "userId": 1,
-      "otherFriendId": 5,
-      "id": 4
-    },
     {
       "userId": 1,
       "otherFriendId": 6,
@@ -186,12 +168,22 @@
       "userId": 1,
       "otherFriendId": 4,
       "id": 6
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 2,
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 5,
+      "id": 8
     }
   ],
   "messages": [
     {
       "userId": 1,
-      "message": "MOTHA FUCKA",
+      "message": "MOTHA ",
       "timeStamp": "3:00:00pm",
       "id": 1
     },
