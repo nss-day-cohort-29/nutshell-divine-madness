@@ -36,13 +36,13 @@ const eventListeners = {
                     //displays navigatin bar
                     dashboard.createNavBar()
                     //session storage
-                    
+
                     sessionStorage.setItem("userId", user.id)
                     let userId = sessionStorage.getItem("userId")
                     //console.log verifying that credentials match and user is logged in
                     console.log("logged in as" + " " + user.userName)
                     console.log("your user ID is: " + userId)
-                
+
                 }
             })
         })
@@ -128,6 +128,7 @@ const eventListeners = {
     },
     eventsNavLink(){
             events.showEventForm()
+            events.appendUserAndFriendEvents();
 
             //appendUserEvent
             console.log("events clicked")
@@ -160,22 +161,22 @@ const eventListeners = {
 
     friendsDeleteFriend () {
         console.log(event.target);
-    
+
     },
     handleEventSaveButton() {
         const nameInputted = document.querySelector("#eventName").value;
         const dateInputted = document.querySelector("#eventDate").value;
         const timeInputted = document.querySelector("#eventTime").value;
         const locationInputted = document.querySelector("#eventLocation").value;
-    
+
         const eventObject = {
             eventName: nameInputted,
             eventDate: dateInputted,
             eventTime: timeInputted,
             eventLocation: locationInputted
         };
-    
-    
+
+
         nomadData.connectToData({
             dataSet: "events",
             fetchType: "POST",

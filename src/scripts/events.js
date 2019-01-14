@@ -8,19 +8,24 @@ import eventPageListeners from "./eventPageListeners";
 //createEventInput and createEventItem will be added to this object. so dombuilder.
 const events = {
   showEventForm () {
-    $("#output").empty()
     const output = document.querySelector("#output");
+    while (output.firstChild) {
+      output.removeChild(output.firstChild);
+    }
+    const eventsContainer = document.createElement("article");
+    eventsContainer.setAttribute("id", "eventsContainer");
+    output.appendChild(eventsContainer);
     const eventsForm = this.createEventInput();
-    output.appendChild(eventsForm)
-    const eventLog = document.createElement("article")
+    eventsContainer.appendChild(eventsForm)
+    const eventLog = document.createElement("article");
     eventLog.setAttribute("id", "eventLog");
-    output.appendChild(eventLog);
+    eventsContainer.appendChild(eventLog);
   },
   addShowButton() {
-    const output = document.querySelector("#output");
+    const eventsContainer = document.querySelector("#eventsContainer");
     const showButton = domComponents.createDomElement({elementType: "button", content: "Create a New Event", attributes: {type: "button", id: "showForm"}});
     showButton.addEventListener("click", eventPageListeners.handleShowButton);
-    output.insertBefore(showButton, output.firstChild);
+    eventsContainer.insertBefore(showButton, eventsContainer.firstChild);
   },
   appendUserAndFriendEvents() {
     const eventLog = document.querySelector("#eventLog");
@@ -68,11 +73,13 @@ const events = {
     });
   },
   createEventInput() {
-  
-    const formContainer = document.querySelector("#output")
-    const formHeader = domComponents.createDomElement({elementType: "h2", content: "Add a New Event:"});
-    formContainer.appendChild(formHeader);
+    const eventsContainer = document.querySelector("#eventsContainer");
+
     const eventForm = domComponents.createDomElement({elementType: "form", attributes: {class: "eventInput"}});
+    eventsContainer.appendChild(eventForm)
+    const formHeader = domComponents.createDomElement({elementType: "h2", content: "Add a New Event:"});
+    eventForm.appendChild(formHeader);
+
     const nameFieldset = domComponents.createDomElement({elementType: "fieldset"});
     const nameLabel = domComponents.createDomElement({elementType: "label", content: "Event Name:", attributes: {for: "eventName"}});
     const nameInput = domComponents.createDomElement({elementType: "input", attributes: {type: "text", name: "eventName", id: "eventName"}});
@@ -102,14 +109,14 @@ const events = {
 
     const hideButton = domComponents.createDomElement({elementType: "button", content: "Hide Event Input", attributes: {type: "button", id: "hideEvent"}});
     hideButton.addEventListener("click", eventPageListeners.handleHideButton);
-    formContainer.appendChild(eventForm)
+
     eventForm.appendChild(nameFieldset);
     eventForm.appendChild(dateFieldset);
     eventForm.appendChild(timeFieldset);
     eventForm.appendChild(locationFieldset);
     eventForm.appendChild(saveButton);
     eventForm.appendChild(hideButton);
-    // formContainer.appendChild(eventForm)
+
     return eventForm;
   },
   createEventItem (eventObject) {
