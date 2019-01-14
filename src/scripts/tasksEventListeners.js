@@ -7,7 +7,7 @@ const tasksEventListeners = {
 
         let taskTitle = document.getElementById("taskTitleInput").value;
         let dueDate = document.getElementById("taskDateInput").value;
-        let userId = Number(sessionStorage.getItem('userId'));
+        let userId = Number(sessionStorage.getItem("userId"));
 
         nomadData.connectToData({
 

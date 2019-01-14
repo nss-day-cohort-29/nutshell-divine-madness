@@ -129,7 +129,7 @@ const tasks = {
 
     getTasks() {
 
-        let currentUser = Number(sessionStorage.getItem('userId'));
+        let currentUser = Number(sessionStorage.getItem("userId"));
 
         //populate tasks
         nomadData.connectToData({

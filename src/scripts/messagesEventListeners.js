@@ -1,7 +1,7 @@
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
 import messages from "./messages";
-import friendsEventListeners from "./friendsEventListeners.js";
+// import friendsEventsListener from "./friendsEventsListener.js";
 
 const messagesEventListeners = {
 
@@ -15,7 +15,7 @@ const messagesEventListeners = {
             dataSet : "messages",
             fetchType : "POST",
             dataBaseObject : {
-                userId : Number(sessionStorage.getItem('userId')),
+                userId : Number(sessionStorage.getItem("userId")),
                 message : messageInput.value,
                 timeStamp : timeStamp
             }

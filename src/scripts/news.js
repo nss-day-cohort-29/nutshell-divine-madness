@@ -1,87 +1,128 @@
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
+import newsListener from "./newsListener";
 //pull from api then display to dom.
 // create save button send saved articles to Json
 // create button to pull all saved materials in json.
 // delete method for articles
+
+const newsContainer = document.querySelector("#output")
+
 const news = {
-
-    getNews(){
-        //pull then send pulled data to dom
-       return fetch("http://jsonplaceholder.typicode.com/posts/1")
+    getAPINews () {
+        //getAPINews will pull news from API then call createElement and append to output.
+        //Create a header for incoming news.
+        let articleCounter = 0;
+        const newsHeader = domComponents.createDomElement({elementType: "h1", content: "Current News", cssClass:"newsAPIHeader"});
+        newsContainer.appendChild(newsHeader);
+        //pull the data from the api and display it to the dom.
+       return fetch("https://newsapi.org/v2/everything?q=vanlife&from=2018-12-31&sortBy=publishedAt&apiKey=9f5c509fe90044dc95a8a6963573284f")
             .then(newsItems => newsItems.json())
-    },
-    save() {
-        //This is functioning and writing to JSON.
-        this.getNews().then(post =>{
-        const newsObject = {
-                "dataSet" : "newsItems",
-                "fetchType" : "POST",
-                "dataBaseObject" : {
-                    "userId": 1,
-                    "url": `${post.title}`,
-                    "title": `${post.body}`,
-                    "synopsis": "blah blah blah"
-                }
-        }
-        // console.log(testnewsObj);
-        nomadData.connectToData(newsObject);
-    })
-    },
+            .then(displayData => {
+                    displayData.articles.forEach(dataGran =>
+                        {
+                            let artURL = dataGran.url;
+                            let artTitle = dataGran.title;
+                            let artDesc = dataGran.description;
+                            articleCounter ++;
+                            
+                            sessionStorage.setItem(`article_${articleCounter}_title`, `${artTitle}`);
+                            sessionStorage.setItem(`article_${articleCounter}_url`, `${artURL}`);
+                            sessionStorage.setItem(`article_${articleCounter}_desc`, `${artDesc}`);
 
-    allSaved(){
-        nomadData.connectToData(testnewsObj)
+                        //console.log(displayData.articles)
+                        //add section container for all articles.
+                        newsHeader.appendChild(domComponents.createDomElement({
+                            elementType:"section",
+                            cssClass: `newsAPIContainer_${articleCounter}`
+                        }))
+                        //create fieldset for articles to be and then attach them to the sections above. 
+                        const parentAPISection = document.querySelector(`.newsAPIContainer_${articleCounter}`)
+                        parentAPISection.appendChild(domComponents.createDomElement({
+                            elementType: "fieldset",
+                            content: dataGran.title,
+                            //!!!! Cannot find anything unique to get a good name. No unique identifier on API.
+                            cssClass: `apiData`,
+                            attributes : {
+                                id : `article_${articleCounter}`
+                            }
+                        }))
+                        //creating button in order to attach to individual articles. But cannot find unique identifier. 
+                       // const newsApiArticles = document.querySelector(`.newsAPIContainer`);
+                        const saveApiButton = domComponents.createDomElement({
+                            elementType: "button",
+                            content: "SAVE BITCH",
+                            cssClass: "newsSaveButton",
+                            attributes : {
+                                name : `${articleCounter}`
+                            }
+                        })
+                        //Eventlistener to send current data to savefunction. 
+                        parentAPISection.appendChild(saveApiButton);
+                        saveApiButton.addEventListener("click", newsListener.saveButtonListener)
+                    })
+                    })
+                
     },
-
-    deleteDB(){
-        
-
-    },
-
-    newsElementCreator(){
-        const newsContainer = document.querySelector("#output")
+    
+    savedNewsElementsCreator(saveButton){
+        //Creates the header for the saved news articles.
+        const mainSavedContainer = domComponents.createDomElement({elementType: "article"})
+        newsContainer.appendChild(mainSavedContainer);
+        const savedHeader = domComponents.createDomElement({elementType: "h1", content: "Saved News"});
+        mainSavedContainer.appendChild(savedHeader);
+        const saveRef = saveButton;
+        //creates the object that is needed to use the createDomElement Factory.
         let newsCreatorKey = {
             "dataSet" : "newsItems",
             "fetchType" : "GET",
-            "dataBaseObject" : "",
-            "embedItem" : "?_embed=newsItems"
+            "embedItem" : `?_embed=${saveRef}`
         }
+
+        //Makes the call to the data factory to fetch/get data to put in the object.
         nomadData.connectToData(newsCreatorKey)
-        .then (dbGrabs => {
-            dbGrabs.forEach(dbGrab =>  {
-                console.log(dbGrab);
-                newsContainer.appendChild(domComponents.createDomElement({
-                    elementType: "button",
-                    content: "SAVE BITCH",
-                    cssClass: "newsSaveButton"    
+        .then(dbGrabs => {
+            // const articleButton = document.querySelector(".newsTitle");
+            // console.log(articleButton);
+            dbGrabs.forEach(dbGrab =>  
+                {
+                mainSavedContainer.appendChild(domComponents.createDomElement({
+                    elementType:"section",
+                    cssClass: `newsArticleContainer--${dbGrab.id}`
                 }))
-                newsContainer.appendChild(domComponents.createDomElement({
-                    elementType: "h2",
-                    content: dbGrab.title,
-                    cssClass: "newsTitle"    
+                const parentSavedSection = document.querySelector(`.newsArticleContainer--${dbGrab.id}`)
+                    parentSavedSection.appendChild(domComponents.createDomElement({
+                    elementType: "h3",
+                    content: `${dbGrab.title}`,
+                    cssClass: "newsTitle"
                 }))
-                newsContainer.appendChild(domComponents.createDomElement({
-                    elementType: "p",
-                    content: dbGrab.synopsis,        
-                    cssClass: "newsBody"   
-                }))
-                newsContainer.appendChild(domComponents.createDomElement({
+                parentSavedSection.appendChild(domComponents.createDomElement({
                     elementType: "a",
-                    content: dbGrab.url,        
+                    content: dbGrab.url,
                     cssClass: "newsURL",
                     attributes:{
-                        href:`${dbGrab.url}`
-                    }   
+                        href:`${dbGrab.url}`,
+                        target: "blank"
+                    }
                 }))
-                
+                 const delButon = domComponents.createDomElement({
+                    elementType: "button",
+                    content: "ADIOS",
+                    cssClass: `newsDeleteButton--${dbGrab.id}`
+                })
+                //creating a button and pointing at the article to delete. Attached event listner.
+                parentSavedSection.appendChild(delButon); 
+                delButon.addEventListener("click", newsListener.deleteButtonListener);
+
             })
-
-        })
-        
-        // const NewsTest = domComponents.createDomElement("h2",testPass,"testObj",null);
-        // output.appendChild(NewsTest);
-        
-
+            // .then(dbGrabAgain => {
+            // console.log(dbGrabAgain)
+                $(mainSavedContainer).empty()
+                debugger
+                this.savedNewsElementsCreator();
+            })
+                //})
+            
     }
 }
 export default news

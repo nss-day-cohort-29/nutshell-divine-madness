@@ -1,8 +1,10 @@
 // import events from "./events";
+import messages from "./messages";
+import friends from "./friends";
 import nomadData from "./nomadData";
-import news from "./news"
+import news from "./news";
+// import friendsEventsListener from "friendsEventsListener./s";
 console.log("DomRenderer is working")
-
 // template for object to pass into nomadData.connectToData() if you are doing a GET
 
 // let fetchTest = {
@@ -47,16 +49,12 @@ console.log("DomRenderer is working")
 
 // nomadData.connectToData(fetchTest3)
 //NEWS SECTION
-// news.save();
-// news.allSaved();
-// news.getNews();
-// news.newsElementCreator();
+news.getAPINews();
+//news.savedNewsElementsCreator();
 
-import messages from "./messages";
-import friends from "./friends";
 
 // friends.defineCurrentUsersFriends();
-friends.initializePotentialFriends();
+// friends.initializePotentialFriends();
 
 // messages.createMessageBoard();
 
@@ -81,13 +79,13 @@ function userLogin () {
             }
         });
     })
-    let userId = sessionStorage.getItem('userId');
-    loadDashboard(userId)
+    // let userId = sessionStorage.getItem('userId');
+    // loadDashboard(userId)
     // console.log("UserId = ", sessionStorage.getItem('userId'))
 }
 
 userLogin();
 
-function loadDashboard (userId) {
-    console.log(`Thanks for passing the userId.  The userId is ${userId}`)
-}
+// function loadDashboard (userId) {
+//     console.log(`Thanks for passing the userId.  The userId is ${userId}`)
+// }

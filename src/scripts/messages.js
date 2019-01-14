@@ -1,7 +1,7 @@
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
 import messagesEventListeners from "./messagesEventListeners";
-import friendsEventListeners from "./friendsEventListeners.js";
+import friendsEventsListener from "./friendsEventsListener.js";
 
 const messages = {
 
@@ -70,7 +70,7 @@ const messages = {
                 let messageId = message.id;
                 let messageTimeStamp = message.timeStamp;
                 let messageUser = `${message.userId}`;
-                let loggedInUser = sessionStorage.getItem('userId');
+                let loggedInUser = sessionStorage.getItem("userId");
 
                 let messageElement = domComponents.createDomElement({
 
@@ -79,7 +79,7 @@ const messages = {
                     content : `${userName}:`,
                     attributes : {
                         id: `message${messageId}`,
-                        name : parserInt(messageUser)
+                        name: parserInt(messageUser)
                     }
                 })
 
@@ -112,7 +112,7 @@ const messages = {
                     messageElement.appendChild(messageElement2)
                     messageContainer.insertBefore(messageElement, messageInput)
                 }
-                messageElement.addEventListener("click", friendsEventListeners.shiz)
+                messageElement.addEventListener("click", friendsEventsListener.shiz)
             });
         })
     },

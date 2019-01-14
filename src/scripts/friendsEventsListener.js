@@ -4,7 +4,7 @@ import nomadData from "./nomadData";
 const friendsEventsListener = {
   friendsDeleteFriend () {
     const friendToDelete = (event.target.classList.value).split("-")[2];
-    let userId = sessionStorage.getItem('userId');
+    let userId = sessionStorage.getItem("userId");
     let currentUser = userId;
     console.log(friendToDelete, currentUser);
     let finalNumberSendForDelete = 0
@@ -39,7 +39,7 @@ const friendsEventsListener = {
     })
   },
   friendsAddFriend () {
-    let userId = sessionStorage.getItem('userId');
+    let userId = sessionStorage.getItem("userId");
     let currentUser = Number(userId);
 
     
