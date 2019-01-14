@@ -7,40 +7,64 @@
       "password": "yomama"
     },
     {
-      "userName": "JordanRosas",
-      "email": "jordanrosas1203@gmail.com",
-      "password": "qwer",
-      "id": 2
+      "id": 2,
+      "userName": "Lorenzo",
+      "email": "dafud@msn.com",
+      "password": "123"
+    },
+    {
+      "id": 3,
+      "userName": "Jaleandro",
+      "email": "rad@rad.com",
+      "password": "neato"
+    },
+    {
+      "id": 4,
+      "userName": "Sally",
+      "email": "Sally@game.com",
+      "password": "1984"
+    },
+    {
+      "id": 5,
+      "userName": "Julia Gulia",
+      "email": "knifefighter@explorer.com",
+      "password": "word"
+    },
+    {
+      "id": 6,
+      "userName": "Jimbo Gimbo",
+      "email": "James@yahoo.com",
+      "password": "pass"
     }
   ],
   "newsitems": [
     {
       "id": 1,
-      "userId": 2,
+      "userId": 1,
       "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
       "title": "Wormholes Allow Information to Escape Black Holes",
       "synopsis": "Check out this recent discovery about workholes"
     },
     {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 2
+      "id": 2,
+      "userId": 2,
+      "url": "https://www.bbc.com/news/world-africa-46819303",
+      "title": "DR Congo presidential election: Outcry as Tshisekedi named winner",
+      "synopsis": "Some people are bummed"
     },
     {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 3
+      "id": 3,
+      "userId": 3,
+      "url": "https://www.bbc.com/news/technology-46818797",
+      "title": "CES 2019: Amazon and Google Assistant carve up tech expo",
+      "synopsis": "Tech makes me excited about life"
     },
     {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 4
+      "id": 4,
+      "userId": 5,
+      "url": "https://www.cnbc.com/2019/01/07/these-are-the-best-jobs-to-have-in-2019-according-to-us-news--world-report.html",
+      "title": "These are the 13 best jobs to have in 2019, according to US News & World Report",
+      "synopsis": "Developer no.1 yo"
     },
     {
       "userId": 1,
@@ -62,56 +86,53 @@
       "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
       "synopsis": "blah blah blah",
       "id": 7
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 10
     }
   ],
   "events": [
     {
-      "userId": 1,
-      "eventName": "Hiking",
-      "eventDate": "2019-01-14",
-      "eventTime": "15:00",
-      "eventLocation": "Yosemite",
+      "userId": "1",
+      "eventName": "test",
+      "eventDate": "2019-01-08",
+      "eventTime": "11:11",
+      "eventLocation": "test",
       "id": 1
     },
     {
       "id": 2,
-      "userId": 1,
-      "eventName": "Skiing",
-      "eventDate": "2019-01-15",
-      "eventTime": "08:00",
-      "eventLocation": "Rockies"
-    },
-    {
-      "userId": 1,
-      "eventName": "Outdoor Yoga",
-      "eventDate": "2019-01-18",
-      "eventTime": "08:00",
-      "eventLocation": "Outside",
-      "id": 3
-    },
-    {
       "userId": 2,
-      "eventName": "Concert",
-      "eventDate": "2019-01-20",
-      "eventTime": "16:00",
-      "eventLocation": "Red Rock",
-      "id": 4
+      "eventName": "another toga party",
+      "eventDate": "2-15",
+      "eventTime": "3:00pm",
+      "eventLocation": "Vegas"
     },
     {
       "userId": 3,
-      "eventName": "Picnic",
-      "eventDate": "2019-01-17",
-      "eventTime": "12:00",
-      "eventLocation": "A Park",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "eventName": "Party at NSS",
-      "eventDate": "2019-01-26",
-      "eventTime": "12:12",
-      "eventLocation": "NSS",
-      "id": 6
+      "eventName": "yet another toga party",
+      "eventDate": "2-12",
+      "eventTime": "3:00pm",
+      "eventLocation": "Vegas",
+      "id": 3
     }
   ],
   "tasks": [
@@ -130,7 +151,6 @@
       "id": 2
     },
     {
-      "id": 3,
       "userId": 1,
       "task": "save world",
       "expectedCompletionDate": "01 12 2019",
@@ -160,9 +180,19 @@
   ],
   "friends": [
     {
-      "id": 1,
       "userId": 1,
-      "otherFriendId": 3
+      "otherFriendId": 5,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 6,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 4,
+      "id": 6
     }
   ],
   "messages": [
@@ -180,7 +210,7 @@
     },
     {
       "userId": 1,
-      "message": "NM.",
+      "message": "NM. ut all good",
       "timeStamp": "3:02:00pm",
       "id": 3
     },

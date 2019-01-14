@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+}
+
+/* ======================================================================================== */
+/* FRIENDS DISPLAY */
+/* ======================================================================================== */
+#future-friends{
+  /* display:flex;*/
+  background:rgb(81, 78, 78);
+  opacity:0.8;
+  width:70%;
+  margin:0 auto;
+  margin-top:18px;
+  color:white;
+  padding-left:10px;
+  box-shadow: 2px 2px 5px black;
+  border-radius:15px;
+  transition:1s;
+}
+.friend-container{
+  /* display:flex;*/
+  background:rgb(81, 78, 78);
+  opacity:0.8;
+  width:70%;
+  margin:0 auto;
+  margin-top:18px;
+  color:white;
+  padding-left:10px;
+  box-shadow: 2px 2px 5px black;
+  border-radius:15px;
+  transition:1s;
+}
+
+/* -=========================================-========================================= */
+/* FRIENDS MODAL */
+/* -=========================================-========================================= */
+
+#friends__backdrop {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+#friends__modal {
+  display: none;
+  position: fixed;
+  background: white;
+  padding: 10px;
+  width: 260px;
+  top: 100px;
+  left: calc(50% - 140px);
+  z-index: 1;
+}
+
+#friends__modal h1 {
+  margin: 0;
+}
+
+#friends__modal button {
+  background: #fa923f;
+  color: white;
+  border: 1px solid #521751;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  margin: 2px;
+}
+
+#friends__modal button:hover,
+#friends__modal button:active {
+  background: #521751;
+}
+
+#friends__modal button:focus {
+  outline: none;
+}
+
+/* FRIEND SEARCH BUTTON -------------- */
+
+/* body {
+  background: #e84118;
+} */
+
+#friend-search-box {
+  position: absolute;
+  top: 3%;
+  left: 71%;
+  transform: translate(-50%,-50%);
+  background: #2f3640;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+  z-index: 2;
+}
+
+#friend-search-box:hover > .search-txt {
+width: 240px;
+padding: 0 6px;
+}
+
+#friend-search-box:hover > .friend-search-btn {
+  background: white;
+}
+
+.friend-search-btn {
+  color: rgb( 191, 162, 44);
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+}
+
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* FRIEND SEARCH MODAL RESULT ------- */
+.dialog,
+.dialog__overlay {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.dialog {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+}
+
+.dialog__overlay {
+	position: absolute;
+	z-index: 1;
+	background: rgba(55, 58, 71, 0.9);
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.dialog--open .dialog__overlay {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.dialog__content {
+	width: 50%;
+	max-width: 560px;
+	min-width: 290px;
+	background: #fff;
+	padding: 4em;
+	text-align: center;
+	position: relative;
+	z-index: 5;
+	opacity: 0;
+}
+
+.dialog--open .dialog__content {
+	pointer-events: auto;
+}
+
+/* Content */
+.dialog h2 {
+	margin: 0;
+	font-weight: 400;
+	font-size: 2em;
+	padding: 0 0 2em;
+	margin: 0;
+}

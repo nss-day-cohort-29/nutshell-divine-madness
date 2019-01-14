@@ -1,13 +1,13 @@
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
 import messagesEventListeners from "./messagesEventListeners";
-// import friendsEventListeners from "./friendsEventListeners.js";
+import friendsEventsListener from "./friendsEventsListener.js";
 
 const messages = {
 
     createMessageBoard() {
         $("#output").empty()
-        
+
         let outputArticle = document.getElementById("output")
 
         //create display container
@@ -75,7 +75,7 @@ const messages = {
                 let loggedInUser = sessionStorage.getItem("userId");
 
                 let messageElement = domComponents.createDomElement({
-
+                    // ADD LINK HERE
                     elementType : "h3",
                     cssClass : "messageUserName",
                     content : `${userName}:`,
@@ -84,6 +84,7 @@ const messages = {
                         name : parseInt(messageUser)
                     }
                 })
+
 
                 let messageElement2 = domComponents.createDomElement({
                     elementType : "p",
@@ -115,7 +116,7 @@ const messages = {
                     messageElement.appendChild(messageElement2)
                     messageContainer.insertBefore(messageElement, messageInput)
                 }
-                // messageElement.addEventListener("click", friendsEventListeners.shiz)
+                messageElement.addEventListener("click", friendsEventsListener.shiz)
             });
         })
     },
