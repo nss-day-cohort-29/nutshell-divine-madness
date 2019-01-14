@@ -265,9 +265,6 @@ loadCurrentUsersFriends (friend) {
       return temp.sort((a,b) => a-b);
     },
     messengerAddfriendFinale (notfriends, wantedFriend, friendToAddName) {
-      let userId = sessionStorage.getItem('userId');
-      let currentUser = Number(userId);
-
       console.log(notfriends, Number(wantedFriend))
       const finalFriend = notfriends.filter(friendsThatArent => friendsThatArent === Number(wantedFriend))
       // console.log(finalFriend[0], Number(wantedFriend))

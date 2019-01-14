@@ -135,18 +135,28 @@
     },
     {
       "userId": 5,
-      "otherFriendId": 2,
+      "otherFriendId": 1,
       "id": 31
     },
     {
       "userId": 5,
-      "otherFriendId": 4,
+      "otherFriendId": 2,
       "id": 32
     },
     {
       "userId": 5,
-      "otherFriendId": 1,
+      "otherFriendId": 4,
       "id": 33
+    },
+    {
+      "userId": 4,
+      "otherFriendId": 2,
+      "id": 34
+    },
+    {
+      "userId": 4,
+      "otherFriendId": 5,
+      "id": 35
     }
   ],
   "messages": [
@@ -194,8 +204,8 @@
     },
     {
       "userId": 5,
-      "message": "a craaazzzaaa",
-      "timeStamp": "2019-01-13T20:03:10.247Z",
+      "message": "yo man whatup",
+      "timeStamp": "2019-01-14T14:56:52.789Z",
       "id": 8
     }
   ]

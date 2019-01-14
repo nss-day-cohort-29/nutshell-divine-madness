@@ -59,13 +59,13 @@ import messages from "./messages";
 import friendsEventsListener from "./friendsEventsListener";
 
 
-// messages.createMessageBoard();
+messages.createMessageBoard();
 
 
 function userLogin () {
 
-    let userName = "Julia Gulia";
-    let password = "word";
+    let userName = "Sally";
+    let password = "1984";
 
     nomadData.connectToData({
 
@@ -96,4 +96,4 @@ function loadDashboard (userId) {
 
 // friends.initializePotentialFriends();
 // friends.defineCurrentUsersFriends();
-friends.buildFriendSearchBar();
+// friends.buildFriendSearchBar();

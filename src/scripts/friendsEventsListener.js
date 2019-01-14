@@ -117,8 +117,8 @@ const friendsEventsListener = {
       "embedItem" : "?_embed=users"
     })
     .then(users => {
-      const foundUsers = users.find(user => user.userName.includes(userInput)
-      ); console.log(foundUsers.id, currentUser)
+      const foundUsers = users.find(user => user.userName.includes(userInput));
+      console.log(foundUsers.id, currentUser)
       if (foundUsers.id === currentUser) {
         alert("Can't friend yourself");
       } else {
