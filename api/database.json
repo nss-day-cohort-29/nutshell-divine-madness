@@ -120,42 +120,21 @@
       "userId": 1,
       "task": "save world someday",
       "expectedCompletionDate": "02 28 2019",
-      "complete": true
-    },
-    {
-      "userId": 1,
-      "task": "destroy world",
-      "expectedCompletionDate": "01 15 2019",
-      "complete": false,
-      "id": 2
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "task": "save world",
-      "expectedCompletionDate": "01 12 2019",
       "complete": false
     },
     {
       "userId": 1,
       "task": "destroy world",
-      "expectedCompletionDate": "01 13 2019",
+      "expectedCompletionDate": "01 16 2019",
       "complete": false,
-      "id": 4
-    },
-    {
-      "id": 5,
-      "userId": 1,
-      "task": "save world maybe",
-      "expectedCompletionDate": "01 13 2019",
-      "complete": true
+      "id": 2
     },
     {
       "userId": 1,
-      "task": "aaaaaa",
-      "expectedCompletionDate": "01 30 2019",
+      "task": "Reach MVP",
+      "expectedCompletionDate": "undefined undefined ",
       "complete": false,
-      "id": 6
+      "id": 3
     }
   ],
   "friends": [

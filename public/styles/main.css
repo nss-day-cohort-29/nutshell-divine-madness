@@ -121,6 +121,7 @@ ul {
   top:0;
   width:100%;
   z-index: 1;
+  box-shadow: 2px 2px 5px black;
 }
 
 li {
@@ -314,15 +315,76 @@ Task Container
   width:70%;
   margin:0 auto;
   margin-top:85px;
+  background:rgb(81, 78, 78);
+  opacity:0.8;
+  border-radius:12px;
   
 }
 .completedTasksTable{
-  margin-top:6px;
+  margin-top:16px;
 }
+.taskEditButton{
+  border:0;
+  background:rgb(81, 78, 78);
+  opacity:0.8;
+  color:rgb( 191, 162, 44);
+  font-weight: bold;
+}
+.taskEditCell:hover{
+  cursor: pointer;
+}
+
+.activeTasksTable{
+  color:white;
+}
+/* 
 #dueDateCell_1,
 #dueDateCell_4,
 #dueDateCell_2,
 #dueDateCell_3{
   text-align:center;
   margin-left:25px;
+} */
+.editedTaskSubmitButton{
+  background:rgb(81, 78, 78);
+  color:rgb( 191, 162, 44);
+  border:none;
+  font-weight:bold;
+}
+.taskTitleInput{
+  font-size:20px;
+}
+.taskDateInput{
+  font-size:16px;
+}
+.createTaskButton{
+  font-family: "Roboto", sans-serif;
+  margin-top:100px;
+  border:0;
+  background:#43A047;
+  color:white;
+  font-size: 20px;
+  border-bottom-left-radius:12px; 
+  border-bottom-right-radius:12px; 
+}
+.newTaskFormTitle{
+  color:white;
+}
+.submitNewTaskButton{
+  border:0;
+  font-size:20px;
+  background:#43A047;
+  color:white;
+}
+.activeTasksTableTitle{
+  font-weight:bold;
+  font-size:20px;
+}
+
+.completedTasksTable{
+  color:white;
+}
+.completedTasksTableTitle{
+  font-size: 20px;
+  font-weight: bold;
 }
