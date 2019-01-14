@@ -7,40 +7,64 @@
       "password": "yomama"
     },
     {
-      "userName": "JordanRosas",
-      "email": "jordanrosas1203@gmail.com",
-      "password": "qwer",
-      "id": 2
+      "id": 2,
+      "userName": "Lorenzo",
+      "email": "dafud@msn.com",
+      "password": "123"
+    },
+    {
+      "id": 3,
+      "userName": "Jaleandro",
+      "email": "rad@rad.com",
+      "password": "neato"
+    },
+    {
+      "id": 4,
+      "userName": "Sally",
+      "email": "Sally@game.com",
+      "password": "1984"
+    },
+    {
+      "id": 5,
+      "userName": "Julia Gulia",
+      "email": "knifefighter@explorer.com",
+      "password": "word"
+    },
+    {
+      "id": 6,
+      "userName": "Jimbo Gimbo",
+      "email": "James@yahoo.com",
+      "password": "pass"
     }
   ],
   "newsitems": [
     {
       "id": 1,
-      "userId": 2,
+      "userId": 1,
       "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
       "title": "Wormholes Allow Information to Escape Black Holes",
       "synopsis": "Check out this recent discovery about workholes"
     },
     {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 2
+      "id": 2,
+      "userId": 2,
+      "url": "https://www.bbc.com/news/world-africa-46819303",
+      "title": "DR Congo presidential election: Outcry as Tshisekedi named winner",
+      "synopsis": "Some people are bummed"
     },
     {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 3
+      "id": 3,
+      "userId": 3,
+      "url": "https://www.bbc.com/news/technology-46818797",
+      "title": "CES 2019: Amazon and Google Assistant carve up tech expo",
+      "synopsis": "Tech makes me excited about life"
     },
     {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 4
+      "id": 4,
+      "userId": 5,
+      "url": "https://www.cnbc.com/2019/01/07/these-are-the-best-jobs-to-have-in-2019-according-to-us-news--world-report.html",
+      "title": "These are the 13 best jobs to have in 2019, according to US News & World Report",
+      "synopsis": "Developer no.1 yo"
     },
     {
       "userId": 1,
@@ -55,63 +79,32 @@
       "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
       "synopsis": "blah blah blah",
       "id": 6
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 7
     }
   ],
   "events": [
     {
-      "userId": 1,
-      "eventName": "Hiking",
-      "eventDate": "2019-01-14",
-      "eventTime": "15:00",
-      "eventLocation": "Yosemite",
+      "userId": "1",
+      "eventName": "test",
+      "eventDate": "2019-01-08",
+      "eventTime": "11:11",
+      "eventLocation": "test",
       "id": 1
     },
     {
       "id": 2,
-      "userId": 1,
-      "eventName": "Skiing",
-      "eventDate": "2019-01-15",
-      "eventTime": "08:00",
-      "eventLocation": "Rockies"
-    },
-    {
-      "userId": 1,
-      "eventName": "Outdoor Yoga",
-      "eventDate": "2019-01-18",
-      "eventTime": "08:00",
-      "eventLocation": "Outside",
-      "id": 3
-    },
-    {
       "userId": 2,
-      "eventName": "Concert",
-      "eventDate": "2019-01-20",
-      "eventTime": "16:00",
-      "eventLocation": "Red Rock",
-      "id": 4
+      "eventName": "another toga party",
+      "eventDate": "2-15",
+      "eventTime": "3:00pm",
+      "eventLocation": "Vegas"
     },
     {
       "userId": 3,
-      "eventName": "Picnic",
-      "eventDate": "2019-01-17",
-      "eventTime": "12:00",
-      "eventLocation": "A Park",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "eventName": "Party at NSS",
-      "eventDate": "2019-01-26",
-      "eventTime": "12:12",
-      "eventLocation": "NSS",
-      "id": 6
+      "eventName": "yet another toga party",
+      "eventDate": "2-12",
+      "eventTime": "3:00pm",
+      "eventLocation": "Vegas",
+      "id": 3
     }
   ],
   "tasks": [
@@ -120,53 +113,116 @@
       "userId": 1,
       "task": "save world",
       "expectedCompletionDate": "2-12",
-      "complete": false
-    },
-    {
-      "userId": 1,
-      "task": "Reach MVP",
-      "expectedCompletionDate": "2019-01-14",
       "complete": true
     },
     {
+      "id": 2,
       "userId": 1,
-      "task": "conquer the world",
-      "expectedCompletionDate": "2019-01-31",
+      "task": "kill git",
+      "expectedCompletionDate": "2019-01-15",
       "complete": true
-    },
-    {
-      "userId": 1,
-      "task": "work",
-      "expectedCompletionDate": "2019-01-13",
-      "complete": false
-    },
-    {
-      "id": 5,
-      "userId": 2,
-      "task": "clean ",
-      "expectedCompletionDate": "2019-01-13",
-      "complete": false
     }
   ],
-  "friends": [],
+  "friends": [
+    {
+      "userId": 3,
+      "otherFriendId": 1,
+      "id": 26
+    },
+    {
+      "userId": 3,
+      "otherFriendId": 2,
+      "id": 27
+    },
+    {
+      "userId": 3,
+      "otherFriendId": 4,
+      "id": 28
+    },
+    {
+      "userId": 4,
+      "otherFriendId": 1,
+      "id": 30
+    },
+    {
+      "userId": 5,
+      "otherFriendId": 2,
+      "id": 31
+    },
+    {
+      "userId": 5,
+      "otherFriendId": 4,
+      "id": 32
+    },
+    {
+      "userId": 5,
+      "otherFriendId": 1,
+      "id": 33
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 4,
+      "id": 34
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 2,
+      "id": 35
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 6,
+      "id": 36
+    }
+  ],
   "messages": [
     {
+      "userId": 1,
+      "message": "Yo bro! d",
+      "timeStamp": "3:00:00pm",
+      "id": 1
+    },
+    {
       "userId": 2,
-      "message": "Hi ",
+      "message": "Sup g.",
       "timeStamp": "3:01:00pm",
       "id": 2
     },
     {
       "userId": 1,
-      "message": "Whats good!",
-      "timeStamp": "2019-01-14T17:44:19.301Z",
+      "message": "uhh?",
+      "timeStamp": "3:02:00pm",
       "id": 3
     },
     {
-      "userId": 1,
-      "message": "Hi",
-      "timeStamp": "2019-01-14T17:54:16.720Z",
+      "userId": 2,
+      "message": "Not Cool.",
+      "timeStamp": "3:03:00pm",
       "id": 4
+    },
+    {
+      "userId": 1,
+      "message": "for rrrrg",
+      "timeStamp": "2019-01-11T01:01:53.174Z",
+      "id": 5
+    },
+    {
+      "userId": 4,
+      "message": "hey boyzzzz",
+      "timeStamp": "2019-01-13T20:00:09.674Z",
+      "id": 6
+    },
+    {
+      "userId": 4,
+      "message": "wowzza dudes",
+      "timeStamp": "2019-01-13T20:01:44.398Z",
+      "id": 7
+    },
+    {
+      "userId": 5,
+      "message": "a craaazzzaaa",
+      "timeStamp": "2019-01-13T20:03:10.247Z",
+      "id": 8
     }
   ]
 }

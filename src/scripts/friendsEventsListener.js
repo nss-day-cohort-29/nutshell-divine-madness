@@ -1,4 +1,5 @@
-// import friends from "./friends"
+import friends from "./friends"
+import messages from "./messages"
 import nomadData from "./nomadData";
 
 const friendsEventsListener = {

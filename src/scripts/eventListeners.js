@@ -124,11 +124,12 @@ const eventListeners = {
     messagesNavLink(){
         messages.createMessageBoard()
         console.log("working")
+        friends.buildFriendSearchBar()
 
     },
     eventsNavLink(){
             events.showEventForm()
-
+            friends.buildFriendSearchBar()
             //appendUserEvent
             console.log("events clicked")
     },
@@ -136,7 +137,7 @@ const eventListeners = {
         console.log("friends nav link clicked")
         friends.defineCurrentUsersFriends();
         friends.initializePotentialFriends();
-        friends.buildFriendSearchBar()
+
     },
     newsNavLink(){
         //NEWS SECTION
@@ -144,15 +145,18 @@ const eventListeners = {
         news.allSaved();
         news.getNews();
         news.newsElementCreator();
+        friends.buildFriendSearchBar()
         console.log("news link clicked")
     },
     tasksNavLink(){
         tasks.createTaskTables()
+        friends.buildFriendSearchBar()
     },
     nomadNavLink(){
         dashboard.buildLoginForm()
         $("nav").hide()
         sessionStorage.clear()
+        friends.buildFriendSearchBar()
         console.log("signed out")
     },
     /*========================================================================================================

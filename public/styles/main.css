@@ -31,12 +31,8 @@ h1{
 
 
 /* =======================================================
-<<<<<<< HEAD
-CLASS SELECTORS
-========================================================== */
 =======
-CLASS SELECTORS 
->>>>>>> master
+CLASS SELECTORS
 
 .login-page{
   width:360px;
@@ -263,8 +259,6 @@ Adding image of the devs behind NOMADS
 .taskDueDate {
     padding-left: 10px;
 }
-<<<<<<< HEAD
-=======
 
 /*=================================================================
 Messages Styling
@@ -315,26 +309,20 @@ Messages Styling
   background:rgb(81, 78, 78);
   color:rgb( 191, 162, 44);
 }
-/*=================================================================
-EVENT FORM STYLES
-===================================================================*/
-#showForm{
-  position:absolute;
-  top:300px;
+
+
+.tasksContainer{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 85px;
 }
-.eventInput{
-  margin-top:300px;
-  background:rgb(81, 78, 78);
-  opacity:0.8;
-  width:70%;
-  margin:0 auto;
-  margin-top:18px;
-  color:white;
-  padding-left:10px;
-  box-shadow: 2px 2px 5px black;
-  border-radius:15px;
+.friend-container{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 85px;
 }
-fieldset{
-  margin-top:6px;
+#future-friends{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 85px;
 }
->>>>>>> master
