@@ -1,7 +1,7 @@
 // Author: Cole Bryant / Purpose:
 
-import nomadData from "./nomadData";
-import domComponents from "./domComponents";
+// import nomadData from "./nomadData";
+// import domComponents from "./domComponents";
 //import eventListeners from "./eventListeners";
 
 

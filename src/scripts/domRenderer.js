@@ -1,10 +1,9 @@
-// import events from "./events";
+import events from "./events";
 
-// import nomadData from "./nomadData";
-// import nomadData from "./nomadData";
-// import friends from "./friends";
-// import news from "./news"
-// import messages from "./messages";
+import nomadData from "./nomadData";
+import friends from "./friends";
+import news from "./news"
+import messages from "./messages";
 import dashBoard from "./dashboard"
 // import domComponents from "./domComponents";
 import eventListeners from "./eventListeners";

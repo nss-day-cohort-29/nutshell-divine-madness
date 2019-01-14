@@ -1,4 +1,4 @@
-import eventListeners from "./eventListeners";
+// import eventListeners from "./eventListeners";
 
 const domComponents = {
   createDomElement({ elementType, content = null, cssClass, attributes = {} }) {
@@ -112,7 +112,7 @@ const domComponents = {
 
     return formContainer;
   }
-  
+
 }
 
 export default domComponents
