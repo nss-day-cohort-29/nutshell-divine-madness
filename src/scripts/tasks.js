@@ -105,7 +105,8 @@ const tasks = {
             cssClass : "createTaskButton",
             content : "Create New Task",
             attributes : {
-                id : "createTaskButton"
+                id : "createTaskButton",
+                type : "button"
             }
         });
 
