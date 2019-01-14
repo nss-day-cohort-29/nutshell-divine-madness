@@ -396,6 +396,7 @@ loadCurrentUsersFriends (friend) {
         let userInputClick = usersSearchFriendInputEnter.value
         friendsEventsListener.searchInputMagic(userInputClick);
         usersSearchFriendInputEnter.value = "";
+
       })
     },
     searchResultDisplayed (friendSearchResultDisplayed) {
