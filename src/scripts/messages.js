@@ -114,7 +114,7 @@ const messages = {
                     messageElement.appendChild(messageElement2)
                     messageContainer.insertBefore(messageElement, messageInput)
                 }
-                messageElement.addEventListener("click", friendsEventListeners.shiz)
+                // messageElement.addEventListener("click", friendsEventListeners.shiz)
             });
         })
     },

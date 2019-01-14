@@ -2,7 +2,6 @@
   box-sizing:border-box;
 }
 body{
-  overflow:hidden;
   background-image:linear-gradient(rgba(0,0,0,0,0.6), rgba(0,0,0,0,0.6));
   height:100vh;
   background-size:cover;
@@ -10,6 +9,7 @@ body{
   margin:0;
   padding:0;
   font-family:'Montserrat Alternates', sans-serif;
+  overflow:hidden;
 }
 h1{
   font-weight: bold;
@@ -118,6 +118,10 @@ ul {
   overflow: hidden;
   background-color: rgb(81, 78, 78);
   opacity:0.9;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index: 1;
 }
 
 li {
@@ -239,4 +243,54 @@ Adding image of the devs behind NOMADS
 
 .taskDueDate {
     padding-left: 10px;
+}
+
+/*=================================================================
+Messages Styling
+==================================================================*/
+.messagesContainer{
+  /* display:flex;
+  flex-direction:column; */
+  height:100vh;
+  padding-right:25px;
+  margin-top:85px;
+  /* overflow:scroll; */
+}
+.messageUserName{
+  /* display:flex;*/
+  background:rgb(81, 78, 78);
+  opacity:0.8;
+  width:70%;
+  margin:0 auto;
+  margin-top:18px;
+  color:white;
+  padding-left:10px;
+  box-shadow: 2px 2px 5px black;
+  border-radius:15px;
+  transition:1s;
+}
+.messageUserName:hover{
+  transform:scale(1);
+  cursor:pointer;
+}
+#messageInput{
+  margin-top:6px;
+  line-height:2;
+  margin-left:350px;
+  width:61%;
+  margin-left:150px;
+}
+#messageSubmitButton{
+  /* justify-content: flex-end; */
+  border:0;
+  line-height:2;
+  width:9%;
+  background:rgb(81, 78, 78);
+  color:rgb( 191, 162, 44);
+  line-height: 2;
+}
+.messageEditButton{
+  border:0;
+  background:rgb(81, 78, 78);
+  color:rgb( 191, 162, 44);
 }

@@ -7,16 +7,10 @@
       "password": "yomama"
     },
     {
-      "userName": "Jordan",
+      "userName": "JordanRosas",
       "email": "jordanrosas1203@gmail.com",
-      "password": "123",
+      "password": "qwer",
       "id": 2
-    },
-    {
-      "userName": "Emily",
-      "email": "jordanrosas1203@gmail.com",
-      "password": "w",
-      "id": 3
     }
   ],
   "newsitems": [
@@ -40,6 +34,34 @@
       "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
       "synopsis": "blah blah blah",
       "id": 3
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "synopsis": "blah blah blah",
+      "id": 7
     }
   ],
   "events": [
@@ -92,20 +114,46 @@
       "complete": true
     },
     {
+      "id": 3,
       "userId": 1,
       "task": "conquer the world",
       "expectedCompletionDate": "2019-01-31",
-      "complete": false,
-      "id": 3
+      "complete": true
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "task": "work",
+      "expectedCompletionDate": "2019-01-13",
+      "complete": false
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "task": "clean ",
+      "expectedCompletionDate": "2019-01-13",
+      "complete": false
     }
   ],
   "friends": [],
   "messages": [
     {
       "userId": 2,
-      "message": "who are you?",
+      "message": "Hi ",
       "timeStamp": "3:01:00pm",
       "id": 2
+    },
+    {
+      "userId": 1,
+      "message": "Whats good",
+      "timeStamp": "2019-01-14T17:44:19.301Z",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "message": "Hi",
+      "timeStamp": "2019-01-14T17:54:16.720Z",
+      "id": 4
     }
   ]
 }

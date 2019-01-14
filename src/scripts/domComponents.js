@@ -13,15 +13,20 @@ const domComponents = {
     return element;
   },
   createEventInput() {
-    const formContainer = this.createDomElement({elementType: "form", attribues: {class: "eventInput"}});
+    const eventForm = this.createDomElement({elementType: "form", attribues: {class: "eventInput"}});
+    
+    const formHeading = document.querySelector("#output")
     const formHeader = this.createDomElement({elementType: "h1", content: "Add a New Event:"});
-    formContainer.appendChild(formHeader);
+    formHeading.appendChild(formHeader);
 
-    const nameFieldset = this.createDomElement({elementType: "fieldset"});
+
+
+    const nameFieldset = this.createDomElement({elementType: "fieldset" , attributes:{id: "eventNameFieldset" }});
     const nameLabel = this.createDomElement({elementType: "label", content: "Event Name:", attributes: {for: "eventName"}});
     const nameInput = this.createDomElement({elementType: "input", attributes: {type: "text", name: "eventName", id: "eventName"}});
     nameFieldset.appendChild(nameLabel);
     nameFieldset.appendChild(nameInput);
+    // eventForm.appendChild(nameFieldset)
 
     const dateFieldset = this.createDomElement({elementType: "fieldset"});
     const dateLabel = this.createDomElement({elementType: "label", content: "Event Date:", attributes: {for: "eventDate"}});
@@ -43,13 +48,13 @@ const domComponents = {
 
     const saveButton = this.createDomElement({elementType: "button", content: "Save", attributes: {type: "button", id: "saveEvent"}});
 
-    formContainer.appendChild(nameFieldset);
-    formContainer.appendChild(dateFieldset);
-    formContainer.appendChild(timeFieldset);
-    formContainer.appendChild(locationFieldset);
-    formContainer.appendChild(saveButton);
+    eventForm.appendChild(nameFieldset);
+    eventForm.appendChild(dateFieldset);
+    eventForm.appendChild(timeFieldset);
+    eventForm.appendChild(locationFieldset);
+    eventForm.appendChild(saveButton);
 
-    return formContainer;
+    return eventForm;
   },
   createEventItem (eventObject) {
     const eventItem = this.createDomElement({elementType: "article", attributes: {class: "eventItem"}});

@@ -16,7 +16,7 @@ const dashboard = {
         <form class = "login-form">
           <input id = "userNameVal" type="text" placeholder = "Username">
           <input id = "passwordVal" type="password" placeholder = "Password">
-          <button id = "logIn">Login</button>
+          <button type = "button" id = "logIn">Login</button>
           <button id = "modalButton">Nomads Mission</button>
           <p class = "message">Don't have an account? <a href = "#">Register</a></p>
         </form>
