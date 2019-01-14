@@ -128,6 +128,7 @@ const eventListeners = {
     },
     eventsNavLink(){
             events.showEventForm()
+
             //appendUserEvent
             console.log("events clicked")
     },

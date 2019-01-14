@@ -104,6 +104,14 @@
       "eventTime": "12:00",
       "eventLocation": "A Park",
       "id": 5
+    },
+    {
+      "userId": 1,
+      "eventName": "Party at NSS",
+      "eventDate": "2019-01-26",
+      "eventTime": "12:12",
+      "eventLocation": "NSS",
+      "id": 6
     }
   ],
   "tasks": [
@@ -153,7 +161,7 @@
     },
     {
       "userId": 1,
-      "message": "Whats good",
+      "message": "Whats good!",
       "timeStamp": "2019-01-14T17:44:19.301Z",
       "id": 3
     },

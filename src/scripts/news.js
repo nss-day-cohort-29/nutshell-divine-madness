@@ -80,13 +80,8 @@ const news = {
         })
 
         // const NewsTest = domComponents.createDomElement("h2",testPass,"testObj",null);
-<<<<<<< HEAD
         //output.appendChild(NewsTest);
         
-=======
-        // output.appendChild(NewsTest);
-
->>>>>>> master
 
     }
 }
