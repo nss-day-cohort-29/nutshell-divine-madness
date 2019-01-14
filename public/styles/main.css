@@ -236,49 +236,77 @@ Events Styling
 ==============================================*/
 
 #eventsContainer {
-  margin-top: 85px;
-  height: 100vh;
+  margin-top: 61.6px;
+  height: 90vh;
   overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#eventLog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
 }
 
 .eventItem > form > fieldset {
     border: none;
     padding: 0px;
+    width: 100%;
 }
 
-.eventItem > form {
-    border: 1px black solid;
+.eventItem {
+  background:rgb(81, 78, 78);
+  opacity:0.8;
+  box-shadow: 2px 2px 5px black;
+  border-radius:15px;
+  color: white;
+  margin: .5em;
+  padding: 1em;
+  width: 100%;
 }
 
 #eventLog > article:first-child {
-    background: goldenrod;
+    background: forestgreen;
     font-weight: bold;
-    border: 3px solid black;
-}
-.tasksContainer {
-    display: flex;
-    flex-direction: column;
 }
 
-.eventInput{
-  margin-top:300px;
+.eventInput {
   background:rgb(81, 78, 78);
-  opacity:0.8;
-  width:70%;
-  margin:0 auto;
-  margin-top:18px;
+  width: 50%;
+  opacity: 0.8;
+  margin: .5em;
+  padding: 1em;
   color:white;
   padding-left:10px;
   box-shadow: 2px 2px 5px black;
   border-radius:15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-fieldset{
+
+.eventInput > fieldset {
+ border: none;
+}
+
+fieldset {
   margin-top:6px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 /*=================================================================
 Tasks Styling
 ===================================================================*/
+.tasksContainer {
+    display: flex;
+    flex-direction: column;
+}
 
 .taskDiv{
     display: flex;
