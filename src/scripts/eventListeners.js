@@ -124,19 +124,20 @@ const eventListeners = {
     messagesNavLink(){
         messages.createMessageBoard()
         console.log("working")
+        friends.buildFriendSearchBar()
 
     },
     eventsNavLink(){
             events.showEventForm()
             events.appendUserAndFriendEvents();
-
             //appendUserEvent
             console.log("events clicked")
     },
     friendsNavLink(){
         console.log("friends nav link clicked")
-        friends.loadCurrentUsersFriends()
-        friends.defineCurrentUsersFriends()
+        friends.defineCurrentUsersFriends();
+        friends.initializePotentialFriends();
+
     },
     newsNavLink(){
         //NEWS SECTION
@@ -144,10 +145,12 @@ const eventListeners = {
         news.allSaved();
         news.getNews();
         news.newsElementCreator();
+        friends.buildFriendSearchBar()
         console.log("news link clicked")
     },
     tasksNavLink(){
         tasks.createTaskTables()
+        friends.buildFriendSearchBar()
     },
     nomadNavLink(){
         dashboard.buildLoginForm()
@@ -158,6 +161,11 @@ const eventListeners = {
     /*========================================================================================================
     END OF NAVIGATION EVENTLISTENERS
     =========================================================================================================*/
+
+    friendsDeleteFriend () {
+        console.log(event.target);
+
+    }
 };
 
 export default eventListeners;

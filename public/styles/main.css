@@ -1,3 +1,4 @@
+@import 'friends.css';
 *{
   box-sizing:border-box;
 }
@@ -30,6 +31,10 @@ h1{
 
 
 /* =======================================================
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> master
 CLASS SELECTORS
 
 .login-page{
@@ -365,4 +370,25 @@ Messages Styling
   border:0;
   background:rgb(81, 78, 78);
   color:rgb( 191, 162, 44);
+<<<<<<< HEAD
 }
+=======
+}
+
+
+.tasksContainer{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 85px;
+}
+.friend-container{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 85px;
+}
+#future-friends{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 85px;
+}
+>>>>>>> master
