@@ -1,10 +1,11 @@
-import nomadData from "./nomadData";
-import dashboard from "./dashboard";
+import dashboard from "./dashboard"
 import domComponents from "./domComponents";
+import nomadData from "./nomadData";
 import events from "./events";
 import messages from "./messages";
 import friends from "./friends";
 import news from "./news";
+import tasks from "./tasks";
 
 const eventListeners = {
     /*===============================================================================================================
@@ -35,6 +36,7 @@ const eventListeners = {
                     //displays navigatin bar
                     dashboard.createNavBar()
                     //session storage
+
                     sessionStorage.setItem("userId", user.id)
                     let userId = sessionStorage.getItem("userId")
                     //console.log verifying that credentials match and user is logged in
@@ -118,9 +120,6 @@ const eventListeners = {
     },
     /*===============================================================================================================
     NAVBAR LI ELISTENERS: When user clicks an item in the NAVBAR the content associated with that tab will populate the DOM
-
-    THESE 5 ARRAY METHODS ARE GOING TO STAY IN THE MAIN EVENTLISTENERS FILE EVEYTHING ELSE WILL BE SEPERATED INTO SEPERATE
-    EL FILES
     =================================================================================================================*/
     messagesNavLink(){
         messages.createMessageBoard()
@@ -129,6 +128,7 @@ const eventListeners = {
     },
     eventsNavLink(){
             events.showEventForm()
+
             //appendUserEvent
             console.log("events clicked")
     },
@@ -146,6 +146,19 @@ const eventListeners = {
         news.newsElementCreator();
         console.log("news link clicked")
     },
+    tasksNavLink(){
+        tasks.createTaskTables()
+    },
+    nomadNavLink(){
+        dashboard.buildLoginForm()
+        $("nav").hide()
+        sessionStorage.clear()
+        console.log("signed out")
+    },
+    /*========================================================================================================
+    END OF NAVIGATION EVENTLISTENERS
+    =========================================================================================================*/
+
     friendsDeleteFriend () {
         console.log(event.target);
 

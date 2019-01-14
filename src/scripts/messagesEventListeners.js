@@ -1,13 +1,13 @@
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
 import messages from "./messages";
-import friendsEventsListener from "./friendsEventsListener.js";
+// import friendsEventListeners from "./friendsEventListeners.js";
 
 const messagesEventListeners = {
 
     postNewMessage() {
 
-        let messageInput = document.getElementById("messageInput");
+        let messageInput = document.getElementById("messageInput").value;
         let timeStamp = new Date();
 
         nomadData.connectToData({
@@ -15,8 +15,8 @@ const messagesEventListeners = {
             dataSet : "messages",
             fetchType : "POST",
             dataBaseObject : {
-                userId : Number(sessionStorage.getItem('userId')),
-                message : messageInput.value,
+                userId : Number(sessionStorage.getItem("userId")),
+                message : messageInput,//.value,
                 timeStamp : timeStamp
             }
         }).then(shit => {
@@ -72,15 +72,16 @@ const messagesEventListeners = {
             attributes : {
                 id : `messageEditSubmitButton_${messageId}`,
                 name: messageTimeStamp,
-                type : "submit"
+                type : "button"
             }
         });
-
         messageEditSubmitButton.addEventListener("click", messagesEventListeners.handleEditSubmitButton)
         messageEditFieldset.appendChild(messageEditInput)
         messageEditFieldset.appendChild(messageEditSubmitButton)
         messageEditForm.appendChild(messageEditFieldset)
         messageContainer.appendChild(messageEditForm)
+
+        event.stopPropagation();
     },
 
     handleEditSubmitButton() {

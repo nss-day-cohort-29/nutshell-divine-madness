@@ -7,7 +7,7 @@ const tasksEventListeners = {
 
         let taskTitle = document.getElementById("taskTitleInput").value;
         let dueDate = document.getElementById("taskDateInput").value;
-        let userId = Number(sessionStorage.getItem('userId'));
+        let userId = Number(sessionStorage.getItem("userId"));
 
         nomadData.connectToData({
 
@@ -35,14 +35,14 @@ const tasksEventListeners = {
             dataSet : "tasks",
             fetchType : "GET",
             embedItem : `?&id=${taskToEditId}`
-        }).then(tasks => {
+        }).then(parsedTasks => {
 
 
-            let taskId = tasks[0].id;
-            let userId = tasks[0].userId;
-            let task = tasks[0].task;
-            let expectedCompletionDate = tasks[0].expectedCompletionDate;
-            let complete = tasks[0].complete;
+            let taskId = parsedTasks[0].id;
+            let userId = parsedTasks[0].userId;
+            let task = parsedTasks[0].task;
+            let expectedCompletionDate = parsedTasks[0].expectedCompletionDate;
+            let complete = parsedTasks[0].complete;
 
             console.log(taskId, userId, task, expectedCompletionDate, complete)
 
@@ -64,10 +64,12 @@ const tasksEventListeners = {
                     expectedCompletionDate: expectedCompletionDate,
                     complete: complete
                 }
+            }).then(shit => {
+                console.log(shit)
+                $("#output").empty()
+                tasks.createTaskTables()
             })
         })
-        $("#output").empty()
-        tasks.createTaskTables();
     }
 }
 export default tasksEventListeners;
