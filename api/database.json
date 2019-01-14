@@ -118,58 +118,77 @@
     {
       "id": 1,
       "userId": 1,
-      "task": "save world",
-      "expectedCompletionDate": "2-12",
-      "complete": false
+      "task": "save world someday",
+      "expectedCompletionDate": "02 28 2019",
+      "complete": true
     },
     {
-      "id": 2,
       "userId": 1,
-      "task": "Reach MVP",
-      "expectedCompletionDate": "2019-01-14",
-      "complete": true
+      "task": "destroy world",
+      "expectedCompletionDate": "01 15 2019",
+      "complete": false,
+      "id": 2
     },
     {
       "id": 3,
       "userId": 1,
-      "task": "conquer the world",
-      "expectedCompletionDate": "2019-01-31",
-      "complete": true
+      "task": "save world",
+      "expectedCompletionDate": "01 12 2019",
+      "complete": false
     },
     {
-      "id": 4,
       "userId": 1,
-      "task": "work",
-      "expectedCompletionDate": "2019-01-13",
-      "complete": false
+      "task": "destroy world",
+      "expectedCompletionDate": "01 13 2019",
+      "complete": false,
+      "id": 4
     },
     {
       "id": 5,
-      "userId": 2,
-      "task": "clean ",
-      "expectedCompletionDate": "2019-01-13",
-      "complete": false
-    }
-  ],
-  "friends": [],
-  "messages": [
-    {
-      "userId": 2,
-      "message": "Hi ",
-      "timeStamp": "3:01:00pm",
-      "id": 2
+      "userId": 1,
+      "task": "save world maybe",
+      "expectedCompletionDate": "01 13 2019",
+      "complete": true
     },
     {
       "userId": 1,
-      "message": "Whats good!",
-      "timeStamp": "2019-01-14T17:44:19.301Z",
+      "task": "aaaaaa",
+      "expectedCompletionDate": "01 30 2019",
+      "complete": false,
+      "id": 6
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "userId": 1,
+      "otherFriendId": 3
+    }
+  ],
+  "messages": [
+    {
+      "userId": 1,
+      "message": "MOTHA FUCKA",
+      "timeStamp": "3:00:00pm",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "message": "Sup.",
+      "timeStamp": "3:01:00pm"
+    },
+    {
+      "userId": 1,
+      "message": "NM.",
+      "timeStamp": "3:02:00pm",
       "id": 3
     },
     {
-      "userId": 1,
-      "message": "Hi",
-      "timeStamp": "2019-01-14T17:54:16.720Z",
-      "id": 4
+      "id": 4,
+      "userId": 2,
+      "message": "Cool.",
+      "timeStamp": "3:03:00pm"
     }
   ]
 }
