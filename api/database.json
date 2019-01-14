@@ -45,12 +45,12 @@
   ],
   "events": [
     {
+      "id": 1,
       "userId": 1,
       "eventName": "Hiking",
       "eventDate": "2019-01-14",
       "eventTime": "15:00",
-      "eventLocation": "Yosemite",
-      "id": 1
+      "eventLocation": "Yosemite"
     },
     {
       "id": 2,
@@ -61,12 +61,12 @@
       "eventLocation": "Rockies"
     },
     {
+      "id": 3,
       "userId": 1,
       "eventName": "Outdoor Yoga",
       "eventDate": "2019-01-18",
       "eventTime": "08:00",
-      "eventLocation": "Outside",
-      "id": 3
+      "eventLocation": "Outside"
     },
     {
       "userId": 2,

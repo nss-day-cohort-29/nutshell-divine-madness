@@ -60,7 +60,7 @@ import tasks from "./tasks";
 
 // friends.defineCurrentUsersFriends();
 // friends.initializePotentialFriends();
-tasks.createTaskTables();
+// tasks.createTaskTables();
 // messages.createMessageBoard();
 
 function userLogin () {
