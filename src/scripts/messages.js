@@ -1,13 +1,13 @@
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
 import messagesEventListeners from "./messagesEventListeners";
-import friendsEventListeners from "./friendsEventListeners.js";
+import friendsEventsListeners from "./friendsEventsListeners.js";
 
 const messages = {
 
     createMessageBoard() {
         $("#output").empty()
-        
+
         let outputArticle = document.getElementById("output")
 
         //create display container
@@ -114,7 +114,7 @@ const messages = {
                     messageElement.appendChild(messageElement2)
                     messageContainer.insertBefore(messageElement, messageInput)
                 }
-                messageElement.addEventListener("click", friendsEventListeners.shiz)
+                messageElement.addEventListener("click", friendsEventsListeners.shiz)
             });
         })
     },

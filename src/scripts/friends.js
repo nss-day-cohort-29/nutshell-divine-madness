@@ -4,17 +4,17 @@ import friendsEventsListener from "./friendsEventsListener";
 
 const friends = {
 
-  
+
   defineCurrentUsersFriends () {
     $("#output").empty()
     const currentUser = 1;
     let userId = sessionStorage.getItem('userId');
-    let currentUser = Number(userId);
+    // let currentUser = Number(userId);
     console.log(currentUser, userId)
     let friendHolder = [];
 // PULL FROM FRIENDS JSON-------------------------
 
-nomadData.connectToData({    
+nomadData.connectToData({
 "dataSet" : "friends",
 "fetchType" : "GET",
 "dataBaseObject" : "",
@@ -149,7 +149,7 @@ loadCurrentUsersFriends (friend) {
         }
       })
       // console.log(friendsIHave)
-      
+
         this.showUserPotentialFriends(friendsIHave)
     })
   },
@@ -174,7 +174,7 @@ loadCurrentUsersFriends (friend) {
       let notCurrentFriend = this.differenceOf2Arrays(allTheUsers, friend)
       notCurrentFriend.forEach(noFriendOfMine => {
         this.printPotentialFriendsToBrowser(noFriendOfMine)
-        
+
       })
     })
   },
@@ -182,7 +182,7 @@ loadCurrentUsersFriends (friend) {
     var temp = [];
     array1 = array1.toString().split(',').map(Number);
     array2 = array2.toString().split(',').map(Number);
-    
+
     for (var i in array1) {
     if(array2.indexOf(array1[i]) === -1) temp.push(array1[i]);
     }

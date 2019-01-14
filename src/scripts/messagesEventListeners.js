@@ -1,7 +1,7 @@
 import nomadData from "./nomadData";
 import domComponents from "./domComponents";
 import messages from "./messages";
-import friendsEventListeners from "./friendsEventListeners.js";
+import friendsEventsListeners from "./friendsEventsListeners.js";
 
 const messagesEventListeners = {
 
