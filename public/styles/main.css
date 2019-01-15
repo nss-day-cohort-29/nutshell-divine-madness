@@ -428,3 +428,7 @@ TASKS styles
   color: rgb( 191, 162, 44);
   text-shadow: 0px 0px 0px white;
 }
+
+.messageEditButton {
+  margin-left: 15%;
+}
