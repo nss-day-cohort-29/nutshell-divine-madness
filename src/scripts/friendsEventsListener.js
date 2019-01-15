@@ -36,8 +36,13 @@ const friendsEventsListener = {
         "dataBaseObject" : {
           "userId": sessionStorage.getItem("userId")
         }
+      }).then(() => {
+        $("#output").empty();
+        friends.defineCurrentUsersFriends();
+        friends.initializePotentialFriends();
       })
     })
+
   },
   friendsAddFriend () {
     let userId = sessionStorage.getItem("userId");
@@ -49,7 +54,7 @@ const friendsEventsListener = {
 
     let goodByeNonFriend = document.getElementById(`potentialFriend-${friendToBeAdded}`);
     goodByeNonFriend.parentNode.removeChild(goodByeNonFriend);
-    alert(`${event.target.previousSibling.innerText} is now your friend!`);
+    // alert(`${event.target.previousSibling.innerText} is now your friend!`);
 
     nomadData.connectToData({
       "dataSet" : "friends",
@@ -58,9 +63,16 @@ const friendsEventsListener = {
         "userId": currentUser,
         "otherFriendId": Number(friendToBeAdded),
       }
+    }).then(() => {
+      $("#output").empty();
+      friends.defineCurrentUsersFriends();
+      friends.initializePotentialFriends();
     })
   },
   shiz () {
+    if (event.target.attributes.name.value === "undefined") {
+      console.log("shziball")
+    }
     const friendToBeAdded = event.target.attributes.name.value;
     const friendToBeAddedHasAName = event.target.textContent.split(":")[0]
     let friendsIHave = []

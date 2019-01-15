@@ -74,6 +74,14 @@ const messages = {
                 let messageUser = `${message.userId}`;
                 let loggedInUser = sessionStorage.getItem("userId");
 
+                let messageDiv = domComponents.createDomElement({
+                    elementType : "div",
+                    cssClass : "messageDiv",
+                    attributes : {
+                        id : `messageDiv_${messageId}`
+                    }
+                })
+
                 let messageElement = domComponents.createDomElement({
                     // ADD LINK HERE
                     elementType : "h3",
@@ -84,7 +92,6 @@ const messages = {
                         name : parseInt(messageUser)
                     }
                 })
-
 
                 let messageElement2 = domComponents.createDomElement({
                     elementType : "p",
@@ -108,9 +115,10 @@ const messages = {
                         }
                     })
                     messageEditButton.addEventListener("click", messagesEventListeners.editMessage, {once: true})
+                    messageDiv.appendChild(messageElement)
                     messageElement.appendChild(messageElement2)
-                    messageElement.appendChild(messageEditButton)
-                    messageContainer.insertBefore(messageElement, messageInput)
+                    messageDiv.appendChild(messageEditButton)
+                    messageContainer.insertBefore(messageDiv, messageInput)
                 } else {
 
                     messageElement.appendChild(messageElement2)
