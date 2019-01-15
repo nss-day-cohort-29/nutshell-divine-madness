@@ -21,6 +21,11 @@ h1{
   font-size:70px;
   text-shadow: 4px 4px 8px black;
 }
+h1.welcome-user{
+  position:absolute;
+  top:-6%;
+  left:25%;
+}
 
 
 .t-border{
@@ -34,7 +39,9 @@ h1{
 CLASS SELECTORS
 ===========================================================*/
 
-
+/* h1.welcome-user{
+  margin-top:-550px;
+} */
 
 .form{
   position:relative;
@@ -243,20 +250,6 @@ Adding image of the devs behind NOMADS
     font-weight: bold;
     border: 3px solid black;
 }
-.tasksContainer {
-    display: flex;
-    flex-direction: column;
-}
-
-.taskDiv{
-    display: flex;
-    flex-direction: row;
-}
-
-.taskDueDate {
-    padding-left: 10px;
-}
-
 /*=================================================================
 Messages Styling
 ===================================================================*/
@@ -309,15 +302,26 @@ Messages Styling
 /*================================================================
 TASKS styles
 ===================================================================*/
-.tasksContainer{
+.tasksContainer {
+  display: flex;
+  flex-direction: column;
   width:70%;
   margin:0 auto;
-  margin-top:85px;
+  margin-top:230px;
   background:rgb(81, 78, 78);
   opacity:0.8;
   border-radius:12px;
-  
 }
+
+.taskDiv{
+  display: flex;
+  flex-direction: row;
+}
+
+.taskDueDate {
+  padding-left: 10px;
+}
+
 .completedTasksTable{
   margin-top:16px;
 }
@@ -338,14 +342,7 @@ TASKS styles
 .taskCheckbox{
   zoom:1.5;
 }
-/* 
-#dueDateCell_1,
-#dueDateCell_4,
-#dueDateCell_2,
-#dueDateCell_3{
-  text-align:center;
-  margin-left:25px;
-} */
+
 .editedTaskSubmitButton{
   background:rgb(81, 78, 78);
   color:rgb( 191, 162, 44);
@@ -389,11 +386,11 @@ TASKS styles
   font-size: 20px;
   font-weight: bold;
 }
-.tasksContainer{
+/* .tasksContainer{
   width: 70%;
   margin: 0 auto;
-  margin-top: 85px;
-}
+  margin-top: 230px;
+} */
 .friend-container{
   width: 70%;
   margin: 0 auto;
