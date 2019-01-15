@@ -99,7 +99,7 @@ const events = {
     timeFieldset.appendChild(timeInput);
 
     const locationFieldset = domComponents.createDomElement({elementType: "fieldset"});
-    const locationLabel = domComponents.createDomElement({elementType: "label", content: "Enter Location:", attributes: {for: "eventLocation"}});
+    const locationLabel = domComponents.createDomElement({elementType: "label", content: "Event Location:", attributes: {for: "eventLocation"}});
     const locationInput = domComponents.createDomElement({elementType: "input", attributes: {type: "text", name: "eventLocation", id: "eventLocation"}});
     locationFieldset.appendChild(locationLabel);
     locationFieldset.appendChild(locationInput);
@@ -176,7 +176,7 @@ const events = {
     return eventItem;
   },
   createEventEditInput(containerId, eventObject) {
-    const formContainer = domComponents.createDomElement({elementType: "form", attribues: {class: "eventEdit"}});
+    const formContainer = domComponents.createDomElement({elementType: "form", attributes: {class: "eventEdit"}});
     const eventHeader = domComponents.createDomElement({elementType: "h2", content: eventObject.eventName});
     formContainer.appendChild(eventHeader);
 

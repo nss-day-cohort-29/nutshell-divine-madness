@@ -80,12 +80,12 @@
   ],
   "events": [
     {
+      "id": 1,
       "userId": 1,
       "eventName": "Pre-launch Party",
       "eventDate": "2019-01-15",
       "eventTime": "17:00",
-      "eventLocation": "NSS",
-      "id": 1
+      "eventLocation": "NSS"
     },
     {
       "id": 2,
