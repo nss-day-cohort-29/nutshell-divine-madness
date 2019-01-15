@@ -4,11 +4,13 @@ import friendsEventsListener from "./friendsEventsListener";
 
 const friends = {
 
-  
+
   defineCurrentUsersFriends () {
-    let userId = sessionStorage.getItem("userId");
-    let currentUser = Number(userId);
-    // console.log(currentUser, userId)
+    $("#output").empty()
+    const currentUser = 1;
+    let userId = sessionStorage.getItem('userId');
+    // let currentUser = Number(userId);
+    console.log(currentUser, userId)
     let friendHolder = [];
 // PULL FROM FRIENDS JSON-------------------------
 
@@ -147,7 +149,7 @@ loadCurrentUsersFriends (friend) {
         }
       })
       // console.log(friendsIHave)
-      
+
         this.showUserPotentialFriends(friendsIHave)
     })
   },
@@ -172,7 +174,7 @@ loadCurrentUsersFriends (friend) {
       let notCurrentFriend = this.differenceOf2Arrays(allTheUsers, friend)
       notCurrentFriend.forEach(noFriendOfMine => {
         this.printPotentialFriendsToBrowser(noFriendOfMine)
-        
+
       })
     })
   },

@@ -2,10 +2,12 @@ import nomadData from "./nomadData";
 import domComponents from "./domComponents";
 import tasksEventListeners from "./tasksEventListeners";
 import tasksPopup from "./tasksPopup";
+// import eventListeners from "./eventListeners"
 
 const tasks = {
 
     createTaskTables() {
+        $("#output").empty()
 
         let outputArticle = document.getElementById("output")
 
@@ -105,7 +107,8 @@ const tasks = {
             cssClass : "createTaskButton",
             content : "Create New Task",
             attributes : {
-                id : "createTaskButton"
+                id : "createTaskButton",
+                type : "button"
             }
         });
 

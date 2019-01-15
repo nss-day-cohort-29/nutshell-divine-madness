@@ -6,7 +6,8 @@ import friendsEventsListener from "./friendsEventsListener.js";
 const messages = {
 
     createMessageBoard() {
-
+        $("#output").empty()
+        
         let outputArticle = document.getElementById("output")
 
         //create display container
@@ -33,7 +34,7 @@ const messages = {
             content : "Submit",
             attributes : {
                 id : "messageSubmitButton",
-                type : "submit"
+                type : "button"
             }});
 
         messageSubmitButton.addEventListener("click", messagesEventListeners.postNewMessage, {once: true});
@@ -41,7 +42,7 @@ const messages = {
         messagesContainer.appendChild(messageSubmitButton);
         outputArticle.appendChild(messagesContainer);
 
-        this.getMessages()
+            this.getMessages()
     },
 
     getMessages() {
@@ -65,6 +66,7 @@ const messages = {
 
             //build DOM Component for each message and append
             messages.forEach(message => {
+                console.log(message)
                 let messageText = message.message;
                 let userName = message.user.userName;
                 let messageId = message.id;
@@ -100,7 +102,8 @@ const messages = {
                         content : "Edit",
                         attributes : {
                             id: `messageEditButton_${messageId}`,
-                            name: messageTimeStamp
+                            name: messageTimeStamp,
+                            type : "button"
                         }
                     })
                     messageEditButton.addEventListener("click", messagesEventListeners.editMessage, {once: true})

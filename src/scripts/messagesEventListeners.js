@@ -7,7 +7,7 @@ const messagesEventListeners = {
 
     postNewMessage() {
 
-        let messageInput = document.getElementById("messageInput");
+        let messageInput = document.getElementById("messageInput").value;
         let timeStamp = new Date();
 
         nomadData.connectToData({
@@ -72,15 +72,16 @@ const messagesEventListeners = {
             attributes : {
                 id : `messageEditSubmitButton_${messageId}`,
                 name: messageTimeStamp,
-                type : "submit"
+                type : "button"
             }
         });
-
         messageEditSubmitButton.addEventListener("click", messagesEventListeners.handleEditSubmitButton)
         messageEditFieldset.appendChild(messageEditInput)
         messageEditFieldset.appendChild(messageEditSubmitButton)
         messageEditForm.appendChild(messageEditFieldset)
         messageContainer.appendChild(messageEditForm)
+
+        event.stopPropagation();
     },
 
     handleEditSubmitButton() {

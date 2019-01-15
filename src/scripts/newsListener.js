@@ -9,6 +9,7 @@ const newsListener = {
 
     saveButtonListener(){
             //This is functioning and writing to JSON. Need to attach this to the save button.
+            
             const saveID = event.target.name;
             let article = document.getElementById(`article_${saveID}`)
             let artTitle = sessionStorage.getItem(`article_${saveID}_title`);
@@ -28,13 +29,21 @@ const newsListener = {
                     }
             }
             console.log(sessionStorage)
-            nomadData.connectToData(newsObjectPost);
-            news.savedNewsElementsCreator(saveID);
+            nomadData.connectToData(newsObjectPost)
+            .then(response => response.json)
+            .then (shit => {
+                console.log(shit)
+                $("#output").empty();
+                news.getAPINews();
+                news.savedNewsElementsCreator();
+            })
+            
         // })
     },
     deleteButtonListener(){
         //To delete from saved news articles. 
         const deleteID = event.target.id.split("--")[1];
+        console.log(deleteID);
         nomadData.connectToData({
             deleteId: deleteID,
             dataSet: "newsItems",
@@ -42,6 +51,10 @@ const newsListener = {
             // dataBaseObject: {
             //     userId: sessionStorage.getItem("userId")
         })
+        .then( () => {
+        $(".article1").empty();
+        news.savedNewsElementsCreator();
+         })
     },
 }
 
