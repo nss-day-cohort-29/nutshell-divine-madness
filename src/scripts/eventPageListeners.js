@@ -4,11 +4,11 @@ import events from "./events";
 
 const eventPageListeners = {
     handleShowButton() {
-        const output = document.querySelector("#output");
+        const output = document.querySelector("#eventsContainer");
         const showButton = document.querySelector("#showForm");
-        output.removeChild(showButton);
+        eventsContainer.removeChild(showButton);
         const eventForm = events.createEventInput();
-        output.insertBefore(eventForm, output.firstChild);
+        eventsContainer.insertBefore(eventForm, eventsContainer.firstChild);
     },
     handleSaveButton() {
         const nameInputted = document.querySelector("#eventName").value;
@@ -36,9 +36,9 @@ const eventPageListeners = {
         };
     },
     handleHideButton() {
-        const output = document.querySelector("#output");
+        const eventsContainer = document.querySelector("#eventsContainer");
         const formContainer = document.querySelector(".eventInput");
-        output.removeChild(formContainer);
+        eventsContainer.removeChild(formContainer);
         events.addShowButton();
     },
     handleDeleteButton() {
