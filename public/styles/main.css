@@ -325,3 +325,80 @@ Messages Styling
   margin: 0 auto;
   margin-top: 85px;
 }
+/*=================================================================
+News Styling
+===================================================================*/
+.mainVein{
+
+  height: 100vh;
+  
+  overflow: auto;
+
+}
+.currentArticlesDiv {
+  
+  height: 100%;
+  margin-top: 40px;
+  overflow: auto;
+  border-radius: 12px;
+   
+}
+.newsAPIHeader{
+
+  font-weight: bold;
+  color:white;
+  text-align: center;
+  margin-top:60px;
+  padding:0;
+  font-size:50px;
+  text-shadow: 4px 4px 8px black;
+}
+
+.apiData{
+  background:rgb(81, 78, 78);
+  border-radius: 12px
+}
+
+.article1{
+  border-radius: 12px;
+  background:rgb(81, 78, 78);
+  border-radius: 12px;
+  height: 100%;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  overflow: auto;
+}
+
+.savedHeader{
+
+  font-weight: bold;
+  color:white;
+  text-align: center;
+  margin-top:50px;
+  padding:0;
+  font-size:50px;
+  text-shadow: 4px 4px 8px black;
+
+}
+
+.apiImage{
+  display: flex;
+  width: 30%; 
+  height: 5%; 
+  border-radius: 12px;
+  justify-items: end;
+}
+
+.allButtons{
+  font-size: 17.5px;
+  border:0;
+  background:rgb( 191, 162, 44);
+  color:rgb(81, 78, 78);
+  border-radius: 12px;
+}
+
+.newsTitle{
+
+  color: white;
+
+}

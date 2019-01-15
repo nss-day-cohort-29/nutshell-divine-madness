@@ -142,6 +142,7 @@ const eventListeners = {
     },
     newsNavLink(){
         //NEWS SECTION
+        
         news.getAPINews();
         // news.savedNewsElementsCreator();
         console.log("news link clicked")

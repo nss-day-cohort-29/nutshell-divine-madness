@@ -9,7 +9,6 @@ const newsListener = {
 
     saveButtonListener() {
         //This is functioning and writing to JSON. Need to attach this to the save button.
-
         const saveID = event.target.name;
         let article = document.getElementById(`article_${saveID}`)
         let artTitle = sessionStorage.getItem(`article_${saveID}_title`);
@@ -35,7 +34,7 @@ const newsListener = {
                 console.log(shit)
                 $("#output").empty();
                 news.getAPINews();
-                news.savedNewsElementsCreator();
+                // news.savedNewsElementsCreator();
             })
     },
     deleteButtonListener() {
@@ -49,7 +48,7 @@ const newsListener = {
                 
             })
             .then(() => {
-                $(".article1").empty();
+                $(".article1").remove();
                 news.savedNewsElementsCreator();
             })
     },
