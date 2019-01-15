@@ -38,6 +38,7 @@ const friendsEventsListener = {
         }
       })
     })
+
   },
   friendsAddFriend () {
     let userId = sessionStorage.getItem("userId");
@@ -61,6 +62,9 @@ const friendsEventsListener = {
     })
   },
   shiz () {
+    if (event.target.attributes.name.value === "undefined") {
+      console.log("shziball")
+    }
     const friendToBeAdded = event.target.attributes.name.value;
     const friendToBeAddedHasAName = event.target.textContent.split(":")[0]
     let friendsIHave = []

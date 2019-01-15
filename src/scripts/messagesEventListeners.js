@@ -36,6 +36,8 @@ const messagesEventListeners = {
         let messageContainer = document.getElementById(`message${messageId}`);
         let messageTimeStamp = event.currentTarget.name;
 
+        let messageDiv = document.getElementById("messageDiv")
+
         let messageEditForm = domComponents.createDomElement ({
 
             elementType : "form",
@@ -79,9 +81,10 @@ const messagesEventListeners = {
         messageEditFieldset.appendChild(messageEditInput)
         messageEditFieldset.appendChild(messageEditSubmitButton)
         messageEditForm.appendChild(messageEditFieldset)
-        messageContainer.appendChild(messageEditForm)
-
+        messageDiv.appendChild(messageEditForm)
         event.stopPropagation();
+
+
     },
 
     handleEditSubmitButton() {
