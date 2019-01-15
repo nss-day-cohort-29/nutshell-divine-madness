@@ -1,3 +1,4 @@
+@import 'friends.css';
 *{
   box-sizing:border-box;
 }
@@ -19,7 +20,7 @@ h1{
   padding:0;
   font-size:70px;
   text-shadow: 4px 4px 8px black;
-} 
+}
 
 
 .t-border{
@@ -30,7 +31,8 @@ h1{
 
 
 /* =======================================================
-CLASS SELECTORS 
+=======
+CLASS SELECTORS
 
 .login-page{
   width:360px;
@@ -108,7 +110,7 @@ CLASS SELECTORS
 }
 
 /*====================================
-NAVIGATION BAR 
+NAVIGATION BAR
 ========================================*/
 ul {
   list-style-type: none;
@@ -136,7 +138,7 @@ li a {
   text-decoration: none;
   font-size:20px;
   font-weight:bold;
-  
+
 }
 #logo{
   float:right;
@@ -153,20 +155,20 @@ li a:hover {
   background-color: #111;
 }
 /*============================================
-NOMAD MISSION MODAL WINDOW 
+NOMAD MISSION MODAL WINDOW
 ================================================*/
 /* The Modal (background) */
 .modal {
-  display: none; 
-  position: fixed; 
+  display: none;
+  position: fixed;
   z-index: 1; /* Sit on top */
-  padding-top:0px; 
+  padding-top:0px;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
+  width: 100%;
+  height: 100%;
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); 
+  background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity to give tint to backgorund image */
 }
 /* Modal Content */
@@ -186,7 +188,7 @@ NOMAD MISSION MODAL WINDOW
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
+  from {top:-300px; opacity:0}
   to {top:0; opacity:1}
 }
 
@@ -307,25 +309,20 @@ Messages Styling
   background:rgb(81, 78, 78);
   color:rgb( 191, 162, 44);
 }
-/*=================================================================
-EVENT FORM STYLES
-===================================================================*/
-#showForm{
-  position:absolute;
-  top:300px;
+
+
+.tasksContainer{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 85px;
 }
-.eventInput{
-  margin-top:300px;
-  background:rgb(81, 78, 78);
-  opacity:0.8;
-  width:70%;
-  margin:0 auto;
-  margin-top:18px;
-  color:white;
-  padding-left:10px;
-  box-shadow: 2px 2px 5px black;
-  border-radius:15px;
+.friend-container{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 85px;
 }
-fieldset{
-  margin-top:6px;
+#future-friends{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 85px;
 }

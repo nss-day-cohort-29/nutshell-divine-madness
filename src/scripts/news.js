@@ -81,7 +81,7 @@ const news = {
 
         // const NewsTest = domComponents.createDomElement("h2",testPass,"testObj",null);
         //output.appendChild(NewsTest);
-        
+
 
     }
 }

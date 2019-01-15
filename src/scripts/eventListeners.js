@@ -36,13 +36,13 @@ const eventListeners = {
                     //displays navigatin bar
                     dashboard.createNavBar()
                     //session storage
-                    
+
                     sessionStorage.setItem("userId", user.id)
                     let userId = sessionStorage.getItem("userId")
                     //console.log verifying that credentials match and user is logged in
                     console.log("logged in as" + " " + user.userName)
                     console.log("your user ID is: " + userId)
-                
+
                 }
             })
         })
@@ -124,18 +124,20 @@ const eventListeners = {
     messagesNavLink(){
         messages.createMessageBoard()
         console.log("working")
+        friends.buildFriendSearchBar()
 
     },
     eventsNavLink(){
             events.showEventForm()
-
+            friends.buildFriendSearchBar()
             //appendUserEvent
             console.log("events clicked")
     },
     friendsNavLink(){
         console.log("friends nav link clicked")
-        friends.loadCurrentUsersFriends()
-        friends.defineCurrentUsersFriends()
+        friends.defineCurrentUsersFriends();
+        friends.initializePotentialFriends();
+
     },
     newsNavLink(){
         //NEWS SECTION
@@ -143,10 +145,12 @@ const eventListeners = {
         news.allSaved();
         news.getNews();
         news.newsElementCreator();
+        friends.buildFriendSearchBar()
         console.log("news link clicked")
     },
     tasksNavLink(){
         tasks.createTaskTables()
+        friends.buildFriendSearchBar()
     },
     nomadNavLink(){
         dashboard.buildLoginForm()
@@ -160,22 +164,22 @@ const eventListeners = {
 
     friendsDeleteFriend () {
         console.log(event.target);
-    
+
     },
     handleEventSaveButton() {
         const nameInputted = document.querySelector("#eventName").value;
         const dateInputted = document.querySelector("#eventDate").value;
         const timeInputted = document.querySelector("#eventTime").value;
         const locationInputted = document.querySelector("#eventLocation").value;
-    
+
         const eventObject = {
             eventName: nameInputted,
             eventDate: dateInputted,
             eventTime: timeInputted,
             eventLocation: locationInputted
         };
-    
-    
+
+
         nomadData.connectToData({
             dataSet: "events",
             fetchType: "POST",
