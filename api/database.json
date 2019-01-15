@@ -7,43 +7,19 @@
       "password": "yomama"
     },
     {
-      "id": 2,
       "userName": "Lorenzo",
-      "email": "dafud@msn.com",
-      "password": "123"
-    },
-    {
-      "id": 3,
-      "userName": "Jaleandro",
-      "email": "rad@rad.com",
-      "password": "neato"
-    },
-    {
-      "id": 4,
-      "userName": "Sally",
-      "email": "Sally@game.com",
-      "password": "1984"
-    },
-    {
-      "id": 5,
-      "userName": "Julia Gulia",
-      "email": "knifefighter@explorer.com",
-      "password": "word"
-    },
-    {
-      "id": 6,
-      "userName": "Jimbo Gimbo",
-      "email": "James@yahoo.com",
-      "password": "pass"
+      "email": "lorenzo@gmail.com",
+      "password": "yomama",
+      "id": 2
     }
   ],
   "newsitems": [
     {
       "id": 1,
-      "userId": 1,
-      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-      "title": "Wormholes Allow Information to Escape Black Holes",
-      "synopsis": "Check out this recent discovery about workholes"
+      "userId": 2,
+      "url": "https://vegas.eater.com/2018/10/15/17977462/first-look-nomad-bar-open",
+      "title": "A First Look Inside NoMad Bar, Now Open",
+      "synopsis": "The playful yet chichi bar now serves breakfast through late night"
     },
     {
       "id": 2,
@@ -68,127 +44,129 @@
     },
     {
       "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
+      "url": "https://robbreport.com/food-drink/dining/nomad-las-vegas-opens-park-mgm-2828686/",
+      "title": "NoMad Las Vegas Is Embracing the Theatricality of Sin City",
+      "synopsis": "NoMad Las Vegas Is Embracing the Theatricality of Sin City",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "url": "https://www.cntraveler.com/story/the-new-nomad-las-vegas-breaks-the-strip-stereotype",
+      "title": "The New NoMad Las Vegas Breaks the Strip Stereotype",
+      "synopsis": "The New NoMad Las Vegas Breaks the Strip Stereotype",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "url": "https://www.hollywoodreporter.com/news/nomad-restaurant-open-las-vegas-1157021",
+      "title": "NoMad Restaurant to Bow in Las Vegas",
+      "synopsis": "NoMad Restaurant to Bow in Las Vegas",
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "url": "https://www.wallpaper.com/travel/usa/las-vegas/hotels/nomad",
+      "title": "NoMad hotel - Las Vegas, USA",
+      "synopsis": "Review of NoMad hotel - Las Vegas, USA",
       "id": 5
     },
     {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
+      "userId": 2,
+      "url": "https://vegas.eater.com/2018/11/14/18093982/lunch-dinner-menus-nomad-bar",
+      "title": "Glance Through the Perfect Lunch and Dinner Menus at NoMad Bar",
+      "synopsis": "The dishes are playful yet expertly executed",
       "id": 6
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 10
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 11
     }
   ],
   "events": [
     {
+      "userId": 1,
+      "eventName": "Pre-launch Party",
+      "eventDate": "2019-01-15",
+      "eventTime": "17:00",
+      "eventLocation": "NSS",
+      "id": 1
+    },
+    {
       "id": 2,
       "userId": 1,
-      "eventName": "Skiing",
+      "eventName": "Launch Party",
+      "eventDate": "2019-01-16",
+      "eventTime": "18:00",
+      "eventLocation": "Neighbors Bar"
+    },
+    {
+      "userId": 1,
+      "eventName": "Post-Launch Party",
+      "eventDate": "2019-01-17",
+      "eventTime": "10:00",
+      "eventLocation": "NoMad Bar, Las Vegas!!!!!",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "eventName": "Pre-Pre-launch Party",
       "eventDate": "2019-01-15",
-      "eventTime": "08:00",
-      "eventLocation": "Rockies"
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "eventName": "Outdoor Yoga",
-      "eventDate": "2019-01-18",
-      "eventTime": "08:00",
-      "eventLocation": "Outside"
-    },
-    {
-      "userId": 1,
-      "eventName": "Party at NSS",
-      "eventDate": "2019-01-26",
-      "eventTime": "12:12",
-      "eventLocation": "NSS",
+      "eventTime": "15:00",
+      "eventLocation": "Red Bicycle",
       "id": 4
     },
     {
-      "userId": 4,
-      "eventName": "Running",
+      "id": 5,
+      "userId": 2,
+      "eventName": "The Party before the Launch Party",
       "eventDate": "2019-01-16",
-      "eventTime": "17:00",
-      "eventLocation": "Running trails",
-      "id": 5
+      "eventTime": "16:00",
+      "eventLocation": "Neighbors Bar"
+    },
+    {
+      "userId": 2,
+      "eventName": "Pre-Post-Launch Party",
+      "eventDate": "2019-01-17",
+      "eventTime": "08:00",
+      "eventLocation": "On the plane to Vegas!!!!!!",
+      "id": 6
     }
   ],
   "tasks": [
     {
       "id": 1,
       "userId": 1,
-      "task": "save world someday",
-      "expectedCompletionDate": "02 28 2019",
+      "task": "Build Nomads 'Tasks' Section",
+      "expectedCompletionDate": "01 15 2019",
       "complete": true
     },
     {
       "userId": 1,
-      "task": "destroy world",
-      "expectedCompletionDate": "01 15 2019",
+      "task": "Launch Nomads to the WORLD!",
+      "expectedCompletionDate": "01 16 2019",
       "complete": false,
       "id": 2
     },
     {
       "userId": 1,
-      "task": "save world",
-      "expectedCompletionDate": "01 12 2019",
+      "task": "Make a HUGE bank deposit",
+      "expectedCompletionDate": "01 17 2019",
       "complete": false
     },
     {
-      "userId": 1,
-      "task": "destroy world",
-      "expectedCompletionDate": "01 13 2019",
-      "complete": false,
+      "userId": 2,
+      "task": "Build Nomads 'Friends' Section",
+      "expectedCompletionDate": "01 15 2019",
+      "complete": true,
       "id": 4
     },
     {
       "id": 5,
-      "userId": 1,
-      "task": "save world maybe",
-      "expectedCompletionDate": "01 13 2019",
-      "complete": true
+      "userId": 2,
+      "task": "Launch Nomads to the WORLD!",
+      "expectedCompletionDate": "01 16 2019",
+      "complete": false
     },
     {
-      "userId": 1,
-      "task": "aaaaaa",
-      "expectedCompletionDate": "undefined undefined ",
+      "userId": 2,
+      "task": "Make a HUGE bank deposit",
+      "expectedCompletionDate": "01 17 2019",
       "complete": false,
       "id": 6
     }
@@ -196,43 +174,37 @@
   "friends": [
     {
       "userId": 1,
-      "otherFriendId": 5,
-      "id": 4
+      "otherFriendId": 2
     },
     {
-      "userId": 1,
-      "otherFriendId": 6,
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "otherFriendId": 4,
-      "id": 6
+      "id": 2,
+      "userId": 2,
+      "otherFriendId": 3
     }
   ],
   "messages": [
     {
       "userId": 1,
-      "message": "MOTHA FUCKA",
+      "message": "This Nomads thing is going to be HUGE!!",
       "timeStamp": "3:00:00pm",
       "id": 1
     },
     {
       "id": 2,
       "userId": 2,
-      "message": "Sup.",
+      "message": "Hell yeah it is, we'll be drinking champagne in Vegas by Monday!!",
       "timeStamp": "3:01:00pm"
     },
     {
       "userId": 1,
-      "message": "NM. ut all good",
+      "message": "For sure, and tipping strippers in $100 bills!",
       "timeStamp": "3:02:00pm",
       "id": 3
     },
     {
-      "id": 4,
+      "id": 2,
       "userId": 2,
-      "message": "Cool.",
+      "message": "Damn Right!!",
       "timeStamp": "3:03:00pm"
     },
     {
