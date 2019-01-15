@@ -66,6 +66,25 @@ const eventListeners = {
                         targetContainer.insertBefore(welcomeMessage, taskContainers)
                     })
                     tasks.createTaskTables()
+
+                nomadData.connectToData({
+                    "dataSet" : "users",
+                    "fetchType" : "GET",
+                    "dataBaseObject" : "",
+                    "embedItem" : "?_embed=users"
+                })
+                .then(users => {
+                    users.forEach(user => {
+                        if (user.id === Number(userId)) {
+                            const targetContainer = document.getElementById("output")
+                            targetContainer.appendChild(domComponents.createDomElement({
+                                elementType: "div",
+                                content: `welcome ${user.userName}`,
+                                cssClass: "welcome-user"
+                            }));
+                        }
+                    })
+                })
                 }
                 
             })

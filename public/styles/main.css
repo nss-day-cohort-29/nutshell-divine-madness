@@ -37,10 +37,15 @@ h1.welcome-user{
 
 /* =======================================================
 CLASS SELECTORS
-===========================================================*/
 
 /* h1.welcome-user{
   margin-top:-550px;
+=======
+.login-page{
+  width:360px;
+  /* padding:10% 0 0 ; */
+  /* padding-top:-50px;
+  margin:auto;
 } */
 
 .form{
@@ -565,16 +570,34 @@ TASKS styles
 .friend-container{
   width: 70%;
   margin: 0 auto;
-  margin-top: 85px;
+  margin-top: 5px;
 }
 #future-friends{
   width: 70%;
   margin: 0 auto;
   margin-top: 85px;
+  padding-bottom: 5px;
 }
 #future-friends{
   color:rgb( 191, 162, 44)
 }
 .friendContainer{
   color:rgb( 191, 162, 44);
+}
+
+.welcome-user{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 85px;
+  padding-bottom: 5px;
+}
+#future-friends{
+  color:rgb( 191, 162, 44)
+}
+.friendContainer{
+  color:rgb( 191, 162, 44);
+}
+
+.messageEditButton {
+  margin-left: 15%;
 }

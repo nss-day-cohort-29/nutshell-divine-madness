@@ -24,14 +24,41 @@ body {
   opacity:0.8;
   width:70%;
   margin:0 auto;
-  margin-top:18px;
+  margin-top:2px;
   color:white;
   padding-left:10px;
   box-shadow: 2px 2px 5px black;
   border-radius:15px;
   transition:1s;
+  padding-bottom: 5px;
+}
+.add-friend-button{
+  color: white;
+  background: #43A047;
+  border-radius: 12px;
+}
+.friendTag {
+  text-align: center;
+  margin-bottom: -16px;
 }
 
+.friend-container > button {
+  color: white;
+  background: rgb( 191, 162, 44);
+  border-radius: 12px;
+}
+
+.friend-container > h2{
+  color: #43A047;
+}
+
+#allFriendContainer{
+  margin-top: 85px;
+}
+
+.friendToBe {
+  text-align: center;
+  }
 /* -=========================================-========================================= */
 /* FRIENDS MODAL */
 /* -=========================================-========================================= */
@@ -55,6 +82,7 @@ body {
   top: 100px;
   left: calc(50% - 140px);
   z-index: 1;
+  border-radius: 12px;
 }
 
 #friends__modal > h1 {
@@ -65,9 +93,9 @@ body {
 }
 
 #friends__modal button {
-  background: #fa923f;
+  background: #43A047;
   color: white;
-  border: 1px solid #521751;
+  border: 1px solid #43A047;
   font: inherit;
   font-size: 12px;
   cursor: pointer;
@@ -76,12 +104,14 @@ body {
 
 #friends__modal button:hover,
 #friends__modal button:active {
-  background: #521751;
+  background: rgb( 191, 162, 44);
 }
 
 #friends__modal button:focus {
   outline: none;
 }
+
+
 
 /* FRIEND SEARCH BUTTON -------------- */
 
@@ -191,4 +221,9 @@ padding: 0 6px;
 	font-size: 2em;
 	padding: 0 0 2em;
 	margin: 0;
+}
+
+.friendScrollContainer {
+  overflow: scroll;
+  height: 95vh;
 }
