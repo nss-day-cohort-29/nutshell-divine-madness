@@ -185,29 +185,34 @@
       "id": 11
     },
     {
-      "userId": 1,
+      "userId": 4,
       "otherFriendId": 2,
-      "id": 14
-    },
-    {
-      "userId": 1,
-      "otherFriendId": 5,
-      "id": 15
+      "id": 26
     },
     {
       "userId": 4,
-      "otherFriendId": 5,
-      "id": 17
+      "otherFriendId": 1,
+      "id": 27
     },
     {
-      "userId": 4,
+      "userId": 1,
       "otherFriendId": 2,
-      "id": 18
+      "id": 28
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 3,
+      "id": 29
     },
     {
       "userId": 1,
       "otherFriendId": 4,
-      "id": 19
+      "id": 30
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 5,
+      "id": 31
     }
   ],
   "messages": [

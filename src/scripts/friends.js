@@ -11,7 +11,16 @@ const friends = {
     let currentUser = Number(userId);
     console.log(currentUser, userId)
     const targetContainer = document.getElementById("output")
-    targetContainer.appendChild(domComponents.createDomElement({
+    const friendScrollContainer = domComponents.createDomElement({
+      elementType: "section",
+      cssClass: "friendScrollContainer",
+      attributes: {
+        id: "friendScrollContainer"
+      }
+    })
+    targetContainer.appendChild(friendScrollContainer)
+
+    friendScrollContainer.appendChild(domComponents.createDomElement({
       elementType: "section",
       attributes: {
         id: "allFriendContainer",
@@ -143,11 +152,11 @@ loadCurrentUsersFriends (friend) {
     let currentUser = Number(userId);
     // console.log("friends Page user id is-",currentUser);
 
-    const targetContainer = document.getElementById("output");
+    const scrollTargetContainer = document.getElementById("friendScrollContainer");
     const findNewFriendContainer = document.createElement("section");
     let friendsIHave = [];
     findNewFriendContainer.setAttribute("id", "future-friends");
-    targetContainer.appendChild(findNewFriendContainer);
+    scrollTargetContainer.appendChild(findNewFriendContainer);
     const findNewFriendTag = document.createElement("h5");
     findNewFriendContainer.appendChild(findNewFriendTag);
     findNewFriendTag.classList.add("friendToBe");
