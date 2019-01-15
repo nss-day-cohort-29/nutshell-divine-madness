@@ -7,9 +7,8 @@ const friends = {
 
   defineCurrentUsersFriends () {
     $("#output").empty()
-    const currentUser = 1;
     let userId = sessionStorage.getItem('userId');
-    // let currentUser = Number(userId);
+    let currentUser = Number(userId);
     console.log(currentUser, userId)
     const targetContainer = document.getElementById("output")
     targetContainer.appendChild(domComponents.createDomElement({
