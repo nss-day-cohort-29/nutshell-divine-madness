@@ -1,4 +1,4 @@
-import eventListeners from "./eventListeners"
+import eventListeners from "./eventListeners" 
 const dashboard = {
   buildLoginForm(){
     //using string interpolation to create the form
@@ -11,7 +11,7 @@ const dashboard = {
           <input id = "regPassword" type="password" placeholder = "Password" required>
           <input id = "regConfirmPassword" type="password" placeholder = "Confirm Password" required>
           <button id = "registerButton">Create Account</button>
-          <p class = "message">Already a Registered Member? <a href = "#">LogIn </a></p>
+          <p class = "message">Already a Registered Member? <a href = "#">LogIn</a></p>
         </form>
         <form class = "login-form">
           <input id = "userNameVal" type="text" placeholder = "Username">
@@ -42,6 +42,7 @@ const dashboard = {
       $("#output").html(formHTML)
       eventListeners.modalDisplayAnimation()
       $("#logIn").click(eventListeners.userLogin)
+      // $("#logIn").click(eventListeners.tasksNavLink)
       $("#registerButton").click(eventListeners.userRegistration)
       $("#registerButton").click(this.buildLoginForm)
       // $("#registerButton").click(eventListeners.userLogin)

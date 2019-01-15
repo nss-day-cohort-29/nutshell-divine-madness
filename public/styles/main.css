@@ -21,6 +21,11 @@ h1{
   font-size:70px;
   text-shadow: 4px 4px 8px black;
 }
+h1.welcome-user{
+  position:absolute;
+  top:-6%;
+  left:25%;
+}
 
 
 .t-border{
@@ -31,14 +36,18 @@ h1{
 
 
 /* =======================================================
-=======
 CLASS SELECTORS
+
+/* h1.welcome-user{
+  margin-top:-550px;
+=======
 .login-page{
   width:360px;
   /* padding:10% 0 0 ; */
   /* padding-top:-50px;
   margin:auto;
 } */
+
 .form{
   position:relative;
   z-index:1;
@@ -448,9 +457,8 @@ Messages Styling
 #messageInput{
   margin-top:6px;
   line-height:2;
-  margin-left:350px;
+  margin-left:225px;
   width:61%;
-  margin-left:150px;
 }
 #messageSubmitButton{
   /* justify-content: flex-end; */
@@ -465,20 +473,32 @@ Messages Styling
   border:0;
   background:rgb(81, 78, 78);
   color:rgb( 191, 162, 44);
+  margin-left: 15%;
 }
 
 /*================================================================
 TASKS styles
 ===================================================================*/
-.tasksContainer{
+.tasksContainer {
+  display: flex;
+  flex-direction: column;
   width:70%;
   margin:0 auto;
-  margin-top:85px;
+  margin-top:230px;
   background:rgb(81, 78, 78);
   opacity:0.8;
   border-radius:12px;
-
 }
+
+.taskDiv{
+  display: flex;
+  flex-direction: row;
+}
+
+.taskDueDate {
+  padding-left: 10px;
+}
+
 .completedTasksTable{
   margin-top:16px;
 }
@@ -499,14 +519,7 @@ TASKS styles
 .taskCheckbox{
   zoom:1.5;
 }
-/*
-#dueDateCell_1,
-#dueDateCell_4,
-#dueDateCell_2,
-#dueDateCell_3{
-  text-align:center;
-  margin-left:25px;
-} */
+
 .editedTaskSubmitButton{
   background:rgb(81, 78, 78);
   color:rgb( 191, 162, 44);
@@ -526,8 +539,8 @@ TASKS styles
   background:#43A047;
   color:white;
   font-size: 20px;
-  border-bottom-left-radius:12px;
-  border-bottom-right-radius:12px;
+  border-bottom-left-radius:12px; 
+  border-bottom-right-radius:12px; 
 }
 .newTaskFormTitle{
   color:white;
@@ -550,11 +563,11 @@ TASKS styles
   font-size: 20px;
   font-weight: bold;
 }
-.tasksContainer{
+/* .tasksContainer{
   width: 70%;
   margin: 0 auto;
-  margin-top: 85px;
-}
+  margin-top: 230px;
+} */
 .friend-container{
   width: 70%;
   margin: 0 auto;
@@ -573,18 +586,23 @@ TASKS styles
   color:rgb( 191, 162, 44);
 }
 
-.welcome-user{
-  width: 70%;
+/* .welcome-user{
   margin: 0 auto;
   margin-top: 85px;
   padding-bottom: 5px;
+} */
+
+#friends__content {
+  font-size: 25px;
+  color: rgb( 191, 162, 44);
+  text-shadow: 0px 0px 0px white;
 }
 
 
-/*================================================================
-News styles
-===================================================================*/
 
+/*================================================================
+NEWS styles
+===================================================================*/
 
 .mainVein{
 
@@ -669,12 +687,5 @@ News styles
 
 }
 
-#friends__content {
-  font-size: 25px;
-  color: rgb( 191, 162, 44);
-  text-shadow: 0px 0px 0px white;
-}
 
-.messageEditButton {
-  margin-left: 15%;
-}
+

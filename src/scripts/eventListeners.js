@@ -43,6 +43,30 @@ const eventListeners = {
                     //console.log verifying that credentials match and user is logged in
                     console.log("logged in as" + " " + user.userName)
                     console.log("your user ID is: " + userId)
+                    let usersName = " "
+                    nomadData.connectToData({
+                        "dataSet" : "users",
+                        "fetchType" : "GET",
+                        "dataBaseObject" : "",
+                        "embedItem" : "?_embed=users"
+                    }).then(users => {
+                        users.forEach(user => {
+                            if (user.id === Number(userId)) {
+                                usersName = user.userName
+                                
+                            }
+                        })
+                        
+                        let taskContainers = document.getElementById("#tasksContainer")
+                        const targetContainer = document.getElementById("output")
+                        let welcomeMessage = (domComponents.createDomElement({
+                            elementType: "h1",
+                            content: `welcome ${usersName}`,
+                            cssClass: "welcome-user"
+                        }));
+                        targetContainer.insertBefore(welcomeMessage, taskContainers)
+                    })
+                    tasks.createTaskTables()
 
                 nomadData.connectToData({
                     "dataSet" : "users",
@@ -55,7 +79,7 @@ const eventListeners = {
                         if (user.id === Number(userId)) {
                             const targetContainer = document.getElementById("output")
                             targetContainer.appendChild(domComponents.createDomElement({
-                                elementType: "div",
+                                elementType: "h1",
                                 content: `welcome ${user.userName}`,
                                 cssClass: "welcome-user"
                             }));
@@ -63,6 +87,7 @@ const eventListeners = {
                     })
                 })
                 }
+                
             })
         })
     },

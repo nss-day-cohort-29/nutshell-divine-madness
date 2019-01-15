@@ -78,15 +78,18 @@ body {
   position: fixed;
   background: white;
   padding: 10px;
-  width: 260px;
+  width: 400px;
   top: 100px;
   left: calc(50% - 140px);
   z-index: 1;
   border-radius: 12px;
 }
 
-#friends__modal h1 {
+#friends__modal > h1 {
   margin: 0;
+  font-size:20px;
+  color:black;
+  text-shadow: none;
 }
 
 #friends__modal button {
@@ -161,7 +164,7 @@ padding: 0 6px;
   transition: 0.4s;
   line-height: 40px;
   width: 0px;
-  text-align: center;
+  /* text-align: center; */
   margin-bottom: 16px;
 }
 
