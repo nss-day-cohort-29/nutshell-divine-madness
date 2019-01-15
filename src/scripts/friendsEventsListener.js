@@ -54,7 +54,7 @@ const friendsEventsListener = {
 
     let goodByeNonFriend = document.getElementById(`potentialFriend-${friendToBeAdded}`);
     goodByeNonFriend.parentNode.removeChild(goodByeNonFriend);
-    alert(`${event.target.previousSibling.innerText} is now your friend!`);
+    // alert(`${event.target.previousSibling.innerText} is now your friend!`);
 
     nomadData.connectToData({
       "dataSet" : "friends",
