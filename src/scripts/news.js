@@ -7,7 +7,7 @@ const newsContainer = document.querySelector("#output")
 
 const news = {
     getAPINews() {
-        $(".output").empty();
+        //$(".output").empty();
         //getAPINews will pull news from API then call createElement and append to output.
         //Create a header for incoming news.
         sessionStorage.setItem("userId", 1) //take me out when you're done testing........
@@ -16,6 +16,7 @@ const news = {
             elementType: "h1",
             content: "Current News",
             cssClass: "newsAPIHeader"
+        
         });
         newsContainer.appendChild(newsHeader);
         //pull the data from the api and display it to the dom.
@@ -38,7 +39,11 @@ const news = {
                     //add section container for all articles.
                     newsHeader.appendChild(domComponents.createDomElement({
                             elementType: "section",
-                            cssClass: `newsAPIContainer_${articleCounter}`
+                            cssClass: `newsAPIContainer_${articleCounter}`,
+                            attribute: {
+                                id: "apiSectionGrab",
+                                style: "color:white;text-align:center;font-size:20px;overflow:auto; border-radius: 12px;"
+                            }
                         }))
                         //create fieldset for articles to be and then attach them to the sections above.
                     const parentAPISection = document.querySelector(`.newsAPIContainer_${articleCounter}`)
@@ -47,7 +52,8 @@ const news = {
                             content: dataGran.title,
                             cssClass: `apiData`,
                             attributes: {
-                                id: `article_${articleCounter}`
+                                id: `article_${articleCounter}`,
+                                style: "color:white;text-align:center;font-size:20px;overflow:auto; border-radius: 12px;"
                             }
                         }))
                     parentAPISection.appendChild(domComponents.createDomElement({
@@ -57,7 +63,7 @@ const news = {
                             attributes: {
                                 id: `apiImage_${articleCounter}`,
                                 src: dataGran.urlToImage,
-                                style: "width: 50%; height: 25%;"
+                                style: "width: 30%; height: 15%; border-radius: 12px;"
                             }
                         }))
 
@@ -65,10 +71,11 @@ const news = {
                         
                     const saveApiButton = domComponents.createDomElement({
                             elementType: "button",
-                            content: "SAVE BITCH",
+                            content: "Remember This",
                             cssClass: "newsSaveButton",
                             attributes: {
-                                name: `${articleCounter}`
+                                name: `${articleCounter}`,
+                                style: "  border: 0; line-height:2; width:9%; background:rgb(81, 78, 78); color:rgb( 191, 162, 44);line-height: 2; border-radius: 12px;"
                             }
                         })
                         //Eventlistener to send current data to savefunction.

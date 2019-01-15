@@ -7,13 +7,51 @@
       "password": "yomama"
     },
     {
-      "userName": "JordanRosas",
-      "email": "jordanrosas1203@gmail.com",
-      "password": "qwer",
-      "id": 2
+      "id": 2,
+      "userName": "Lorenzo",
+      "email": "dafud@msn.com",
+      "password": "123"
+    },
+    {
+      "id": 3,
+      "userName": "Jaleandro",
+      "email": "rad@rad.com",
+      "password": "neato"
+    },
+    {
+      "id": 4,
+      "userName": "Sally",
+      "email": "Sally@game.com",
+      "password": "1984"
+    },
+    {
+      "id": 5,
+      "userName": "Julia Gulia",
+      "email": "knifefighter@explorer.com",
+      "password": "word"
+    },
+    {
+      "id": 6,
+      "userName": "Jimbo Gimbo",
+      "email": "James@yahoo.com",
+      "password": "pass"
     }
   ],
   "newsItems": [
+    {
+      "id": 3,
+      "userId": 3,
+      "url": "https://www.bbc.com/news/technology-46818797",
+      "title": "CES 2019: Amazon and Google Assistant carve up tech expo",
+      "synopsis": "Tech makes me excited about life"
+    },
+    {
+      "id": 4,
+      "userId": 5,
+      "url": "https://www.cnbc.com/2019/01/07/these-are-the-best-jobs-to-have-in-2019-according-to-us-news--world-report.html",
+      "title": "These are the 13 best jobs to have in 2019, according to US News & World Report",
+      "synopsis": "Developer no.1 yo"
+    },
     {
       "userId": 1,
       "url": "https://www.wheels24.co.za/News/Guides_and_Lists/unnoticed-heroes-of-the-year-here-are-our-top-3-stealth-cars-of-2018-20181231",
@@ -23,127 +61,189 @@
     },
     {
       "userId": 2,
-      "url": "FUCKUO",
-      "title": "Wheels24.co.za | Unnoticed heroes of the year - Here are our top 3 'stealth' cars of 2018",
-      "synopsis": "Some of the best cars of 2018, were the ones which go by mostly unnoticed. Lance Branquinho takes a look at three underground automotive heroes.",
-      "id": 24
-    },
-    {
-      "userId": 2,
       "url": "https://www.wired.com/story/youtube-boomers-vanlife-bob-wells/",
       "title": "YouTube Boomers Show #VanLife Isn’t Just for Millennials",
       "synopsis": "Bob Wells, a 63-year-old YouTube personality, has been living the #vanlife since 1995. He’s managed to make a living—and inspire a generation.",
       "id": 26
+    },
+    {
+      "userId": 1,
+      "url": "https://www.nzherald.co.nz/travel/news/article.cfm?c_id=7&objectid=12190685",
+      "title": "RVs go high-tech as millennials search for the perfect camper van",
+      "synopsis": "The campervan holiday was once the pursuit of those in the golden years. RVs were reserved for mobile baby-boomers who wanted to head outdoors but bring all their mod cons with them. Now a younger crowd are taking to the roads...",
+      "id": 27
+    },
+    {
+      "userId": 1,
+      "url": "https://www.nzherald.co.nz/travel/news/article.cfm?c_id=7&objectid=12190685",
+      "title": "RVs go high-tech as millennials search for the perfect camper van",
+      "synopsis": "The campervan holiday was once the pursuit of those in the golden years. RVs were reserved for mobile baby-boomers who wanted to head outdoors but bring all their mod cons with them. Now a younger crowd are taking to the roads...",
+      "id": 28
+    },
+    {
+      "userId": 1,
+      "url": "https://www.nzherald.co.nz/travel/news/article.cfm?c_id=7&objectid=12190685",
+      "title": "RVs go high-tech as millennials search for the perfect camper van",
+      "synopsis": "The campervan holiday was once the pursuit of those in the golden years. RVs were reserved for mobile baby-boomers who wanted to head outdoors but bring all their mod cons with them. Now a younger crowd are taking to the roads...",
+      "id": 29
+    },
+    {
+      "userId": 1,
+      "url": "https://www.nzherald.co.nz/travel/news/article.cfm?c_id=7&objectid=12190685",
+      "title": "RVs go high-tech as millennials search for the perfect camper van",
+      "synopsis": "The campervan holiday was once the pursuit of those in the golden years. RVs were reserved for mobile baby-boomers who wanted to head outdoors but bring all their mod cons with them. Now a younger crowd are taking to the roads...",
+      "id": 30
+    },
+    {
+      "userId": 1,
+      "url": "https://www.nzherald.co.nz/travel/news/article.cfm?c_id=7&objectid=12190685",
+      "title": "RVs go high-tech as millennials search for the perfect camper van",
+      "synopsis": "The campervan holiday was once the pursuit of those in the golden years. RVs were reserved for mobile baby-boomers who wanted to head outdoors but bring all their mod cons with them. Now a younger crowd are taking to the roads...",
+      "id": 31
+    },
+    {
+      "userId": 1,
+      "url": "https://www.nzherald.co.nz/travel/news/article.cfm?c_id=7&objectid=12190685",
+      "title": "RVs go high-tech as millennials search for the perfect camper van",
+      "synopsis": "The campervan holiday was once the pursuit of those in the golden years. RVs were reserved for mobile baby-boomers who wanted to head outdoors but bring all their mod cons with them. Now a younger crowd are taking to the roads...",
+      "id": 32
+    },
+    {
+      "userId": 1,
+      "url": "https://www.nzherald.co.nz/travel/news/article.cfm?c_id=7&objectid=12190685",
+      "title": "RVs go high-tech as millennials search for the perfect camper van",
+      "synopsis": "The campervan holiday was once the pursuit of those in the golden years. RVs were reserved for mobile baby-boomers who wanted to head outdoors but bring all their mod cons with them. Now a younger crowd are taking to the roads...",
+      "id": 33
+    },
+    {
+      "userId": 1,
+      "url": "https://www.nzherald.co.nz/travel/news/article.cfm?c_id=7&objectid=12190685",
+      "title": "RVs go high-tech as millennials search for the perfect camper van",
+      "synopsis": "The campervan holiday was once the pursuit of those in the golden years. RVs were reserved for mobile baby-boomers who wanted to head outdoors but bring all their mod cons with them. Now a younger crowd are taking to the roads...",
+      "id": 34
+    },
+    {
+      "userId": 1,
+      "url": "https://www.nzherald.co.nz/travel/news/article.cfm?c_id=7&objectid=12190685",
+      "title": "RVs go high-tech as millennials search for the perfect camper van",
+      "synopsis": "The campervan holiday was once the pursuit of those in the golden years. RVs were reserved for mobile baby-boomers who wanted to head outdoors but bring all their mod cons with them. Now a younger crowd are taking to the roads...",
+      "id": 35
     }
   ],
   "events": [
     {
-      "userId": 1,
-      "eventName": "Hiking",
-      "eventDate": "2019-01-14",
-      "eventTime": "15:00",
-      "eventLocation": "Yosemite",
+      "userId": "1",
+      "eventName": "test",
+      "eventDate": "2019-01-08",
+      "eventTime": "11:11",
+      "eventLocation": "test",
       "id": 1
     },
     {
       "id": 2,
-      "userId": 1,
-      "eventName": "Skiing",
-      "eventDate": "2019-01-15",
-      "eventTime": "08:00",
-      "eventLocation": "Rockies"
-    },
-    {
-      "userId": 1,
-      "eventName": "Outdoor Yoga",
-      "eventDate": "2019-01-18",
-      "eventTime": "08:00",
-      "eventLocation": "Outside",
-      "id": 3
-    },
-    {
       "userId": 2,
-      "eventName": "Concert",
-      "eventDate": "2019-01-20",
-      "eventTime": "16:00",
-      "eventLocation": "Red Rock",
-      "id": 4
+      "eventName": "another toga party",
+      "eventDate": "2-15",
+      "eventTime": "3:00pm",
+      "eventLocation": "Vegas"
     },
     {
-      "userId": 1,
-      "eventName": "Party at NSS",
-      "eventDate": "2019-01-26",
-      "eventTime": "12:12",
-      "eventLocation": "NSS",
-      "id": 6
+      "userId": 3,
+      "eventName": "yet another toga party",
+      "eventDate": "2-12",
+      "eventTime": "3:00pm",
+      "eventLocation": "Vegas",
+      "id": 3
     }
   ],
   "tasks": [
     {
       "id": 1,
       "userId": 1,
-      "task": "save world",
-      "expectedCompletionDate": "2-12",
-      "complete": false
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "task": "Reach MVP",
-      "expectedCompletionDate": "2019-01-14",
+      "task": "save world someday",
+      "expectedCompletionDate": "02 28 2019",
       "complete": true
     },
     {
-      "id": 3,
       "userId": 1,
-      "task": "conquer the world",
-      "expectedCompletionDate": "2019-01-31",
-      "complete": true
-    },
-    {
-      "id": 4,
-      "userId": 1,
-      "task": "work",
-      "expectedCompletionDate": "2019-01-13",
-      "complete": false
-    },
-    {
-      "id": 5,
-      "userId": 2,
-      "task": "clean ",
-      "expectedCompletionDate": "2019-01-13",
-      "complete": false
-    }
-  ],
-  "friends": [
-    {
-      "id": 1,
-      "userId": 1,
-      "otherFriendId": 2
-    }
-  ],
-  "messages": [
-    {
-      "userId": 2,
-      "message": "Hi ",
-      "timeStamp": "3:01:00pm",
+      "task": "destroy world",
+      "expectedCompletionDate": "01 15 2019",
+      "complete": false,
       "id": 2
     },
     {
       "userId": 1,
-      "message": "Whats good!",
-      "timeStamp": "2019-01-14T17:44:19.301Z",
-      "id": 3
+      "task": "save world",
+      "expectedCompletionDate": "01 12 2019",
+      "complete": false
     },
     {
       "userId": 1,
-      "message": "Hi",
-      "timeStamp": "2019-01-14T17:54:16.720Z",
+      "task": "destroy world",
+      "expectedCompletionDate": "01 13 2019",
+      "complete": false,
+      "id": 4
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "task": "save world maybe",
+      "expectedCompletionDate": "01 13 2019",
+      "complete": true
+    },
+    {
+      "userId": 1,
+      "task": "aaaaaa",
+      "expectedCompletionDate": "01 30 2019",
+      "complete": false,
+      "id": 6
+    }
+  ],
+  "friends": [
+    {
+      "userId": 1,
+      "otherFriendId": 5,
       "id": 4
     },
     {
       "userId": 1,
-      "timeStamp": "2019-01-15T05:08:26.559Z",
+      "otherFriendId": 6,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 4,
+      "id": 6
+    }
+  ],
+  "messages": [
+    {
+      "userId": 1,
+      "message": "MOTHA FUCKA",
+      "timeStamp": "3:00:00pm",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "message": "Sup.",
+      "timeStamp": "3:01:00pm"
+    },
+    {
+      "userId": 1,
+      "message": "NM. ut all good",
+      "timeStamp": "3:02:00pm",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "message": "Cool.",
+      "timeStamp": "3:03:00pm"
+    },
+    {
+      "userId": 1,
+      "timeStamp": "2019-01-15T06:10:59.782Z",
       "id": 5
     }
   ]

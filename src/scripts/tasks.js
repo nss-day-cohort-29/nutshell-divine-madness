@@ -83,6 +83,14 @@ const tasks = {
                 id : "activeTasksDueDateHeader"
             }
         });
+        let activeTasksEdit = domComponents.createDomElement({
+            elementType : "th",
+            cssClass : "activeTasksEdit",
+            content: "",
+            attributes : {
+                id : "activeTasksEdit"
+            }
+        });
 
         let completedTasksHeader = domComponents.createDomElement({
             elementType : "th",
@@ -111,16 +119,26 @@ const tasks = {
                 type : "button"
             }
         });
+        let completedTasksEdit = domComponents.createDomElement({
+            elementType : "th",
+            cssClass : "completedTasksEdit",
+            content: "",
+            attributes : {
+                id : "completedTasksEdit"
+            }
+        });
 
         //append header row to table and table to container
         activeTasksTable.appendChild(activeTasksTableTitle);
         completedTasksTable.appendChild(completedTasksTableTitle);
         activeTasksHeaderRow.appendChild(activeTasksHeader)
         activeTasksHeaderRow.appendChild(activeTasksDueDateHeader);
+        activeTasksHeaderRow.appendChild(activeTasksEdit);
         activeTasksTable.appendChild(activeTasksHeaderRow);
         tasksContainer.appendChild(activeTasksTable);
         completedTasksHeaderRow.appendChild(completedTasksHeader)
         completedTasksHeaderRow.appendChild(completedTasksDueDateHeader);
+        completedTasksHeaderRow.appendChild(completedTasksEdit);
         completedTasksTable.appendChild(completedTasksHeaderRow);
         tasksContainer.appendChild(completedTasksTable);
         createTaskButton.addEventListener("click", tasksPopup.createNewTaskForm);
@@ -180,6 +198,24 @@ const tasks = {
                     }
                 })
 
+                let taskEditCell = domComponents.createDomElement({
+                    elementType : "td",
+                    cssClass : "taskEditCell",
+                    attributes : {
+                        id : `taskEditCell_${task.id}`
+                    }
+                })
+
+                let taskEditButton = domComponents.createDomElement({
+                    elementType : "button",
+                    cssClass : "taskEditButton",
+                    content : "Edit",
+                    attributes : {
+                        id : `taskEditButton_${task.id}`,
+                        type : "button"
+                    }
+                })
+
                 //create task checkbox and title
                 let taskLabel = domComponents.createDomElement({
                     elementType : "label",
@@ -203,7 +239,8 @@ const tasks = {
                 })
                 //create task dute date
                 let dueDateArray = new Date(task.expectedCompletionDate).toDateString().split(" ")
-                let dueDate = `${dueDateArray[1]} ${dueDateArray[2]}, ${dueDateArray[3]}`
+                let dueDate = `${dueDateArray[1]} ${dueDateArray[2]} ${dueDateArray[3]}`
+
 
                 let taskDueDate = domComponents.createDomElement({
                     elementType : "p",
@@ -213,14 +250,18 @@ const tasks = {
                         id : `taskDueDate_${task.id}`
                     }
                 })
+
                 //append -- order is important for checkbox and label to ensure box in on the left
                 taskCheckbox.addEventListener("change", tasksEventListeners.markTaskComplete)
+                taskEditButton.addEventListener("click", tasksEventListeners.taskEditButton)
                 taskLabel.appendChild(taskCheckbox);
                 taskLabel.appendChild(taskTitle);
                 taskCell.appendChild(taskLabel);
                 dueDateCell.appendChild(taskDueDate);
+                taskEditCell.appendChild(taskEditButton);
                 taskRow.appendChild(taskCell);
                 taskRow.appendChild(dueDateCell);
+                taskRow.appendChild(taskEditCell);
 
                 if (status) {
 

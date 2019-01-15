@@ -7,7 +7,7 @@ const messages = {
 
     createMessageBoard() {
         $("#output").empty()
-        
+
         let outputArticle = document.getElementById("output")
 
         //create display container
@@ -75,7 +75,7 @@ const messages = {
                 let loggedInUser = sessionStorage.getItem("userId");
 
                 let messageElement = domComponents.createDomElement({
-
+                    // ADD LINK HERE
                     elementType : "h3",
                     cssClass : "messageUserName",
                     content : `${userName}:`,
@@ -84,6 +84,7 @@ const messages = {
                         name: parserInt(messageUser)
                     }
                 })
+
 
                 let messageElement2 = domComponents.createDomElement({
                     elementType : "p",

@@ -23,5 +23,8 @@
     "nss-domcomponent": "^0.1.0"
   },
   "keywords": [],
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "moment": "^2.23.0"
+  }
 }
