@@ -8,6 +8,7 @@ const messagesEventListeners = {
     postNewMessage() {
 
         let messageInput = document.getElementById("messageInput").value;
+
         let timeStamp = new Date();
 
         nomadData.connectToData({
@@ -16,7 +17,7 @@ const messagesEventListeners = {
             fetchType : "POST",
             dataBaseObject : {
                 userId : Number(sessionStorage.getItem("userId")),
-                message : messageInput.value,
+                message : messageInput,
                 timeStamp : timeStamp
             }
         }).then(shit => {
