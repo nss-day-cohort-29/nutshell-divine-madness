@@ -161,6 +161,16 @@ const events = {
       deleteButton.addEventListener("click", eventPageListeners.handleDeleteButton);
       eventItem.appendChild(editButton);
       eventItem.appendChild(deleteButton);
+    } else {
+      nomadData.connectToData({
+        dataSet: "users",
+        fetchType: "GET",
+        embedItem: `/${eventObject.userId}`
+        })
+        .then(parsedResponse => {
+        const eventUser = domComponents.createDomElement({elementType: "p", content: `Event Created By: ${parsedResponse.userName}`});
+        eventItem.appendChild(eventUser);
+        });
     };
 
     return eventItem;
