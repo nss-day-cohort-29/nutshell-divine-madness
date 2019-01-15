@@ -6,6 +6,7 @@ import messages from "./messages";
 import friends from "./friends";
 import news from "./news";
 import tasks from "./tasks";
+import newsListener from "./newsListener";
 
 const eventListeners = {
     /*===============================================================================================================
@@ -184,11 +185,9 @@ const eventListeners = {
     },
     newsNavLink(){
         //NEWS SECTION
-        news.save();
-        news.allSaved();
-        news.getNews();
-        news.newsElementCreator();
-        friends.buildFriendSearchBar()
+        
+        news.getAPINews();
+        // news.savedNewsElementsCreator();
         console.log("news link clicked")
     },
     tasksNavLink(){

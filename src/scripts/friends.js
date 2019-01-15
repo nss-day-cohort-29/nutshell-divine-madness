@@ -148,7 +148,7 @@ loadCurrentUsersFriends (friend) {
 
   },
   initializePotentialFriends () {
-    let userId = sessionStorage.getItem('userId');
+    let userId = sessionStorage.getItem("userId");
     let currentUser = Number(userId);
     // console.log("friends Page user id is-",currentUser);
 
@@ -182,7 +182,7 @@ loadCurrentUsersFriends (friend) {
     })
   },
   showUserPotentialFriends (friend) {
-    let userId = sessionStorage.getItem('userId');
+    let userId = sessionStorage.getItem("userId");
     let currentUser = Number(userId);
     // console.log(friend)
     let allTheUsers = []
@@ -208,9 +208,9 @@ loadCurrentUsersFriends (friend) {
   },
    differenceOf2Arrays (array1, array2) {
     var temp = [];
-    array1 = array1.toString().split(',').map(Number);
-    array2 = array2.toString().split(',').map(Number);
-
+    array1 = array1.toString().split(",").map(Number);
+    array2 = array2.toString().split(",").map(Number);
+    
     for (var i in array1) {
     if(array2.indexOf(array1[i]) === -1) temp.push(array1[i]);
     }
@@ -241,7 +241,7 @@ loadCurrentUsersFriends (friend) {
             console.log(user.id, "is no friend")
             const potentialFriendContainer = document.getElementById(`potentialFriend-${notAFriend}`)
             potentialFriendContainer.appendChild(domComponents.createDomElement({
-              elementType: 'h2',
+              elementType: "h2",
               content: user.userName,
               cssClass: `potential-friend-${user.id}`
             }))

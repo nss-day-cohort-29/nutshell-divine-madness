@@ -11,7 +11,7 @@ const nomadData = {
         let deleteId = fetchObject.deleteId;
 
         if (fetchType == "GET") {
-
+            
         return fetch(`http://localhost:8088/${dataSet}${embedItem}`)
             .then(response => response.json()) // parses response to JSON
 

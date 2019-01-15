@@ -89,7 +89,7 @@ const messages = {
                     content : `${userName}:`,
                     attributes : {
                         id: `message${messageId}`,
-                        name : parseInt(messageUser)
+                        name: parserInt(messageUser)
                     }
                 })
 
