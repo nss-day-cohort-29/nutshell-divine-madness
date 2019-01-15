@@ -22,13 +22,6 @@
       "synopsis": "The playful yet chichi bar now serves breakfast through late night"
     },
     {
-      "id": 2,
-      "userId": 2,
-      "url": "https://www.bbc.com/news/world-africa-46819303",
-      "title": "DR Congo presidential election: Outcry as Tshisekedi named winner",
-      "synopsis": "Some people are bummed"
-    },
-    {
       "userId": 1,
       "url": "https://robbreport.com/food-drink/dining/nomad-las-vegas-opens-park-mgm-2828686/",
       "title": "NoMad Las Vegas Is Embracing the Theatricality of Sin City",
@@ -62,20 +55,6 @@
       "title": "Glance Through the Perfect Lunch and Dinner Menus at NoMad Bar",
       "synopsis": "The dishes are playful yet expertly executed",
       "id": 6
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 8
     }
   ],
   "events": [
@@ -139,11 +118,12 @@
     {
       "userId": 1,
       "task": "Launch Nomads to the WORLD!",
-      "expectedCompletionDate": "01 11 2019",
+      "expectedCompletionDate": "01 16 2019",
       "complete": false,
       "id": 2
     },
     {
+      "id" : 3,
       "userId": 1,
       "task": "Make a HUGE bank deposit",
       "expectedCompletionDate": "01 17 2019",
@@ -168,19 +148,19 @@
       "task": "Make a HUGE bank deposit",
       "expectedCompletionDate": "01 17 2019",
       "complete": false,
-      "id": 3
+      "id": 6
     }
   ],
   "friends": [
     {
-      "id": 2,
-      "userId": 2,
-      "otherFriendId": 3
+      "id" : 1,
+      "userId": 1,
+      "otherFriendId": 2
     },
     {
-      "userId": 1,
-      "otherFriendId": 2,
-      "id": 3
+      "id": 2,
+      "userId": 2,
+      "otherFriendId": 1
     }
   ],
   "messages": [
