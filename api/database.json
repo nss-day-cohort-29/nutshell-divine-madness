@@ -263,19 +263,19 @@
     },
     {
       "userId": 1,
-      "otherFriendId": 5,
-      "id": 15
+      "otherFriendId": 7,
+      "id": 12
     },
     {
       "userId": 1,
-      "otherFriendId": 2,
-      "id": 16
+      "otherFriendId": 5,
+      "id": 14
     }
   ],
   "messages": [
     {
       "userId": 1,
-      "message": "MOTHs are cool",
+      "message": "MOTHs are",
       "timeStamp": "3:00:00pm",
       "id": 1
     },
@@ -299,7 +299,7 @@
     },
     {
       "userId": 1,
-      "message": "hey  man you good",
+      "message": "hey  man you good yeah",
       "timeStamp": "2019-01-14T21:41:52.308Z",
       "id": 5
     },

@@ -78,7 +78,7 @@ const messages = {
                     elementType : "div",
                     cssClass : "messageDiv",
                     attributes : {
-                        id : "messageDiv"
+                        id : `messageDiv_${messageId}`
                     }
                 })
 
