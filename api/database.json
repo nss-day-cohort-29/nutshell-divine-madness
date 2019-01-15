@@ -1,0 +1,211 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "Hernando",
+      "email": "dlskfj@wh.com",
+      "password": "yomama"
+    },
+    {
+      "userName": "Lorenzo",
+      "email": "lorenzo@gmail.com",
+      "password": "yomama",
+      "id": 2
+    }
+  ],
+  "newsitems": [
+    {
+      "id": 1,
+      "userId": 2,
+      "url": "https://vegas.eater.com/2018/10/15/17977462/first-look-nomad-bar-open",
+      "title": "A First Look Inside NoMad Bar, Now Open",
+      "synopsis": "The playful yet chichi bar now serves breakfast through late night"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "url": "https://www.bbc.com/news/world-africa-46819303",
+      "title": "DR Congo presidential election: Outcry as Tshisekedi named winner",
+      "synopsis": "Some people are bummed"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "url": "https://www.bbc.com/news/technology-46818797",
+      "title": "CES 2019: Amazon and Google Assistant carve up tech expo",
+      "synopsis": "Tech makes me excited about life"
+    },
+    {
+      "id": 4,
+      "userId": 5,
+      "url": "https://www.cnbc.com/2019/01/07/these-are-the-best-jobs-to-have-in-2019-according-to-us-news--world-report.html",
+      "title": "These are the 13 best jobs to have in 2019, according to US News & World Report",
+      "synopsis": "Developer no.1 yo"
+    },
+    {
+      "userId": 1,
+      "url": "https://robbreport.com/food-drink/dining/nomad-las-vegas-opens-park-mgm-2828686/",
+      "title": "NoMad Las Vegas Is Embracing the Theatricality of Sin City",
+      "synopsis": "NoMad Las Vegas Is Embracing the Theatricality of Sin City",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "url": "https://www.cntraveler.com/story/the-new-nomad-las-vegas-breaks-the-strip-stereotype",
+      "title": "The New NoMad Las Vegas Breaks the Strip Stereotype",
+      "synopsis": "The New NoMad Las Vegas Breaks the Strip Stereotype",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "url": "https://www.hollywoodreporter.com/news/nomad-restaurant-open-las-vegas-1157021",
+      "title": "NoMad Restaurant to Bow in Las Vegas",
+      "synopsis": "NoMad Restaurant to Bow in Las Vegas",
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "url": "https://www.wallpaper.com/travel/usa/las-vegas/hotels/nomad",
+      "title": "NoMad hotel - Las Vegas, USA",
+      "synopsis": "Review of NoMad hotel - Las Vegas, USA",
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "url": "https://vegas.eater.com/2018/11/14/18093982/lunch-dinner-menus-nomad-bar",
+      "title": "Glance Through the Perfect Lunch and Dinner Menus at NoMad Bar",
+      "synopsis": "The dishes are playful yet expertly executed",
+      "id": 6
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "userId": 1,
+      "eventName": "Pre-launch Party",
+      "eventDate": "2019-01-15",
+      "eventTime": "17:00",
+      "eventLocation": "NSS"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "eventName": "Launch Party",
+      "eventDate": "2019-01-16",
+      "eventTime": "18:00",
+      "eventLocation": "Neighbors Bar"
+    },
+    {
+      "userId": 1,
+      "eventName": "Post-Launch Party",
+      "eventDate": "2019-01-17",
+      "eventTime": "10:00",
+      "eventLocation": "NoMad Bar, Las Vegas!!!!!",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "eventName": "Pre-Pre-launch Party",
+      "eventDate": "2019-01-15",
+      "eventTime": "15:00",
+      "eventLocation": "Red Bicycle",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "eventName": "The Party before the Launch Party",
+      "eventDate": "2019-01-16",
+      "eventTime": "16:00",
+      "eventLocation": "Neighbors Bar"
+    },
+    {
+      "userId": 2,
+      "eventName": "Pre-Post-Launch Party",
+      "eventDate": "2019-01-17",
+      "eventTime": "08:00",
+      "eventLocation": "On the plane to Vegas!!!!!!",
+      "id": 6
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "userId": 1,
+      "task": "Build Nomads 'Tasks' Section",
+      "expectedCompletionDate": "01 15 2019",
+      "complete": true
+    },
+    {
+      "userId": 1,
+      "task": "Launch Nomads to the WORLD!",
+      "expectedCompletionDate": "01 16 2019",
+      "complete": false,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "task": "Make a HUGE bank deposit",
+      "expectedCompletionDate": "01 17 2019",
+      "complete": false
+    },
+    {
+      "userId": 2,
+      "task": "Build Nomads 'Friends' Section",
+      "expectedCompletionDate": "01 15 2019",
+      "complete": true,
+      "id": 4
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "task": "Launch Nomads to the WORLD!",
+      "expectedCompletionDate": "01 16 2019",
+      "complete": false
+    },
+    {
+      "userId": 2,
+      "task": "Make a HUGE bank deposit",
+      "expectedCompletionDate": "01 17 2019",
+      "complete": false,
+      "id": 6
+    }
+  ],
+  "friends": [
+    {
+      "userId": 1,
+      "otherFriendId": 2
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "otherFriendId": 3
+    }
+  ],
+  "messages": [
+    {
+      "userId": 1,
+      "message": "This Nomads thing is going to be HUGE!!",
+      "timeStamp": "3:00:00pm",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "message": "Hell yeah it is, we'll be drinking champagne in Vegas by Monday!!",
+      "timeStamp": "3:01:00pm"
+    },
+    {
+      "userId": 1,
+      "message": "For sure, and tipping strippers in $100 bills!",
+      "timeStamp": "3:02:00pm",
+      "id": 3
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "message": "Damn Right!!",
+      "timeStamp": "3:03:00pm"
+    }
+  ]
+}
