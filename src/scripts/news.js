@@ -74,7 +74,7 @@ const news = {
                     currentArticlesDiv.appendChild(newsAPIArtContain);
                         //create fieldset for articles to be and then attach them to the sections above.
                     const parentAPISection = domComponents.createDomElement({
-                            elementType: "fieldset",
+                            elementType: "p",
                             content: dataGran.title,
                             cssClass: "apiData",
                             attributes: {
