@@ -7,11 +7,34 @@ const friends = {
 
   defineCurrentUsersFriends () {
     $("#output").empty()
-    const currentUser = 1;
     let userId = sessionStorage.getItem('userId');
-    // let currentUser = Number(userId);
+    let currentUser = Number(userId);
     console.log(currentUser, userId)
+    const targetContainer = document.getElementById("output")
+    const friendScrollContainer = domComponents.createDomElement({
+      elementType: "section",
+      cssClass: "friendScrollContainer",
+      attributes: {
+        id: "friendScrollContainer"
+      }
+    })
+    targetContainer.appendChild(friendScrollContainer)
+
+    friendScrollContainer.appendChild(domComponents.createDomElement({
+      elementType: "section",
+      attributes: {
+        id: "allFriendContainer",
+      }
+    }))
+    const allFriendContainer = document.getElementById("allFriendContainer");
+    allFriendContainer.appendChild(domComponents.createDomElement({
+      elementType: "h2",
+      content: "friends:",
+      cssClass: "friendTag"
+    }))
+
     let friendHolder = [];
+
 // PULL FROM FRIENDS JSON-------------------------
 
 nomadData.connectToData({
@@ -35,16 +58,16 @@ nomadData.connectToData({
 loadCurrentUsersFriends (friend) {
   // PULL FROM USERS JSON -----------------------
   // console.log(friend)
-      const targetContainer = document.getElementById("output")
-      targetContainer.appendChild(domComponents.createDomElement({
-        elementType: "section",
+      const allFriendContainer = document.getElementById("allFriendContainer")
+      allFriendContainer.appendChild(domComponents.createDomElement({
+        elementType: "article",
         attributes: {
           class: "friend-container",
           id: `friend-${friend}`
         }
       }))
       const friendContainer = document.getElementById(`friend-${friend}`)
-
+    // GET A BOX HERE THAT CONTAINS VISUAL OF FRIENDS
 
       let friendDomBuilder = [];
       nomadData.connectToData({
@@ -75,7 +98,7 @@ loadCurrentUsersFriends (friend) {
                   // console.log(event.eventName);
                   const eventHolder = {
                     elementType: "p",
-                    content: `Your fellow nomads upcoming event: ${event.eventName} on ${event.eventDate}`,
+                    content: `EVENT: ${event.eventName} on ${event.eventDate}`,
                     attributes: {
                       id: `event-${event.id}`,
                     }
@@ -97,7 +120,7 @@ loadCurrentUsersFriends (friend) {
                   // console.log(userSpecificArticles.title)
                   const articleHolder = {
                     elementType: "p",
-                    content: userSpecificArticles.title,
+                    content: `ARTICLE: ${userSpecificArticles.title}`,
                     attributes: {
                       id: `article-${userSpecificArticles.id}`,
                     }
@@ -129,11 +152,15 @@ loadCurrentUsersFriends (friend) {
     let currentUser = Number(userId);
     // console.log("friends Page user id is-",currentUser);
 
-    const targetContainer = document.getElementById("output");
+    const scrollTargetContainer = document.getElementById("friendScrollContainer");
     const findNewFriendContainer = document.createElement("section");
     let friendsIHave = [];
     findNewFriendContainer.setAttribute("id", "future-friends");
-    targetContainer.appendChild(findNewFriendContainer);
+    scrollTargetContainer.appendChild(findNewFriendContainer);
+    const findNewFriendTag = document.createElement("h5");
+    findNewFriendContainer.appendChild(findNewFriendTag);
+    findNewFriendTag.classList.add("friendToBe");
+    findNewFriendTag.textContent = "friend to be:"
 
     nomadData.connectToData({
       "dataSet" : "friends",
@@ -223,7 +250,8 @@ loadCurrentUsersFriends (friend) {
               content: "Add Friend",
               attributes: {
                 id: `add-friend-button-${user.id}`,
-                type: "button"
+                type: "button",
+                class: "add-friend-button"
               }
             }))
             const forAddButton = document.getElementById(`add-friend-button-${user.id}`);

@@ -7,145 +7,166 @@
       "password": "yomama"
     },
     {
-      "id": 2,
       "userName": "Lorenzo",
-      "email": "dafud@msn.com",
-      "password": "123"
-    },
-    {
-      "id": 3,
-      "userName": "Jaleandro",
-      "email": "rad@rad.com",
-      "password": "neato"
-    },
-    {
-      "id": 4,
-      "userName": "Sally",
-      "email": "Sally@game.com",
-      "password": "1984"
-    },
-    {
-      "id": 5,
-      "userName": "Julia Gulia",
-      "email": "knifefighter@explorer.com",
-      "password": "word"
-    },
-    {
-      "id": 6,
-      "userName": "Jimbo Gimbo",
-      "email": "James@yahoo.com",
-      "password": "pass"
+      "email": "lorenzo@gmail.com",
+      "password": "yomama",
+      "id": 2
     }
   ],
-  "newsItems": [
+  "newsitems": [
     {
-      "userId": 1,
-      "url": "https://www.singletracks.com/blog/mtb-trails/worldwide-shredlist-the-ever-rugged-sardinia-italy/",
-      "title": "Worldwide Shredlist: The Ever Rugged South Sardinia, Italy",
-      "synopsis": "Sardinia, Italy is a mountain biker's paradise: trails, mountains, sun, and few crowds. The post Worldwide Shredlist: The Ever Rugged South Sardinia, Italy appeared first on Singletracks Mountain Bike News.",
-      "id": 40
-    },
-    {
-      "userId": 1,
-      "url": "https://www.singletracks.com/blog/mtb-trails/worldwide-shredlist-the-ever-rugged-sardinia-italy/",
-      "title": "Worldwide Shredlist: The Ever Rugged South Sardinia, Italy",
-      "synopsis": "Sardinia, Italy is a mountain biker's paradise: trails, mountains, sun, and few crowds. The post Worldwide Shredlist: The Ever Rugged South Sardinia, Italy appeared first on Singletracks Mountain Bike News.",
-      "id": 42
-    },
-    {
-      "userId": 1,
-      "url": "https://bikerumor.com/2019/01/07/vanlife-throw-shade-on-smaller-vehicles-w-rhino-rack-batwing-compact-awning/",
-      "title": "#Vanlife: Throw shade on smaller vehicles w/ Rhino Rack Batwing Compact Awning",
-      "synopsis": "For those looking to make their trail head or race warm up zone a little more comfortable, a vehicle awning is a pretty good way to do it. Assuming you have some room around your vehicle, the awning is attached to your roof rack making transport and set up ea…",
-      "id": 43
-    },
-    {
-      "userId": 1,
-      "url": "https://bikerumor.com/2019/01/07/vanlife-throw-shade-on-smaller-vehicles-w-rhino-rack-batwing-compact-awning/",
-      "title": "#Vanlife: Throw shade on smaller vehicles w/ Rhino Rack Batwing Compact Awning",
-      "synopsis": "For those looking to make their trail head or race warm up zone a little more comfortable, a vehicle awning is a pretty good way to do it. Assuming you have some room around your vehicle, the awning is attached to your roof rack making transport and set up ea…",
-      "id": 46
-    },
-    {
-      "userId": 1,
-      "url": "https://www.wired.com/story/youtube-boomers-vanlife-bob-wells/",
-      "title": "YouTube Boomers Show #VanLife Isn’t Just for Millennials",
-      "synopsis": "Bob Wells, a 63-year-old YouTube personality, has been living the #vanlife since 1995. He’s managed to make a living—and inspire a generation.",
-      "id": 47
-    },
-    {
-      "userId": 1,
-      "url": "https://www.singletracks.com/blog/mtb-trails/worldwide-shredlist-the-ever-rugged-sardinia-italy/",
-      "title": "Worldwide Shredlist: The Ever Rugged South Sardinia, Italy",
-      "synopsis": "Sardinia, Italy is a mountain biker's paradise: trails, mountains, sun, and few crowds. The post Worldwide Shredlist: The Ever Rugged South Sardinia, Italy appeared first on Singletracks Mountain Bike News.",
-      "id": 48
-    }
-  ],
-  "events": [
-    {
-      "userId": "1",
-      "eventName": "test",
-      "eventDate": "2019-01-08",
-      "eventTime": "11:11",
-      "eventLocation": "test",
-      "id": 1
+      "id": 1,
+      "userId": 2,
+      "url": "https://vegas.eater.com/2018/10/15/17977462/first-look-nomad-bar-open",
+      "title": "A First Look Inside NoMad Bar, Now Open",
+      "synopsis": "The playful yet chichi bar now serves breakfast through late night"
     },
     {
       "id": 2,
       "userId": 2,
-      "eventName": "another toga party",
-      "eventDate": "2-15",
-      "eventTime": "3:00pm",
-      "eventLocation": "Vegas"
+      "url": "https://www.bbc.com/news/world-africa-46819303",
+      "title": "DR Congo presidential election: Outcry as Tshisekedi named winner",
+      "synopsis": "Some people are bummed"
     },
     {
+      "id": 3,
       "userId": 3,
-      "eventName": "yet another toga party",
-      "eventDate": "2-12",
-      "eventTime": "3:00pm",
-      "eventLocation": "Vegas",
+      "url": "https://www.bbc.com/news/technology-46818797",
+      "title": "CES 2019: Amazon and Google Assistant carve up tech expo",
+      "synopsis": "Tech makes me excited about life"
+    },
+    {
+      "id": 4,
+      "userId": 5,
+      "url": "https://www.cnbc.com/2019/01/07/these-are-the-best-jobs-to-have-in-2019-according-to-us-news--world-report.html",
+      "title": "These are the 13 best jobs to have in 2019, according to US News & World Report",
+      "synopsis": "Developer no.1 yo"
+    },
+    {
+      "userId": 1,
+      "url": "https://robbreport.com/food-drink/dining/nomad-las-vegas-opens-park-mgm-2828686/",
+      "title": "NoMad Las Vegas Is Embracing the Theatricality of Sin City",
+      "synopsis": "NoMad Las Vegas Is Embracing the Theatricality of Sin City",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "url": "https://www.cntraveler.com/story/the-new-nomad-las-vegas-breaks-the-strip-stereotype",
+      "title": "The New NoMad Las Vegas Breaks the Strip Stereotype",
+      "synopsis": "The New NoMad Las Vegas Breaks the Strip Stereotype",
       "id": 3
+    },
+    {
+      "userId": 2,
+      "url": "https://www.hollywoodreporter.com/news/nomad-restaurant-open-las-vegas-1157021",
+      "title": "NoMad Restaurant to Bow in Las Vegas",
+      "synopsis": "NoMad Restaurant to Bow in Las Vegas",
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "url": "https://www.wallpaper.com/travel/usa/las-vegas/hotels/nomad",
+      "title": "NoMad hotel - Las Vegas, USA",
+      "synopsis": "Review of NoMad hotel - Las Vegas, USA",
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "url": "https://vegas.eater.com/2018/11/14/18093982/lunch-dinner-menus-nomad-bar",
+      "title": "Glance Through the Perfect Lunch and Dinner Menus at NoMad Bar",
+      "synopsis": "The dishes are playful yet expertly executed",
+      "id": 6
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "userId": 1,
+      "eventName": "Pre-launch Party",
+      "eventDate": "2019-01-15",
+      "eventTime": "17:00",
+      "eventLocation": "NSS"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "eventName": "Launch Party",
+      "eventDate": "2019-01-16",
+      "eventTime": "18:00",
+      "eventLocation": "Neighbors Bar"
+    },
+    {
+      "userId": 1,
+      "eventName": "Post-Launch Party",
+      "eventDate": "2019-01-17",
+      "eventTime": "10:00",
+      "eventLocation": "NoMad Bar, Las Vegas!!!!!",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "eventName": "Pre-Pre-launch Party",
+      "eventDate": "2019-01-15",
+      "eventTime": "15:00",
+      "eventLocation": "Red Bicycle",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "eventName": "The Party before the Launch Party",
+      "eventDate": "2019-01-16",
+      "eventTime": "16:00",
+      "eventLocation": "Neighbors Bar"
+    },
+    {
+      "userId": 2,
+      "eventName": "Pre-Post-Launch Party",
+      "eventDate": "2019-01-17",
+      "eventTime": "08:00",
+      "eventLocation": "On the plane to Vegas!!!!!!",
+      "id": 6
     }
   ],
   "tasks": [
     {
       "id": 1,
       "userId": 1,
-      "task": "save world someday",
-      "expectedCompletionDate": "02 28 2019",
+      "task": "Build Nomads 'Tasks' Section",
+      "expectedCompletionDate": "01 15 2019",
       "complete": true
     },
     {
       "userId": 1,
-      "task": "destroy world",
-      "expectedCompletionDate": "01 15 2019",
+      "task": "Launch Nomads to the WORLD!",
+      "expectedCompletionDate": "01 16 2019",
       "complete": false,
       "id": 2
     },
     {
       "userId": 1,
-      "task": "save world",
-      "expectedCompletionDate": "01 12 2019",
+      "task": "Make a HUGE bank deposit",
+      "expectedCompletionDate": "01 17 2019",
       "complete": false
     },
     {
-      "userId": 1,
-      "task": "destroy world",
-      "expectedCompletionDate": "01 13 2019",
-      "complete": false,
+      "userId": 2,
+      "task": "Build Nomads 'Friends' Section",
+      "expectedCompletionDate": "01 15 2019",
+      "complete": true,
       "id": 4
     },
     {
       "id": 5,
-      "userId": 1,
-      "task": "save world maybe",
-      "expectedCompletionDate": "01 13 2019",
-      "complete": true
+      "userId": 2,
+      "task": "Launch Nomads to the WORLD!",
+      "expectedCompletionDate": "01 16 2019",
+      "complete": false
     },
     {
-      "userId": 1,
-      "task": "aaaaaa",
-      "expectedCompletionDate": "01 30 2019",
+      "userId": 2,
+      "task": "Make a HUGE bank deposit",
+      "expectedCompletionDate": "01 17 2019",
       "complete": false,
       "id": 6
     }
@@ -153,49 +174,38 @@
   "friends": [
     {
       "userId": 1,
-      "otherFriendId": 5,
-      "id": 4
+      "otherFriendId": 2
     },
     {
-      "userId": 1,
-      "otherFriendId": 6,
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "otherFriendId": 4,
-      "id": 6
+      "id": 2,
+      "userId": 2,
+      "otherFriendId": 3
     }
   ],
   "messages": [
     {
       "userId": 1,
-      "message": "MOTHA FUCKA",
+      "message": "This Nomads thing is going to be HUGE!!",
       "timeStamp": "3:00:00pm",
       "id": 1
     },
     {
       "id": 2,
       "userId": 2,
-      "message": "Sup.",
+      "message": "Hell yeah it is, we'll be drinking champagne in Vegas by Monday!!",
       "timeStamp": "3:01:00pm"
     },
     {
       "userId": 1,
-      "message": "NM. ut all good",
+      "message": "For sure, and tipping strippers in $100 bills!",
       "timeStamp": "3:02:00pm",
       "id": 3
     },
     {
-      "id": 4,
+      "id": 2,
       "userId": 2,
-      "message": "Cool.",
+      "message": "Damn Right!!",
       "timeStamp": "3:03:00pm"
-    },
-    {
-      "userId": 1,
-      "timeStamp": "2019-01-15T06:10:59.782Z",
-      "id": 5
     }
   ]
 }

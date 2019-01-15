@@ -30,11 +30,11 @@ const messagesEventListeners = {
         let number = event.currentTarget.id;
         let messageArray = number.split("_");
         let messageId = messageArray[1];
-
         let messageToEdit = document.getElementById(`${messageId}`);
         let messageText = messageToEdit.innerHTML;
-        let messageContainer = document.getElementById(`message${messageId}`);
+        let messageDiv = document.getElementById (`messageDiv_${messageId}`)
         let messageTimeStamp = event.currentTarget.name;
+
 
         let messageEditForm = domComponents.createDomElement ({
 
@@ -79,9 +79,10 @@ const messagesEventListeners = {
         messageEditFieldset.appendChild(messageEditInput)
         messageEditFieldset.appendChild(messageEditSubmitButton)
         messageEditForm.appendChild(messageEditFieldset)
-        messageContainer.appendChild(messageEditForm)
-
+        messageDiv.appendChild(messageEditForm)
         event.stopPropagation();
+
+
     },
 
     handleEditSubmitButton() {
