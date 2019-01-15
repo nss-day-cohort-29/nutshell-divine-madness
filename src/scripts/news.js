@@ -7,7 +7,7 @@ const newsContainer = document.querySelector("#output")
 
 const news = {
     getAPINews() {
-        //$(".output").empty();
+        $("#output").empty();
         //getAPINews will pull news from API then call createElement and append to output.
         //Create a header for incoming news.
         sessionStorage.setItem("userId", 1) //take me out when you're done testing........
@@ -20,7 +20,7 @@ const news = {
         });
         newsContainer.appendChild(newsHeader);
         //pull the data from the api and display it to the dom.
-        return fetch("https://newsapi.org/v2/everything?q=vanlife&from=2019-01-05&sortBy=publishedAt&apiKey=9f5c509fe90044dc95a8a6963573284f")
+        return fetch("https://newsapi.org/v2/everything?q=vanlife&from=2019-01-05&sortBy=publishedAt&language=en&apiKey=9f5c509fe90044dc95a8a6963573284f")
             .then(newsItems => newsItems.json())
             .then(displayData => {
                 displayData.articles.forEach(dataGran => {
@@ -37,12 +37,20 @@ const news = {
                     sessionStorage.setItem(`article_${articleCounter}_image`, `${artImage}`)
 
                     //add section container for all articles.
-                    newsHeader.appendChild(domComponents.createDomElement({
+                    newsContainer.appendChild(domComponents.createDomElement({
+                        elementType: "article",
+                        cssClass: "newsAPIArticleContainer",
+                        // attribute: {
+                        //     style: "height:95vh; overflow: scroll; color:white;text-align:center;font-size:20px;overflow:auto; border-radius: 12px;"
+                        // }
+                    }))
+                    const newsAPIArtContain = document.querySelector(".newsAPIArticleContainer")
+                    newsAPIArtContain.appendChild(domComponents.createDomElement({
                             elementType: "section",
                             cssClass: `newsAPIContainer_${articleCounter}`,
                             attribute: {
                                 id: "apiSectionGrab",
-                                style: "color:white;text-align:center;font-size:20px;overflow:auto; border-radius: 12px;"
+                                style: "height:100px; overflow: scroll; color:white;text-align:center;font-size:20px;overflow:auto; border-radius: 12px;"
                             }
                         }))
                         //create fieldset for articles to be and then attach them to the sections above.
@@ -68,7 +76,6 @@ const news = {
                         }))
 
                         //creating button in order to attach to individual articles.
-                        
                     const saveApiButton = domComponents.createDomElement({
                             elementType: "button",
                             content: "Remember This",
@@ -82,6 +89,7 @@ const news = {
                     parentAPISection.appendChild(saveApiButton);
                     saveApiButton.addEventListener("click", newsListener.saveButtonListener)
                 })
+                news.savedNewsElementsCreator()
             })
     },
 // method displays friends news.
@@ -158,7 +166,10 @@ const news = {
 
         const mainSavedContainer = domComponents.createDomElement({
             elementType: "article",
-            cssClass: "article1"
+            cssClass: "article1",
+            attribute:{
+                style: "border-width: thin"
+            }
         })
         newsContainer.appendChild(mainSavedContainer);
         const savedHeader = domComponents.createDomElement({

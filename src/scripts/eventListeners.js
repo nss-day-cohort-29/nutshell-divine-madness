@@ -143,7 +143,7 @@ const eventListeners = {
     newsNavLink(){
         //NEWS SECTION
         news.getAPINews();
-        news.savedNewsElementsCreator();
+        // news.savedNewsElementsCreator();
         console.log("news link clicked")
     },
     tasksNavLink(){
