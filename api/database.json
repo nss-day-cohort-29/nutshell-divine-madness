@@ -22,27 +22,6 @@
       "synopsis": "The playful yet chichi bar now serves breakfast through late night"
     },
     {
-      "id": 2,
-      "userId": 2,
-      "url": "https://www.bbc.com/news/world-africa-46819303",
-      "title": "DR Congo presidential election: Outcry as Tshisekedi named winner",
-      "synopsis": "Some people are bummed"
-    },
-    {
-      "id": 3,
-      "userId": 3,
-      "url": "https://www.bbc.com/news/technology-46818797",
-      "title": "CES 2019: Amazon and Google Assistant carve up tech expo",
-      "synopsis": "Tech makes me excited about life"
-    },
-    {
-      "id": 4,
-      "userId": 5,
-      "url": "https://www.cnbc.com/2019/01/07/these-are-the-best-jobs-to-have-in-2019-according-to-us-news--world-report.html",
-      "title": "These are the 13 best jobs to have in 2019, according to US News & World Report",
-      "synopsis": "Developer no.1 yo"
-    },
-    {
       "userId": 1,
       "url": "https://robbreport.com/food-drink/dining/nomad-las-vegas-opens-park-mgm-2828686/",
       "title": "NoMad Las Vegas Is Embracing the Theatricality of Sin City",
@@ -76,20 +55,6 @@
       "title": "Glance Through the Perfect Lunch and Dinner Menus at NoMad Bar",
       "synopsis": "The dishes are playful yet expertly executed",
       "id": 6
-    },
-    {
-      "userId": 1,
-      "url": "http://cdm.link/2019/01/review-volca-modular-takes-on-creative-synthesis-in-a-small-package/",
-      "title": "Review: volca modular takes on creative synthesis in a small package",
-      "synopsis": "Can KORG take modular patching and Buchla-inspired synthesis, and squeeze it into a $200 instrument that’s still accessible to synth newcomers and experts alike? We go deep with the new $199 KORG volca modular to find out. To grasp what this cute little box i…",
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "url": "https://bikerumor.com/2019/01/07/vanlife-throw-shade-on-smaller-vehicles-w-rhino-rack-batwing-compact-awning/",
-      "title": "#Vanlife: Throw shade on smaller vehicles w/ Rhino Rack Batwing Compact Awning",
-      "synopsis": "For those looking to make their trail head or race warm up zone a little more comfortable, a vehicle awning is a pretty good way to do it. Assuming you have some room around your vehicle, the awning is attached to your roof rack making transport and set up ea…",
-      "id": 8
     }
   ],
   "events": [
@@ -158,6 +123,7 @@
       "id": 2
     },
     {
+      "id" : 3,
       "userId": 1,
       "task": "Make a HUGE bank deposit",
       "expectedCompletionDate": "01 17 2019",
@@ -187,14 +153,14 @@
   ],
   "friends": [
     {
-      "id": 1,
+      "id" : 1,
       "userId": 1,
       "otherFriendId": 2
     },
     {
       "id": 2,
       "userId": 2,
-      "otherFriendId": 3
+      "otherFriendId": 1
     }
   ],
   "messages": [
