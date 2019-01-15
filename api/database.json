@@ -55,20 +55,6 @@
       "title": "Glance Through the Perfect Lunch and Dinner Menus at NoMad Bar",
       "synopsis": "The dishes are playful yet expertly executed",
       "id": 6
-    },
-    {
-      "userId": 1,
-      "url": "http://cdm.link/2019/01/review-volca-modular-takes-on-creative-synthesis-in-a-small-package/",
-      "title": "Review: volca modular takes on creative synthesis in a small package",
-      "synopsis": "Can KORG take modular patching and Buchla-inspired synthesis, and squeeze it into a $200 instrument that’s still accessible to synth newcomers and experts alike? We go deep with the new $199 KORG volca modular to find out. To grasp what this cute little box i…",
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "url": "https://bikerumor.com/2019/01/07/vanlife-throw-shade-on-smaller-vehicles-w-rhino-rack-batwing-compact-awning/",
-      "title": "#Vanlife: Throw shade on smaller vehicles w/ Rhino Rack Batwing Compact Awning",
-      "synopsis": "For those looking to make their trail head or race warm up zone a little more comfortable, a vehicle awning is a pretty good way to do it. Assuming you have some room around your vehicle, the awning is attached to your roof rack making transport and set up ea…",
-      "id": 8
     }
   ],
   "events": [
@@ -167,11 +153,7 @@
   ],
   "friends": [
     {
-<<<<<<< HEAD
       "id": 1,
-=======
-      "id" : 1,
->>>>>>> master
       "userId": 1,
       "otherFriendId": 2
     },
