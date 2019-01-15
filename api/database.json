@@ -7,18 +7,6 @@
       "password": "yomama"
     },
     {
-<<<<<<< HEAD
-      "userName": "JordanRosas",
-      "email": "jordanrosas1203@gmail.com",
-      "password": "qwer",
-      "id": 2
-    },
-    {
-      "userName": "a",
-      "email": "email@email.com",
-      "password": "a",
-      "id": 3
-=======
       "id": 2,
       "userName": "Lorenzo",
       "email": "dafud@msn.com",
@@ -47,7 +35,6 @@
       "userName": "Jimbo Gimbo",
       "email": "James@yahoo.com",
       "password": "pass"
->>>>>>> master
     }
   ],
   "newsitems": [
@@ -119,51 +106,11 @@
       "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
       "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
       "synopsis": "blah blah blah",
-<<<<<<< HEAD
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
       "id": 10
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 11
-    },
-    {
-      "userId": 1,
-      "url": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "title": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "synopsis": "blah blah blah",
-      "id": 12
-=======
-      "id": 10
->>>>>>> master
     }
   ],
   "events": [
     {
-<<<<<<< HEAD
       "id": 1,
       "userId": 1,
       "eventName": "Hiking",
@@ -188,17 +135,6 @@
       "eventLocation": "Outside"
     },
     {
-=======
-      "userId": "1",
-      "eventName": "test",
-      "eventDate": "2019-01-08",
-      "eventTime": "11:11",
-      "eventLocation": "test",
-      "id": 1
-    },
-    {
-      "id": 2,
->>>>>>> master
       "userId": 2,
       "eventName": "another toga party",
       "eventDate": "2-15",
@@ -206,21 +142,20 @@
       "eventLocation": "Vegas"
     },
     {
-<<<<<<< HEAD
       "userId": 1,
       "eventName": "Party at NSS",
       "eventDate": "2019-01-26",
       "eventTime": "12:12",
       "eventLocation": "NSS",
       "id": 6
-=======
-      "userId": 3,
-      "eventName": "yet another toga party",
-      "eventDate": "2-12",
-      "eventTime": "3:00pm",
-      "eventLocation": "Vegas",
-      "id": 3
->>>>>>> master
+    },
+    {
+      "userId": 1,
+      "eventName": "Running",
+      "eventDate": "2019-01-16",
+      "eventTime": "17:00",
+      "eventLocation": "Running trails",
+      "id": 7
     }
   ],
   "tasks": [
@@ -307,6 +242,12 @@
       "userId": 2,
       "message": "Cool.",
       "timeStamp": "3:03:00pm"
+    },
+    {
+      "userId": 1,
+      "message": "YOOOOOOO",
+      "timeStamp": "2019-01-14T22:02:29.439Z",
+      "id": 5
     }
   ]
 }

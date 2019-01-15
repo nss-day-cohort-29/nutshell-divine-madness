@@ -31,10 +31,7 @@ h1{
 
 
 /* =======================================================
-<<<<<<< HEAD
 =======
-=======
->>>>>>> master
 CLASS SELECTORS
 
 .login-page{
@@ -242,7 +239,7 @@ Events Styling
 
 #eventsContainer {
   margin-top: 61.6px;
-  height: 90vh;
+  height: 95vh;
   overflow: scroll;
   display: flex;
   flex-direction: column;
@@ -288,9 +285,6 @@ Events Styling
   padding-left:10px;
   box-shadow: 2px 2px 5px black;
   border-radius:15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .eventInput > fieldset {
@@ -370,9 +364,6 @@ Messages Styling
   border:0;
   background:rgb(81, 78, 78);
   color:rgb( 191, 162, 44);
-<<<<<<< HEAD
-}
-=======
 }
 
 
@@ -391,4 +382,3 @@ Messages Styling
   margin: 0 auto;
   margin-top: 85px;
 }
->>>>>>> master

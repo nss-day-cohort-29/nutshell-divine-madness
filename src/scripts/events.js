@@ -73,15 +73,8 @@ const events = {
     });
   },
   createEventInput() {
-<<<<<<< HEAD
     const eventsContainer = document.querySelector("#eventsContainer");
 
-=======
-
-    const formContainer = document.querySelector("#output")
-    const formHeader = domComponents.createDomElement({elementType: "h2", content: "Add a New Event:"});
-    formContainer.appendChild(formHeader);
->>>>>>> master
     const eventForm = domComponents.createDomElement({elementType: "form", attributes: {class: "eventInput"}});
     eventsContainer.appendChild(eventForm)
     const formHeader = domComponents.createDomElement({elementType: "h2", content: "Add a New Event:"});
