@@ -31,15 +31,11 @@ h1{
 
 
 /* =======================================================
-=======
 CLASS SELECTORS
+===========================================================*/
 
-.login-page{
-  width:360px;
-  /* padding:10% 0 0 ; */
-  /* padding-top:-50px;
-  margin:auto;
-} */
+
+
 .form{
   position:relative;
   z-index:1;
@@ -292,9 +288,8 @@ Messages Styling
 #messageInput{
   margin-top:6px;
   line-height:2;
-  margin-left:350px;
+  margin-left:225px;
   width:61%;
-  margin-left:150px;
 }
 #messageSubmitButton{
   /* justify-content: flex-end; */

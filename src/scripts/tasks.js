@@ -8,7 +8,8 @@ const tasks = {
 
     createTaskTables() {
         $("#output").empty()
-
+        //need to get session storage before building tasks form upon logIn
+        this.getTasks();
         let outputArticle = document.getElementById("output")
 
         //create display container
@@ -145,13 +146,12 @@ const tasks = {
         tasksContainer.appendChild(createTaskButton);
         outputArticle.appendChild(tasksContainer);
 
-        this.getTasks();
+        
     },
 
     getTasks() {
 
         let currentUser = Number(sessionStorage.getItem("userId"));
-
         //populate tasks
         nomadData.connectToData({
 
@@ -168,7 +168,6 @@ const tasks = {
             tasks.forEach(task => {
 
                 if (task.userId === currentUser) {
-
                 let status = task.complete;
                 let activeTasksTable = document.getElementById("activeTasksTable");
                 let completedTasksTable = document.getElementById("completedTasksTable");
