@@ -585,12 +585,11 @@ TASKS styles
   color:rgb( 191, 162, 44);
 }
 
-.welcome-user{
-  width: 70%;
+/* .welcome-user{
   margin: 0 auto;
   margin-top: 85px;
   padding-bottom: 5px;
-}
+} */
 #future-friends{
   color:rgb( 191, 162, 44)
 }

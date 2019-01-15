@@ -78,7 +78,7 @@ const eventListeners = {
                         if (user.id === Number(userId)) {
                             const targetContainer = document.getElementById("output")
                             targetContainer.appendChild(domComponents.createDomElement({
-                                elementType: "div",
+                                elementType: "h1",
                                 content: `welcome ${user.userName}`,
                                 cssClass: "welcome-user"
                             }));
