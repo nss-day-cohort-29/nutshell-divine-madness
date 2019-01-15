@@ -4,7 +4,7 @@ import news from "./news";
 
 
 
-const output = document.querySelector("#output")
+
 const newsListener = {
 
     saveButtonListener() {
@@ -15,8 +15,8 @@ const newsListener = {
         let artDescription = sessionStorage.getItem(`article_${saveID}_desc`);
         let articleURL = sessionStorage.getItem(`article_${saveID}_url`);
 
-        console.log(article)
-            // console.log(event.target, event.currentTarget)
+        
+
         const newsObjectPost = {
             "dataSet": "newsItems",
             "fetchType": "POST",
@@ -34,13 +34,12 @@ const newsListener = {
                 console.log(shit)
                 $("#output").empty();
                 news.getAPINews();
-                // news.savedNewsElementsCreator();
+                
             })
     },
     deleteButtonListener() {
         //To delete from saved news articles.
         const deleteID = event.target.id.split("--")[1];
-        console.log(deleteID);
         nomadData.connectToData({
                 deleteId: deleteID,
                 dataSet: "newsItems",

@@ -6,11 +6,10 @@ import newsListener from "./newsListener";
 const news = {
 
     getAPINews() {
-        
+        //clear when called.
         $("#output").empty();
         //getAPINews will pull news from API then call createElement and append to output.
         //Create a header for incoming news.
-        sessionStorage.setItem("userId", 1) //take me out when you're done testing........
         let articleCounter = 0;
         
         const newsContainer = domComponents.createDomElement({
@@ -19,8 +18,8 @@ const news = {
         })
     
         const targetValue = document.querySelector("#output");
-        
-        
+    
+        //New container for scrolling.
         const newsHeader = domComponents.createDomElement({
             elementType: "h1",
             content: "Current News",
@@ -37,7 +36,6 @@ const news = {
                 id : "currentArticlesDiv"
             }
         })
-        console.log(currentArticlesDiv)
         return fetch("https://newsapi.org/v2/everything?q=vanlife&from=2019-01-05&sortBy=publishedAt&language=en&apiKey=9f5c509fe90044dc95a8a6963573284f")
             .then(newsItems => newsItems.json())
             .then(displayData => {
@@ -110,6 +108,7 @@ const news = {
                     saveApiButton.addEventListener("click", newsListener.saveButtonListener)
                 })
                 newsContainer.appendChild(currentArticlesDiv)
+                //calls the creator to make the SAVED ARTICLES Section
                 news.savedNewsElementsCreator()
             })
     },
@@ -118,7 +117,7 @@ const news = {
         //create array and call to get user data.
         const friendHolder = [];
         let friendsContainer = document.querySelector(".article1");
-        //console.log(sessionStorage.getItem("userId"))
+        
         nomadData.connectToData({
                 dataSet: "users",
                 fetchType: "GET",
@@ -218,8 +217,7 @@ const news = {
         //Makes the call to the data factory to fetch/get data to put in the object.
         nomadData.connectToData(newsCreatorKey)
             .then(dbGrabs => {
-                // const articleButton = document.querySelector(".newsTitle");
-                // console.log(articleButton);
+               
                 dbGrabs.forEach(dbGrab => {
                     const sectionSavedContainer = domComponents.createDomElement({
                         elementType: "section",
@@ -264,7 +262,7 @@ const news = {
                 news.getUserFriendsNews();
 
             })
-            //})
+           
     }
 }
 export default news
