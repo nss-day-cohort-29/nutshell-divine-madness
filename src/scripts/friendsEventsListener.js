@@ -36,6 +36,10 @@ const friendsEventsListener = {
         "dataBaseObject" : {
           "userId": sessionStorage.getItem("userId")
         }
+      }).then(() => {
+        $("#output").empty();
+        friends.defineCurrentUsersFriends();
+        friends.initializePotentialFriends();
       })
     })
 
@@ -59,6 +63,10 @@ const friendsEventsListener = {
         "userId": currentUser,
         "otherFriendId": Number(friendToBeAdded),
       }
+    }).then(() => {
+      $("#output").empty();
+      friends.defineCurrentUsersFriends();
+      friends.initializePotentialFriends();
     })
   },
   shiz () {

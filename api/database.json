@@ -249,18 +249,18 @@
     },
     {
       "userId": 1,
-      "otherFriendId": 4,
-      "id": 19
-    },
-    {
-      "userId": 1,
       "otherFriendId": 2,
-      "id": 20
+      "id": 14
     },
     {
       "userId": 1,
-      "otherFriendId": 7,
-      "id": 21
+      "otherFriendId": 3,
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 4,
+      "id": 16
     }
   ],
   "messages": [
