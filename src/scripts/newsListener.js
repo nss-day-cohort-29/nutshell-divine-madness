@@ -1,5 +1,4 @@
 import nomadData from "./nomadData";
-import domComponents from "./domComponents";
 import news from "./news";
 
 
@@ -10,7 +9,6 @@ const newsListener = {
     saveButtonListener() {
         //This is functioning and writing to JSON. Need to attach this to the save button.
         const saveID = event.target.name;
-        let article = document.getElementById(`article_${saveID}`)
         let artTitle = sessionStorage.getItem(`article_${saveID}_title`);
         let artDescription = sessionStorage.getItem(`article_${saveID}_desc`);
         let articleURL = sessionStorage.getItem(`article_${saveID}_url`);

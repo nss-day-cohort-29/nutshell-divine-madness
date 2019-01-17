@@ -4,7 +4,7 @@ import events from "./events";
 
 const eventPageListeners = {
     handleShowButton() {
-        const output = document.querySelector("#eventsContainer");
+        const eventsContainer = document.querySelector("#eventsContainer");
         const showButton = document.querySelector("#showForm");
         eventsContainer.removeChild(showButton);
         const eventForm = events.createEventInput();

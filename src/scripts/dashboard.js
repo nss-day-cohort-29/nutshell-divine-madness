@@ -1,4 +1,4 @@
-import eventListeners from "./eventListeners" 
+import eventListeners from "./eventListeners"
 const dashboard = {
   buildLoginForm(){
     //using string interpolation to create the form

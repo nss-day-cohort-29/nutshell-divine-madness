@@ -1,4 +1,3 @@
-import eventListeners from "./eventListeners";
 const nomadData = {
 
     connectToData(fetchObject) {

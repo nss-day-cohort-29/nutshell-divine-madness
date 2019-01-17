@@ -6,7 +6,6 @@ import messages from "./messages";
 import friends from "./friends";
 import news from "./news";
 import tasks from "./tasks";
-import newsListener from "./newsListener";
 
 const eventListeners = {
     /*===============================================================================================================
