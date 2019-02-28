@@ -1,3 +1,9 @@
+![image](https://user-images.githubusercontent.com/3199884/53596212-d5b9c200-3b64-11e9-8710-b6cd20ccfaa5.png)
+
+
+
+
+
 # Nutshell: The Information Dashboard
 
 Nutshell is a new product offering that you have been tasked with building. It's a dashboard for people to use to organize their daily tasks, events, news article, friends, and chat messages.
